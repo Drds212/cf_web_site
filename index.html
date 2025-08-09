@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>CIP SISTEM</title>
 </head>
 <body>
+  <div class="idiomas" aria-label="Selector de idiomas">
+    <nav>
+      <a href="#">FR</a>
+      <a href="#">EN</a>
+      <a href="#">中文</a>
+      <a href="#">ES</a>
+      <a href="#">DE</a>
+    </nav>
+  </div>
+  <header role="barra" aria-label="Barra de navegación principal">
+<div class="logo-cipsistem">
+    <img src="recursos/Imagen1.png" alt="CIP SISTEM Logo" class="logo-image" aria-hidden="true">
+</div>
+    <nav class="menu" role="navigation" aria-label="Menú principal">
+      <a href="#">NOSOTROS</a>
+      <a href="#">PROVEEDORES</a>
+      <a href="#">POPULARES</a>
+      <a href="#">CONTACTANOS</a>
+      <a href="#">SERVICIOS</a>
+      <a href="#">UBICACION</a>
+    </nav>
+    <div class="encabezado">
+      <button class="boton-contacto" type="button" aria-label="Contactar con Definox">Contactar con CIP SISTEM</button>
+      <button class="boton-buscar" type="button" aria-label="Buscar">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-    
-    
+<section class="animacion" role="video">
+    <video autoplay loop muted onerror="this.style.display='none'" width="100%" height="100%">
+        <source src="recursos/document_4952103936602408101.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <div class="descripcion">
+      SOLUCIONES INTEGRALES EN EQUIPOS DE ALTA CALIDAD PARA LA <br /> INDUSTRIA, CON SERVICIO POSTVENTA Y CAPACITACIÓN ESPECIALIZADA
+    </div>
+</section>
 </body>
 </html>
