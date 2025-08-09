@@ -214,6 +214,60 @@ body {
         gap: 6px;
       }
     }
+
+
+/* Estilos para el carrusel de proveedores */
+
+.carousel-container {
+    position: relative;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    margin: auto;
+    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+}
+
+.carousel-track {
+    display: flex; /* Para alinear las imágenes en una fila */
+    transition: transform 0.5s ease; /* Suaviza la transición */
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding del ul */
+    margin: 0; /* Elimina el margin del ul */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.proveedor-logo {
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-height: 180px; /* Ajusta la altura máxima para que las imágenes sean más grandes */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.5rem;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px; /* Posiciona el botón "prev" a la izquierda */
+}
+
+.next {
+    right: 10px; /* Posiciona el botón "next" a la derecha */
+}
+
+
+
+
   
 
 
