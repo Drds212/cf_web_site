@@ -22,7 +22,7 @@
 </div>
     <nav class="menu" role="navigation" aria-label="Menú principal">
       <a href="#nosotros">NOSOTROS</a>
-      <a href="#">PROVEEDORES</a>
+      <a href="#proveedores">PROVEEDORES</a>
       <a href="#">POPULARES</a>
       <a href="#">CONTACTANOS</a>
       <a href="#">SERVICIOS</a>
@@ -43,12 +43,37 @@
     </div>
 </section>
 
-  <section id="nosotros" class="nosotros">
-    <h2>NOSOTROS</h2>
-    <p>CIP SISTEM, C.A. es una empresa especializada en el diseño, dimensionamiento y suministro de equipos para la industria alimenticia, química, petrolera, papelera, cementera y otros sectores. Contamos con el respaldo y la distribución de los fabricantes más reconocidos a nivel mundial, garantizando equipos de la más alta calidad, monitoreados desde su origen hasta su entrega en planta, asegurando así la mejor relación precio–valor. Nos comprometemos con la calidad y el cumplimiento de normas, ofreciendo mucho más que una simple comercialización: aportamos valor agregado a través de un excelente servicio postventa y capacitación especializada para el uso de nuestros equipos de medición de procesos. Además, tenemos la capacidad de desarrollar sistemas CIP y SIP desde su concepción hasta su automatización y puesta en marcha.</p>
-  </section>
+<section id="nosotros" class="nosotros">
+  <div class="nosotros-container">
+    <div class="nosotros-imagen">
+      <img src="recursos/Conjunto de Vañvulas DEFINOX DISPONIBLE EN VENEZUELA CON CIP SISTEM CA.jpg" alt="Soldador trabajando">
+    </div>
+    <div class="nosotros-texto">
+      <h2>NOSOTROS</h2>
+      <p>
+        CIP SISTEM, C.A. es una empresa especializada en el diseño, dimensionamiento y suministro de equipos para la industria alimenticia, química, petrolera, papelera, cementera y otros sectores.
+        Contamos con el respaldo y la distribución de los fabricantes más reconocidos a nivel mundial, garantizando equipos de la más alta calidad, monitoreados desde su origen hasta su entrega en planta,
+        asegurando así la mejor relación precio–valor. Nos comprometemos con la calidad y el cumplimiento de normas, ofreciendo mucho más que una simple comercialización: aportamos valor agregado a través
+        de un excelente servicio postventa y capacitación especializada para el uso de nuestros equipos de medición de procesos. Además, tenemos la capacidad de desarrollar sistemas CIP y SIP desde su
+        concepción hasta su automatización y puesta en marcha.
+      </p>
+    </div>
+  </div>
+</section>
 
-  <section class="nosotros">
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('.nosotros-texto', {
+    origin: 'left',
+    distance: '60px',
+    duration: 1000,
+    delay: 200,
+    opacity: 0,
+    reset: true 
+  });
+</script>
+
+  <section id="proveedores" class="proveedores">
   <h2>PROVEEDORES</h2>
   <div class="carousel-container">
     <button class="carousel-button prev">&#10094;</button>
@@ -76,7 +101,7 @@
           <img src="img/flexim_logo.png" alt="Logo de Watson-Marlow" class="proveedor-logo">
         </li>
         <li class="carousel-slide">
-          <img src="" alt="Logo de Watson-Marlow" class="proveedor-logo">
+          <img src="img/rosemount.png" alt="Logo de Watson-Marlow" class="proveedor-logo">
         </li>
         <li class="carousel-slide">
           <img src="img/fisher_logo.png" alt="Logo de Watson-Marlow" class="proveedor-logo">
