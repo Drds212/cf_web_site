@@ -482,6 +482,18 @@ body {
 
 
 
+/* Estilos para la sección de ubicación */
+ .ubicacion-container {
+  display: flex;
+  justify-content: center;
+ }
+
+ .ubicacion-texto {
+  display: flex;
+  justify-content: center;
+ }
+
+
 
 
 
