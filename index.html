@@ -42,7 +42,7 @@
         Tu navegador no soporta el elemento de video.
     </video>
     <div  class="descripcion">
-      SOLUCIONES INTEGRALES EN EQUIPOS DE ALTA CALIDAD PARA LA <br /> INDUSTRIA, CON SERVICIO POSTVENTA Y CAPACITACIÓN ESPECIALIZADA
+      SOLUCIONES INDUSTRIALES EFICIENTES <br /> CON SERVICIO Y CAPACITACIÓN ESPECIALIZADA
     </div>
 </section >
 
@@ -134,7 +134,98 @@
 <br>
 <script src="js/carrusel.js"></script>
 
+   
+<section id="productos" class="productos"  >
+ <h2>PRODUCTOS</h2>
+<img src="img/imagen1.jpg" alt="Imagen principal del producto" class="main-image" id="main-image">
+<div class="container">
+  <div class="product">
+    <img src="img/imagen1.jpg" alt="Producto #1" class="product-image" data-image="img/imagen1.jpg">
+    <h3>Producto #1</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
 
+  <div class="product">
+    <img src="img/imagen2.jpg" alt="Producto #2" class="product-image" data-image="img/imagen2.jpg">
+    <h3>Producto #2</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
+
+  <div class="product">
+    <img src="img/imagen3.jpg" alt="Producto #2" class="product-image" data-image="img/imagen3.jpg">
+    <h3>Producto #2</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
+
+    <div class="product">
+    <img src="img/imagen4.jpg" alt="Producto #2" class="product-image" data-image="img/imagen4.jpg">
+    <h3>Producto #2</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
+
+    <div class="product">
+    <img src="img/imagen5.jpg" alt="Producto #2" class="product-image" data-image="img/imagen5.jpg">
+    <h3>Producto #2</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
+
+    <div class="product">
+    <img src="img/imagen6.jpg" alt="Producto #2" class="product-image" data-image="img/imagen6.jpg">
+    <h3>Producto #2</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
+
+    <div class="product">
+    <img src="img/imagen7.jpg" alt="Producto #2" class="product-image" data-image="img/imagen7.jpg">
+    <h3>Producto #2</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
+
+    <div class="product">
+    <img src="img/imagen8.jpg" alt="Producto #2" class="product-image" data-image="img/imagen8.jpg">
+    <h3>Producto #2</h3>
+    <p>Descripción: producto</p>
+    <p>código: 2345</p>
+    <p>Pulga: 8.323</p>
+    <p>Medidas: 34x99</p>
+  </div>
+  </div>
+
+</section>
+  <script>
+  // Obtener referencias a los elementos necesarios
+  const mainImage = document.getElementById('main-image');
+  const productImages = document.querySelectorAll('.product-image');
+  
+  // Agregar evento de mouseover a las imágenes de los productos
+  productImages.forEach(image => {
+    image.addEventListener('mouseover', () => {
+      mainImage.src = image.dataset.image;
+    });
+  });
+</script>
+  </section>
 
 </body>
 </html>

@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -11,9 +10,6 @@ html {
   section {
     scroll-margin-top: 35px;
 }
-
-
-
 
 body {
       margin: 0;
@@ -142,8 +138,8 @@ body {
       padding: 0 20px;
       text-align: center;
       font-weight: 600;
-      font-size: 2.0rem;
-      line-height: 1.7;
+      font-size: 2.5rem;
+      line-height: 1.4;
       user-select: none;
     }
 
@@ -304,6 +300,52 @@ body {
 .proveedor img {
     width: 90px;           
     height: 45px;            
-    margin: 40px 5px;            
+    margin: 20px 5px;            
 }
  
+
+  .productos h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #003D5B;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .product {
+    width: 200px;
+    margin: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: 150px; /* Establecer una altura fija */
+    object-fit: contain; /* Ajustar la imagen al contenedor */
+    cursor: pointer;
+  }
+  
+  .product h3 {
+    margin-top: 5px;
+  }
+  
+  .product p {
+    margin-top: 5px;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-width: 400px;
+    height: 300px; /* Establecer una altura fija */
+    margin: 5px auto;
+    display: block;
+    object-fit: contain; /* Ajustar la imagen al contenedor */
+  }
