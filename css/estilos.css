@@ -352,7 +352,23 @@ body {
 
 
 
-  
+  .product-image {
+  width: 100%;
+  height: 70%; /* altura que ocupará la imagen dentro del producto */
+  overflow: hidden;
+}
+
+.imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product:hover .imagen {
+  transform: scale(1.1);
+}
+
 
   /*estilos para las tarjetas de los productos*/
 
@@ -425,6 +441,45 @@ body {
   margin: 5px 0;
   font-size: 16px;
 }
+
+/* --- Forzar que cualquier imagen dentro de .product ocupe todo el cuadro --- */
+.product .product-image,
+.product .product-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative; /* necesario si tienes .product-info dentro */
+  overflow: hidden;
+}
+
+/* Aplica a cualquier <img> dentro de .product y a las clases que usas */
+.product img,
+.product img.product-image,
+.product img.imagen {
+  width: 100%;
+  height: 100%;
+  display: block;            /* elimina gaps/espacios inline */
+  object-fit: cover;         /* rellena sin deformar */
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom al hacer hover */
+.product:hover img,
+.product:hover img.product-image,
+.product:hover img.imagen {
+  transform: scale(1.1);
+}
+
+/* Asegura que la capa de info quede por encima de la imagen */
+.product .product-info {
+  z-index: 2;
+  position: absolute; /* ya lo tenías, esto solo refuerza */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 
 
