@@ -12,16 +12,20 @@ html {
     scroll-margin-top: 35px;
 }
 
+
+
+
 body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #00B2A9;
       background-color: #fff;
-    }
+       font-family: 'Nunito Sans', sans-serif !important;
+}
+
 
     /* barra y diseño de lenguaje*/
     .idiomas {
-      background-color: #003D5B;
+      background-color: #24476B;
       display: flex;
       justify-content: flex-end;
       padding: 10px 20px;
@@ -81,7 +85,7 @@ body {
   color: #00B2A9; /* Color al hacer hover */
 }
  
-    /* boton de contacto y busquedad */
+    /* boton de contacto */
     .encabezado {
       display: flex;
       align-items: center;
@@ -92,6 +96,7 @@ body {
     .boton-contacto {
       background-color: #00B2A9;
       color: white;
+      font-size: 12px;
       font-weight: 600;
       border: none;
       padding: 20px 18px;
@@ -100,6 +105,7 @@ body {
       transition: background-color 0.25s ease;
       user-select: none;
       border-radius: 10px;
+
     }
 
     .boton-contacto:hover,
@@ -135,9 +141,9 @@ body {
       color: white;
       padding: 0 20px;
       text-align: center;
-      font-weight: 700;
-      font-size: 1.8rem;
-      line-height: 1.2;
+      font-weight: 600;
+      font-size: 2.0rem;
+      line-height: 1.7;
       user-select: none;
     }
 
@@ -151,7 +157,7 @@ body {
 
     .nosotros-container {
   display: flex;
-  background-color: #1e2f3f;
+  background-color: #30567c;
   overflow: hidden;
   max-width:150%;
   max-height: 400px;
@@ -166,6 +172,8 @@ body {
     .nosotros-imagen img {
       width: 700px;
       height: 410px;
+      pointer-events: none; /* desactiva interacción con el mouse */
+      user-select: none; /* evita selección */
       
   }
 
@@ -181,7 +189,7 @@ body {
   .nosotros-texto h2 {
     font-size: 30px;
     margin-bottom: 5px;
-    color: #00B2A9;
+    color: #ffffff;
     text-align: center;
   }
 
@@ -288,5 +296,14 @@ body {
 
   
 
-
+.proveedor {
+    display: flex;            
+    flex-wrap: wrap;         
+    justify-content: center;  
+}
+.proveedor img {
+    width: 90px;           
+    height: 45px;            
+    margin: 40px 5px;            
+}
  
