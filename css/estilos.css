@@ -6,6 +6,12 @@ html {
 *, *::before, *::after {
       box-sizing: border-box;
     }
+
+   /*movimiento entre secciones*/
+  section {
+    scroll-margin-top: 35px;
+}
+
 body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -102,37 +108,13 @@ body {
       outline: none;
     }
 
-    /* iconos */
-    .boton-buscar {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      cursor: pointer;
-      color: #00345b;
-      border: 1px solid transparent;
-      transition: border-color 0.25s ease, background-color 0.25s ease;
-      user-select: none;
-    }
-    .boton-buscar:hover,
-    .boton-buscar:focus {
-      border-color: #00B2A9;
-      background-color: #f8f3e8;
-      outline: none;
-    }
-    .boton-buscar svg {
-      width: 20px;
-      height: 20px;
-      stroke-width: 2;
-    }
+
     
     /* videos de recibimiento*/
     .animacion {
       position: relative;
       width: 100%;
-      height: 520px;
+      height: 570px;
       overflow: hidden;
     }
 
@@ -183,9 +165,8 @@ body {
 
     .nosotros-imagen img {
       width: 700px;
-      height: 400px;
-      object-fit: cover;
-      display: block;
+      height: 410px;
+      
   }
 
   .nosotros-texto {
