@@ -8,15 +8,7 @@
   <title>CIP SISTEM</title>
 </head>
 <body>
-  <!-- <div class="idiomas" aria-label="Selector de idiomas">
-    <nav>
-      <a href="#">FR</a>
-      <a href="#">EN</a>
-      <a href="#">中文</a>
-      <a href="#">ES</a>
-      <a href="#">DE</a>
-    </nav>
-  </div> -->
+ 
   <header role="barra" aria-label="Barra de navegación principal">
 <div class="logo-cipsistem">
     <a href="https://www.instagram.com/cipsistem.ca/" target="_blank">
@@ -336,17 +328,40 @@
 function abrirCorreo(e) {
     if (confirm("¿Quieres abrir Gmail para enviar el correo?")) {
         e.preventDefault();
+
+        const asunto = "Solicitud de Cotización - CIP SISTEM";
+        const cuerpo = `Estimado equipo de CIP SISTEM,
+
+Me gustaría solicitar una cotización para los siguientes productos/servicios:
+
+- [Especificar producto o servicio]
+- [Cantidad]
+- [Detalles adicionales]
+
+Datos de contacto:  
+Nombre:  
+Teléfono:  
+Correo:  
+
+Quedo atento(a) a su respuesta.
+
+Saludos cordiales,  
+[nombre]`;
+
+        // Codificamos para URL
+        const cuerpoCodificado = encodeURIComponent(cuerpo);
+        const asuntoCodificado = encodeURIComponent(asunto);
+
         window.open(
-            "https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com",
+            `https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=${asuntoCodificado}&body=${cuerpoCodificado}`,
             "_blank"
         );
     }
 }
 </script>
+
   </footer>
 </div>
-
-
 
 </body>
 </html>
