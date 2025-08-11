@@ -50,6 +50,7 @@ body {
       padding-right: 10px;
       cursor: pointer;
     }
+  
     /* encabezado */
     header {
       display: flex;
@@ -68,73 +69,130 @@ body {
         max-width: 230px; 
         height: auto; 
     }    
+/* Estilos generales para el menú */
+nav.menu {
+    display: flex;
+    gap: 25px; /* Espacio entre los enlaces */
+    font-weight: 600;
+    font-size: 1rem;
+}
 
-    /* menu */
+/* Estilos de los enlaces del menú */
+nav.menu a {
+    text-decoration: none;
+    color: #00345b;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    padding: 6px 4px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+nav.menu a:hover {
+    color: #00B2A9; /* Color al hacer hover */
+}
+
+/* Estilos del encabezado y botón de contacto */
+.encabezado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+/* Estilos del botón de contacto */
+.boton-contacto {
+    background-color: #00B2A9;
+    color: white;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    font-weight: 600;
+    border: none;
+    padding: 6px 20px; /* Espaciado interno reducido */
+    border-radius: 8px; /* Radio del borde reducido */
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    user-select: none;
+    display: flex; 
+    align-items: center; 
+}
+
+.boton-contacto:hover,
+.boton-contacto:focus {
+    background-color: #003D5B;
+    outline: none;
+}
+
+.boton-contacto img {
+    height: 30px; /* Ajusta la altura de la imagen del botón */
+    width: auto;
+    border-radius: 3px;
+    padding: 2px 4px;
+    object-fit: contain;
+    max-width: 100px; /* Limita el ancho máximo */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
     nav.menu {
-      display: flex;
-      gap: 25px;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    nav.menu a {
-      text-decoration: none;
-      color: #00345b;
-      white-space: nowrap;
-      padding: 6px 4px;
-      position: relative;
-      user-select: none;
-      cursor: pointer;
-    }  
-
-    nav.menu a:hover {
-  color: #00B2A9; /* Color al hacer hover */
-} 
-    /* boton de contacto */
-    .encabezado {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      white-space: nowrap;
+        gap: 15px; /* Reduce el espacio entre enlaces */
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente */
     }
 
     .boton-contacto {
-      background-color: #00B2A9;
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      border: none;
-      padding: 8px 30px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.25s ease;
-      user-select: none;
-      border-radius: 10px;
-      display: flex; 
-      align-items: center; 
-
+        padding: 4px 15px; /* Reduce aún más el espaciado interno */
+        font-size: 12px; /* Tamaño de fuente más pequeño */
     }
 
-    .boton-contacto:hover,
-    .boton-contacto:focus {
-      background-color: #003D5B;
-      outline: none;
+    .logo-cipsistem img {
+        height: 40px; /* Ajusta la altura del logo */
+        width: auto; /* Mantiene la proporción */
+    }
+}
+
+@media (max-width: 768px) {
+    nav.menu {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        gap: 10px; /* Reduce el espacio entre enlaces */
+        padding: 10px; /* Espaciado interno para el menú */
+        background-color: white; /* Fondo blanco para el menú */
+        border: 1px solid #eaeaea; /* Borde para el menú */
+        position: absolute; /* Posiciona el menú */
+        top: 60px; /* Ajusta la posición según el encabezado */
+        right: 20px; /* Alinea a la derecha */
+        display: none; /* Oculta el menú por defecto */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
     }
 
-  .boton-contacto img {
-    height: 37px;
-    width: auto;
-    border-radius: 3px;
-    padding: 2px 4px 2px 4px;
-    object-fit: contain;
-    max-width: 300px; 
-    object-fit: contain; 
-  }
+    nav.menu.show {
+        display: flex; /* Muestra el menú cuando tiene la clase 'show' */
+    }
+
+    .encabezado {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea a la izquierda */
+    }
+
+    .boton-contacto {
+        width: 100%; /* Botón ocupa todo el ancho */
+        padding: 6px; /* Aumenta el espaciado interno */
+        text-align: center; /* Centra el texto */
+        font-size: 10px; /* Tamaño de fuente más pequeño */
+    }
+
+    .logo-cipsistem img {
+        height: 30px; /* Ajusta la altura del logo más en pantallas pequeñas */
+        width: auto; /* Mantiene la proporción */
+    }
+}
+
+
     
     /* videos de recibimiento*/
+
     .animacion {
       position: relative;
       width: 100%;
-      height: 570px;
+      height: 15%;
       overflow: hidden;
     }
 
@@ -144,7 +202,7 @@ body {
       }
 
     /* difunimado de fondo del video */
-    .descripcion{
+    .descripcion-video{
       position: absolute;
       inset: 0;
       background: rgba(0, 32, 91, 0.3);
@@ -173,8 +231,9 @@ body {
   display: flex;
   background-color: #30567c;
   overflow: hidden;
-  max-width:150%;
-  max-height: 400px;
+  max-width:100%;
+  max-height:30%;
+  min-width: 100%;
   width: 100%;         
   margin: 0;           
   border-radius: 0;   
@@ -184,11 +243,19 @@ body {
   }
 
     .nosotros-imagen img {
-      width: 700px;
-      height: 410px;
+      width: 100%;
+      height: 100%;
+      min-height: 0%;
+      min-width: 0%;
       pointer-events: none;
       user-select: none; 
   }
+
+  @media (max-width: 600px) {
+    .nosotros-imagen img {
+        display: none; /* Oculta la imagen */
+    }
+}
 
   .nosotros-texto {
     flex: 1;
@@ -198,6 +265,21 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+
+  /* Media query para centrar y hacer cuadrado el texto en pantallas pequeñas */
+@media (max-width: 600px) {
+    .nosotros-texto {
+        width: 100%; /* Ancho completo */
+        height: 100vw; /* Altura igual al ancho para mantener la forma cuadrada */
+        padding: 50%; /* Ajusta el padding según sea necesario */
+        box-sizing: border-box; /* Incluye el padding en el tamaño total */
+        display: flex; /* Mantiene el uso de flexbox */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        text-align: center; /* Centra el texto */
+    }
+}
+
 
   .nosotros-texto h2 {
     font-size: 30px;
@@ -211,6 +293,20 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
   }
+
+  /* Media query para adaptar el texto en pantallas pequeñas */
+@media (max-width: 600px) {
+    .nosotros-texto p {
+        font-size: 4vw; /* Tamaño de fuente adaptativo */
+        line-height: 1.4; /* Ajusta la altura de línea */
+        margin-bottom: 10px; /* Reduce el margen inferior */
+        height: 100%; /* Asegura que el texto ocupe todo el espacio disponible */
+        width: 100%; /* Asegura que el texto ocupe todo el espacio disponible */
+        padding: 5%;
+        
+    }
+}
+
 
 .proveedores{
   background-color: #f5f5f5; 
@@ -526,20 +622,23 @@ body {
   height: 370px;  
 }
 
+/* contenedor del mapa */
    .map-container {
         background-color: #f0f0f0;
         border-radius: 10px; 
-        padding: 20px; 
+        padding: 40px 0; 
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
         text-align: center; 
         margin: 40px auto; 
-        width: fit-content; 
+        width: 85%;
+        height: 90%; 
     }
     .map-container h1 {
         margin: 0 0 10px 0; /* Margen para el título */
         color: #003D5B; /* Color del título */
-        font-size: 24px; /* Tamaño del título */
-        margin: 0 0 10px 0; 
+        font-size: 30px; /* Tamaño del título */
+        margin: 30px 0 10px 0; 
+        padding: 15px 0;
         
     }
 
@@ -552,6 +651,28 @@ body {
 }
 
 
+
+.footer {
+    background-color: #003D5B; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación centrada */
+    padding: 70px 0; /* Espaciado arriba y abajo */
+    position: relative; /* Posicionamiento relativo */
+    bottom: 0; /* Asegura que esté al final */
+    width: 100%; /* Ancho completo */
+    height: 100%;
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+.footer a {
+    color: #00B2A9; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para el enlace */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
 
 
 
