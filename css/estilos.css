@@ -11,7 +11,7 @@ html {
     scroll-margin-top: 35px;
   }
 
-      section.proveedor {
+      section.proveedores {
     scroll-margin-top: 100px;
   }
   
@@ -540,6 +540,7 @@ body {
     margin: 10px 0;
     font-weight: bold; 
 }
+
 
 
 
