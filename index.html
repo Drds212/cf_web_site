@@ -316,10 +316,33 @@
 
 <div class="footer-container">
     <footer class="footer" id="footer">
-      <h3>Para cotizar tu pedido con nosotor contactanos</h3>
-      <p>E-mail: ventas@cipsistem.com</p>
-      <p>&copy; 2024 CIP SISTEM, C.A. Todos los derechos reservados.</p>
-      <a href="https://www.instagram.com/cipsistem.ca/" target="_blank">CIP SISTEM</a>
+        <h3>Para cotizar tu pedido con nosotros, contáctanos</h3>
+
+        <a href="mailto:ventas@cipsistem.com" 
+           onclick="abrirCorreo(event)" 
+           class="footer-email">
+           E-mail: ventas@cipsistem.com
+        </a>
+
+    <a href="https://www.instagram.com/cipsistem.ca/" target="_blank" class="footer-instagram">
+       <h1>CIP SISTEM</h1>
+        </a>
+
+        <p>&copy; 2024 CIP SISTEM, C.A. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+<script>
+function abrirCorreo(e) {
+    if (confirm("¿Quieres abrir Gmail para enviar el correo?")) {
+        e.preventDefault();
+        window.open(
+            "https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com",
+            "_blank"
+        );
+    }
+}
+</script>
   </footer>
 </div>
 
