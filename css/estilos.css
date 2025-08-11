@@ -9,13 +9,22 @@ html {
    /*movimiento entre secciones*/
   section {
     scroll-margin-top: 35px;
-}
+  }
+
+      section.proveedores {
+    scroll-margin-top: 100px;
+  }
+
+    section.productos {
+    scroll-margin-top: 100px;
+  }
 
 body {
       margin: 0;
       color: #00B2A9;
       background-color: #fff;
        font-family: 'Nunito Sans', sans-serif !important;
+       text-align: center;
 }
 
 
@@ -480,8 +489,6 @@ body {
   height: 100%;
 }
 
-
-
 /* Estilos para la sección de ubicación */
  .ubicacion-container {
   display: flex;
@@ -493,8 +500,30 @@ body {
   justify-content: center;
  }
 
+.video-definox {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical (si tiene altura definida) */
+}
 
+.video-definox iframe {
+  width: 900px;   /* más ancho que el original de 560px */
+  height: 370px;  /* mantiene proporción 16:9 */
+}
 
+   .map-container {
+        background-color: #f0f0f0; /* Color gris claro para el contenedor */
+        border-radius: 10px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        text-align: center; /* Centrar el texto */
+        margin: 40px auto; /* Margen superior e inferior */
+        width: fit-content; /* Ajustar el ancho al contenido */
+    }
+    .map-container h1 {
+        margin: 0 0 10px 0; /* Margen para el título */
+        
+    }
 
 
 
