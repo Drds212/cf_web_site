@@ -670,13 +670,6 @@ nav.menu a:hover {
     font-weight: normal; /* Quita negrita */
 }
 
-.footer h1 {
-    color: #00B2A9; /* Color del enlace */
-    text-decoration: none; /* Sin subrayado */
-   letter-spacing: 1px; /* Espacio entre letras */
-    font-size: 19px;
-    font-weight: bold; /* Quita negrita */
-}
 
 .footer a:hover {
     text-decoration: underline; /* Subrayado al pasar el ratón */
@@ -691,6 +684,11 @@ nav.menu a:hover {
 
 .footer-email:hover {
     text-decoration: underline;
+    color: #00B2A9; 
+}
+
+.whatsapp-number:hover {
+     text-decoration: underline;
     color: #00B2A9; 
 }
 
@@ -728,3 +726,39 @@ nav.menu a:hover {
      width: auto;
 
 }
+
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 20px 0; 
+}
+
+.whatsapp-number {
+    text-decoration: none; 
+    font-size: 25px;
+    padding: 0 15px; 
+}
+
+.separator {
+    margin: 0 15px;
+    font-size: 20px; 
+    color: #ffffff; 
+}
+
+
+
+.footer-content {
+    padding: 0px; 
+    text-align: center; 
+}
+
+.location {
+    font-family: 'Arial', sans-serif; 
+    font-size: 20px; 
+    color: #f4f7fa; 
+  
+}
+
+
