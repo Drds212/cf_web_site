@@ -704,3 +704,27 @@ nav.menu a:hover {
      color: #fff; 
 }
 
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;  
+    z-index: 1000; 
+}
+
+.whatsapp-icon img {
+    width: 60px;
+    height: 60px; 
+      
+}
+
+
+.flecha-icono {
+    position: fixed;
+    bottom: 80px; 
+    right: 23px; 
+    z-index: 100; 
+     transform: scale(0.8); 
+     width: auto;
+
+}
