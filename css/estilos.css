@@ -810,17 +810,13 @@ body.dark-mode .theme-bar {
   color: white;
 }
 
-body.dark-mode a {
-  color: #ffffff; /* enlaces en amarillo suave */
-}
-
 body.dark-mode .product,
 body.dark-mode .footer {
   background-color: #222;
   border-color: #444;
 }
 
-/* Modo oscuro: texto de .logo-section en blanco */
+
 body.dark-mode .logo-section p {
   color: white;
 }
@@ -834,7 +830,7 @@ body.dark-mode .productos h2 {
   top: 0;
   left: 0;
   right: 0;
-  height: 40px;  /* altura de la barra */
+  height: 40px;  
   background-color: #f0f0f0;
   display: flex;
   justify-content: flex-end;
