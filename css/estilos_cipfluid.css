@@ -1,0 +1,53 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+.header-cipfluid {
+    background-color: #06176c; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Mantener el encabezado fijo */
+    top: 0; /* Posicionarlo en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    right: 0; /* Alinear a la derecha */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+/* Contenedor del logo y la navegación */
+.logo-de-cipfluid {
+    display: flex; /* Usar flexbox para alinear elementos */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Espacio entre logo y navegación */
+}
+
+/* Estilos del logo */
+.logo-de-cipfluid img {
+    max-width: 10%; /* Asegurarse de que la imagen no exceda el contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Estilos de la navegación */
+.nav-cipfluid {
+    display: flex; /* Usar flexbox para alinear enlaces */
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+.nav-cipfluid a {
+    text-decoration: none; /* Sin subrayado */
+    color: #ffffff; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.nav-cipfluid a:hover {
+    color: #007bff; /* Color al pasar el mouse */
+}
+
+/* Espaciado superior para el contenido principal */
+.main-content {
+    padding-top: 100px; /* Asegurarse de que el contenido no se superponga al encabezado */
+}
+
