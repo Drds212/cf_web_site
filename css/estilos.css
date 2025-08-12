@@ -269,14 +269,10 @@ nav.menu a:hover {
   /* Media query para centrar y hacer cuadrado el texto en pantallas pequeñas */
 @media (max-width: 600px) {
     .nosotros-texto {
-        width: 100%; /* Ancho completo */
-        height: 100vw; /* Altura igual al ancho para mantener la forma cuadrada */
-        padding: 50%; /* Ajusta el padding según sea necesario */
-        box-sizing: border-box; /* Incluye el padding en el tamaño total */
         display: flex; /* Mantiene el uso de flexbox */
         justify-content: center; /* Centra el contenido verticalmente */
-        align-items: center; /* Centra el contenido horizontalmente */
         text-align: center; /* Centra el texto */
+        margin: 3rem;
     }
 }
 
@@ -285,7 +281,9 @@ nav.menu a:hover {
     font-size: 30px;
     margin-bottom: 5px;
     color: #ffffff;
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
   }
 
   .nosotros-texto p {
@@ -299,10 +297,10 @@ nav.menu a:hover {
     .nosotros-texto p {
         font-size: 4vw; /* Tamaño de fuente adaptativo */
         line-height: 1.4; /* Ajusta la altura de línea */
-        margin-bottom: 10px; /* Reduce el margen inferior */
         height: 100%; /* Asegura que el texto ocupe todo el espacio disponible */
         width: 100%; /* Asegura que el texto ocupe todo el espacio disponible */
-        padding: 5%;
+        display: flex;
+        justify-content: center;
         
     }
 }
