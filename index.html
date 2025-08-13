@@ -5,17 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
-  <meta name="viewport" content="width=1024, initial-scale=1">
+  <meta name="viewport" content="width=1004, initial-scale=1">
 
   <title>CIP SISTEM</title>
 </head>
 <body>
    
-<div class="theme-bar">
-  <button id="light-mode-btn">☀ Claro</button>
-  <button id="dark-mode-btn">🌙 Oscuro</button>
-</div>
-
 
 
   <header role="barra" aria-label="Barra de navegación principal">
@@ -30,16 +25,17 @@
       <a href="#productos">PRODUCTOS</a>
       <a href="#ubicacion">UBICACION</a>
       <a href="#footer">CONTACTANOS</a>
+  </nav>
     </nav>
-  <div class="encabezado">
-    <a href="cip_fluid.html" target="_blank" style="text-decoration: none;">
-      <button class="boton-contacto" type="button" aria-label="Contactar con Definox">
-      <img src="img/logo cip fluid.jpg" alt="Logo CIP Fluid con letras CIP en blanco sobre fondo azul oscuro y la palabra FLUID debajo en blanco, sobre fondo azul más claro" />
-        CIP FLUID
+ <div class="encabezado"> 
+  <a href="cip_fluid.html" target="_blank" style="text-decoration: none;">
+    <button class="shadow__btn" type="button" aria-label="Contactar con Definox">
+      <img src="img/logo cip fluid.jpg" alt="Logo CIP Fluid con letras CIP en blanco sobre fondo azul oscuro y la palabra FLUID debajo en blanco, sobre fondo azul más claro" style="height: 24px; vertical-align: middle; margin-right: 8px;" />
+      CIP FLUID
     </button>
-    </a>
-    
-  </div>
+  </a>
+</div>
+
   </header>
 
 <section class="animacion" role="video" id="inicio">
@@ -54,29 +50,22 @@
 
 <br>
 <br>
-<br>
-<br>
 
-<section id="nosotros" class="nosotros"  >
+<section id="nosotros" class="nosotros">
   <div class="nosotros-container">
     <div class="nosotros-imagen">
       <img src="recursos/Imagen2.png" alt="Soldador trabajando">
     </div>
     <div class="nosotros-texto">
-      <h2>NOSOTROS</h2>
+      <h2 class="btn-shine">NOSOTROS</h2>
       <p>
-        CIP SISTEM, C.A. es una empresa especializada en el diseño, dimensionamiento y suministro de equipos para la industria alimenticia, química, petrolera, papelera, cementera y otros sectores.
-        Contamos con el respaldo y la distribución de los fabricantes más reconocidos a nivel mundial, garantizando equipos de la más alta calidad, monitoreados desde su origen hasta su entrega en planta,
-        asegurando así la mejor relación precio–valor. Nos comprometemos con la calidad y el cumplimiento de normas, ofreciendo mucho más que una simple comercialización: aportamos valor agregado a través
-        de un excelente servicio postventa y capacitación especializada para el uso de nuestros equipos de medición de procesos. Además, tenemos la capacidad de desarrollar sistemas CIP y SIP desde su
-        concepción hasta su automatización y puesta en marcha.
+        CIP SISTEM, C.A. se dedica al diseño y suministro de equipos de alta calidad para varias industrias. Cuentan con el respaldo de fabricantes reconocidos y se distinguen por ofrecer <strong>servicio postventa y capacitación especializada</strong>. Además, desarrollan e implementan sistemas completos de <strong>Limpieza (CIP) y Esterilización (SIP)</strong>.
       </p>
     </div>
   </div>
 </section>
 
-<br>
-<br>
+
 <br>
 <br>
 
@@ -207,12 +196,23 @@
 
 <br>
 
-  <div class="logo-section">
-    <p>DISTRIBUIDORES AUTORIZADOS DE LA MARCA</p>
-    <a href="cip_fluid.html" target="_blank">
-      <img src="img/logo cip fluid.jpg" alt="Logo único" style="width: 70%; height: 40%;"> <!-- Ajusta el tamaño según lo necesites -->
-    </a>
+<div class="card">
+
+  <a>
+    <img src="img/logo cip fluid.jpg" alt="Logo CIP Fluid" class="card-image">
+  </a>
+
+  <div class="card__content">
+    <p class="btn-shine">DISTRIBUIDORES AUTORIZADOS DE LA MARCA</p>
+    <p class="card__description">
+      Representamos oficialmente a CIP Fluid, ofreciendo soluciones innovadoras y confiables en sistemas de procesamiento de fluidos.
+    </p>
+  <a href="cip_fluid.html" class="btn">IR A CIP FLUID</a>
   </div>
+</div>
+
+ 
+
 </section>
 
 <br>
@@ -223,64 +223,152 @@
 <br>
 <br>
    
+
+
 <section id="productos" class="productos">
   <h2>PRODUCTOS</h2>
 
   <div class="container">
 
+    <!-- Producto 1 -->
     <div class="product">
       <div class="product-image">
+        <img src="img/intercambiador de calor.png" alt="Producto #1" class="imagen">
+        <div class="product-info">
+          <h3>Intercambiador de calor</h3>
+          <p>Nuestros intercambiadores de calor</p>
+          <p>de placas y juntas están construidos</p>
+          <p>con placas y juntas intercambiadoras</p>
+          <p>de calor de alta calidad, diseñadas </p>
+          <p>para soportar diferentes presiones </p>
+          <p>y temperaturas</p>
+          <br>
 
-      <img src="img/intercambiador de calor.png" alt="Producto #1" class="imagen" data-image="img/imagen1.jpg">
-      <div class="product-info">
-        <h3>Intercambiador de calor</h3>
-        <p>Nuestros intercambiadores de calor</p>
-        <p>de placas y juntas están construidos</p>
-        <p>con placas y juntas intercambiadoras</p>
-        <p>de calor de alta calidad, diseñadas </p>
-        <p>para soportar diferentes presiones </p>
-        <p>y temperaturas</p>
-        <a href="recursos/Fundamentos_java_mouredevpro.pdf" download="Fundamentos_java_mouredevpro" target="_blank"> <!--agregar enlace de descarga de un pdf-->
-          mas información
-        </a>
-      </div>
+          <!-- Botón animado -->
+          <div class="container">
+            <label class="label">
+              <input type="checkbox" class="input download-btn" data-file="recursos/Fundamentos_java_mouredevpro.pdf" data-name="Fundamentos_java_mouredevpro" />
+              <span class="circle">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+                </svg>
+                <div class="square"></div>
+              </span>
+              <p class="title">Download</p>
+              <p class="title">Open</p>
+            </label>
+          </div>
+
+        </div>
       </div>
     </div>
 
-     <div class="product">
-      <img src="img/imagen6.jpg" alt="Producto #1" class="product-image" data-image="img/imagen1.jpg">
+    <!-- Producto 2 -->
+    <div class="product">
+      <img src="img/imagen6.jpg" alt="Producto #2" class="product-image">
       <div class="product-info">
-        <h3>Bombas, valvulas y medidores</h3>
-        <p>Conoce todo nuestro catalogo</p>
+        <h3>Bombas, válvulas y medidores</h3>
+        <p>Conoce todo nuestro catálogo</p>
         <p>de productos Definox, Wilo</p>
         <p>Eddy Pump, Flexim,</p>
         <p>Ampco Pumps, Danfoss, Burkert</p>
-        <p>y Rosemount, con un clik</p>
-        <a href="recursos/Catalogo CIP Sistem (1).pdf.pdf" download="Catalogo Cip Sistem" target="_blank">
-          mas información
-        </a>
+        <p>y Rosemount, con un clic</p>
+        <br>
+
+        <!-- Botón animado -->
+        <div class="container">
+          <label class="label">
+            <input type="checkbox" class="input download-btn" data-file="recursos/Catalogo CIP Sistem (1).pdf.pdf" data-name="Catalogo_CIP_Sistem" />
+            <span class="circle">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+              </svg>
+              <div class="square"></div>
+            </span>
+            <p class="title">Download</p>
+            <p class="title">Open</p>
+          </label>
+        </div>
+
       </div>
     </div>
 
+<<<<<<< Updated upstream
     <div class="product">
       <img src="img/imagen1.jpg" alt="Producto #1" class="product-image" data-image="img/imagen1.jpg">
+=======
+    <!-- Producto 3 -->
+    <div class="product">
+      <img src="img/imagen1.jpg" alt="Producto #3" class="product-image">
+>>>>>>> Stashed changes
       <div class="product-info">
         <h3>Producto #3</h3>
         <p>Descripción: producto</p>
         <p>código: 2345</p>
         <p>Pulga: 8.323</p>
         <p>Medidas: 34x99</p>
-        <a href="" target="_blank"> <!--agregar enlace de descarga de un pdf-->
-          mas información
-        </a>
+        <br>
+
+        <!-- Botón animado -->
+        <div class="container">
+          <label class="label">
+            <input type="checkbox" class="input download-btn" data-file="recursos/Producto3.pdf" data-name="Producto3" />
+            <span class="circle">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+              </svg>
+              <div class="square"></div>
+            </span>
+            <p class="title">Download</p>
+            <p class="title">Open</p>
+          </label>
+        </div>
+
       </div>
     </div>
+
   </div>
+
+
+<script>
+document.querySelectorAll(".download-btn").forEach(btn => {
+  btn.addEventListener("change", function() {
+    if (this.checked) {
+      setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = this.dataset.file;
+        link.download = this.dataset.name;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        this.checked = false; // para reiniciar el botón
+      }, 3500); // tiempo de la animación
+    }
+  });
+});
+</script>
+
 
   <div class="video-definox">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/66Qt-H0ZgDk?si=GkFxFbgDns7F0Nou" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </section>
+
+<script>
+document.getElementById("downloadBtn1").addEventListener("change", function() {
+  if (this.checked) {
+    setTimeout(() => {
+      const link = document.createElement("a");
+      link.href = "recursos/Fundamentos_java_mouredevpro.pdf";
+      link.download = "Fundamentos_java_mouredevpro";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 3500); // espera a que termine la animación
+  }
+});
+</script>
+
 
 <br>
 <br>
