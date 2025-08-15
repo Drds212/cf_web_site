@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CIP FLUID</title>
 <link rel="stylesheet" href="css/estilos_cipfluid.css">
-<meta name="viewport" content="width=1024, initial-scale=1">
+ <meta name="viewport" content="width=1024, initial-scale=0.35">
 
 </head>
 <body>
@@ -96,8 +96,50 @@
     <h2>Estamos para servirte. Contáctanos si deseas consultar disponibilidad en nuestros productos</h2>
 
     <a href="mailto:ventas@cipsistem.com" onclick="abrirCorreo(event)" class="footer-email">
-      E-mail: ventas@cipsistem.com
-    </a>
+  E-mail: ventas@cipsistem.com
+</a>
+
+<script>
+function abrirCorreo(e) {
+  e.preventDefault(); // siempre prevenimos el comportamiento por defecto
+
+  const asunto = "Solicitud de Cotización - CIP SISTEM";
+  const cuerpo = `Estimado equipo de CIP SISTEM,
+
+Me gustaría solicitar una cotización para los siguientes productos/servicios:
+
+- [Especificar producto o servicio]
+- [Cantidad]
+- [Detalles adicionales]
+
+Datos de contacto:  
+Nombre:  
+Teléfono:  
+Correo:  
+
+Quedo atento(a) a su respuesta.
+
+Saludos cordiales,  
+[nombre]`;
+
+  const asuntoCodificado = encodeURIComponent(asunto);
+  const cuerpoCodificado = encodeURIComponent(cuerpo);
+
+  // Detectar si es móvil
+  const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (esMovil) {
+    // En móvil: abrir la app de correo predeterminada
+    window.location.href = `mailto:ventas@cipsistem.com?subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
+  } else {
+    // En desktop: abrir Gmail web
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=${asuntoCodificado}&body=${cuerpoCodificado}`,
+      "_blank"
+    );
+  }
+}
+</script>
 
     <div class="contact-options">
       <a href="https://wa.me/+584140496684" class="whatsapp-number">+584140496684</a>
@@ -123,42 +165,6 @@
     <p>&copy; 2025 CIP FLUID, C.A. Todos los derechos reservados.</p>
   </footer>
 </div>
-
-<!-- ================== FUNCIONES JAVASCRIPT ================== -->
-<script>
-  function abrirCorreo(e) {
-    if (confirm("¿Quieres abrir Gmail para enviar el correo?")) {
-      e.preventDefault();
-
-      const asunto = "Solicitud de Cotización - CIP FLUID";
-      const cuerpo = `Estimado equipo de CIP FLUID,
-
-Me gustaría solicitar una cotización para los siguientes productos/servicios:
-
-- [Especificar producto o servicio]
-- [Cantidad]
-- [Detalles adicionales]
-
-Datos de contacto:  
-Nombre:  
-Teléfono:  
-Correo:  
-
-Quedo atento(a) a su respuesta.
-
-Saludos cordiales,  
-[nombre]`;
-      const cuerpoCodificado = encodeURIComponent(cuerpo);
-      const asuntoCodificado = encodeURIComponent(asunto);
-
-      window.open(
-        `https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=${asuntoCodificado}&body=${cuerpoCodificado}`,
-        "_blank"
-      );
-    }
-  }
-
-</script>
 
 </body>
 </html>
