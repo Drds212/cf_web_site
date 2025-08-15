@@ -1,66 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos_cipfluid.css">
-    <title>CIP FLUID</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CIP FLUID</title>
+<link rel="stylesheet" href="css/estilos_cipfluid.css">
+<meta name="viewport" content="width=1024, initial-scale=1">
+
 </head>
-
 <body>
-
-    <header class="header-cipfluid">
-        <div class="logo-de-cipfluid">
-            <a href="" target="_blank">
-                <img src="img/logo cip fluid.jpg" alt="">
-            </a>
-            <nav class="nav-cipfluid">
-                <a href="#nuestra-marca">NUESTRA MARCA</a>
-                <a href="#productos">PRODUCTOS</a>
-
-            </nav>
-        </div>
-    </header>
-
-    <section class="nuestra-marca" id="nuestra-marca">
-        <div class="container-nuestra-marca">
-            <h1>NUESTRA MARCA</h1>
-            <p>
-                insertar texto sobre que es CipFluid
-                algunas imagenes de la compañia tambien
-            </p>
-            <p>
-                insertar mas detalles cobre la compania, su historia, su mision y vision.
-            </p>
-        </div>
-    </section>
-
-    <section class="productos" id="productos">
-        <div class="container-productos">
-            <h1>NUESTROS PRODUCTOS CIPFLUID</h1>
-            <div class="product">
-                <img src="img/imagen1.jpg" alt="Producto #1" class="product-image" data-image="img/imagen1.jpg">
-                <div class="product-info">
-                    <h3>Producto #3</h3>
-                    <p>Descripción: producto</p>
-                    <p>código: 2345</p>
-                    <p>Pulga: 8.323</p>
-                    <p>Medidas: 34x99</p>
-                    <!-- colocar informacion sobre productos, aqui si podemos hablar mas a profundidad -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="footer-cipfluid">
-        <div class="container-footer">
-            <p>© 2025 CIP FLUID. Todos los derechos reservados.</p>
-        </div>
+  <nav id="navbar" class="transparent" role="navigation" aria-label="Main Navigation">
+    <div class="logo-container" aria-label="Logos">
+    <img src="img/logo cip fluid.jpg" alt="Logo CIP SISTEM" onclick="window.open('https://www.instagram.com/cipfluid/', '_blank')" style="cursor:pointer;" />
 
     </div>
+    <ul role="menubar" aria-label="Primary Menu">
+      <a href="#nosotros">NOSOTROS</a>
+      <a href="#productos">PRODUCTOS</a>
+      <a href="#contactanos">CONTACTANOS</a>
+    </ul>
+  </nav>
 
+ <header role="banner" class="hero">
+  <div class="hero-text">
+    <h1>
+      <span class="white-text">SOLUCIONES INDUSTRIALES</span>
+      <span class="blue-text">EFICIENTES</span>
+    </h1>
+  </div>
+</header>
+
+  <main>
+    <section id="nosotros" style="padding:3rem 2rem;">
+      <h2 class="text-2xl font-bold mb-4">Nosotros</h2>
+    </section>
+    <section id="productos" style="padding:3rem 2rem;">
+      <h2 class="text-2xl font-bold mb-4">Productos</h2>
+    </section>
+    <section id="contactanos" style="padding:3rem 2rem;">
+      <h2 class="text-2xl font-bold mb-4">Contáctanos</h2>
+    </section>
+  </main>
+
+  <!-- WhatsApp -->
+<div class="whatsapp-icon">
+  <a href="https://wa.me/04140496684" target="_blank">
+    <img src="recursos/WhatsApp.png" alt="WhatsApp" />
+  </a>
+</div>
+
+  <!-- Scroll to top button -->
+  <button aria-label="Scroll to top" id="scrollTopBtn" class="scroll-top-btn" title="Volver arriba" type="button">
+    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+      viewBox="0 0 24 24" aria-hidden="true" focusable="false" >
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    // Navbar background toggle on scroll
+    const navbar = document.getElementById('navbar');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    const toggleNavbarBackground = () => {
+      if(window.scrollY > 80) {
+        navbar.classList.remove('transparent');
+        navbar.classList.add('solid');
+        scrollTopBtn.style.display = 'flex';
+      } else {
+        navbar.classList.add('transparent');
+        navbar.classList.remove('solid');
+        scrollTopBtn.style.display = 'none';
+      }
+    };
+
+    // Scroll to top on button click
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', toggleNavbarBackground);
+    toggleNavbarBackground(); // Run onload to set correct initial state
+  </script>
+    </section>
+
+    <!-- ================== FOOTER ================== -->
+<div class="footer-container">
+  <footer class="footer" id="footer">
+    <h2>Estamos para servirte. Contáctanos si deseas consultar disponibilidad en nuestros productos</h2>
+
+    <a href="mailto:ventas@cipsistem.com" onclick="abrirCorreo(event)" class="footer-email">
+      E-mail: ventas@cipsistem.com
+    </a>
+
+    <div class="contact-options">
+      <a href="https://wa.me/+584140496684" class="whatsapp-number">+584140496684</a>
+      <span class="separator">|</span>
+      <a href="https://wa.me/+584140492892" class="whatsapp-number">+584140492892</a>
+    </div>
+
+    <div class="footer-instagram">
+      <p class="redes">
+        <img src="recursos/instagram.png" alt="Instagram" style="width:20px; height:20px; vertical-align:middle;">
+        <a href="https://www.instagram.com/cipsistem.ca/" class="redes-social">CIP SISTEM</a>
+      </p>
+    </div>
+
+    <div class="footer-content">
+      <p class="location">
+        <img src="recursos/ubicacion.png" alt="Ubicación" style="width:20px; height:20px; vertical-align:middle;">
+        <a href="#ubicacion" class="location-link">CC Coche Aragua, Av. Intercomunal Santiago Mariño, Turmero 2115, Aragua</a>
+      </p>
+    </div>
+
+    <a href="#inicio">Volver al inicio</a>
+    <p>&copy; 2025 CIP FLUID, C.A. Todos los derechos reservados.</p>
+  </footer>
+</div>
+
+<!-- ================== FUNCIONES JAVASCRIPT ================== -->
+<script>
+  function abrirCorreo(e) {
+    if (confirm("¿Quieres abrir Gmail para enviar el correo?")) {
+      e.preventDefault();
+
+      const asunto = "Solicitud de Cotización - CIP FLUID";
+      const cuerpo = `Estimado equipo de CIP FLUID,
+
+Me gustaría solicitar una cotización para los siguientes productos/servicios:
+
+- [Especificar producto o servicio]
+- [Cantidad]
+- [Detalles adicionales]
+
+Datos de contacto:  
+Nombre:  
+Teléfono:  
+Correo:  
+
+Quedo atento(a) a su respuesta.
+
+Saludos cordiales,  
+[nombre]`;
+      const cuerpoCodificado = encodeURIComponent(cuerpo);
+      const asuntoCodificado = encodeURIComponent(asunto);
+
+      window.open(
+        `https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=${asuntoCodificado}&body=${cuerpoCodificado}`,
+        "_blank"
+      );
+    }
+  }
+
+</script>
 
 </body>
-
 </html>

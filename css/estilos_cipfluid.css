@@ -1,53 +1,249 @@
-/* Estilos generales */
-body {
+html { scroll-behavior: smooth; }
+ /* Custom styles */
+  body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+  }
+  /* Navbar base */
+ nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrar contenido global */
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Estilos del encabezado */
-.header-cipfluid {
-    background-color: #06176c; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    position: fixed; /* Mantener el encabezado fijo */
-    top: 0; /* Posicionarlo en la parte superior */
-    left: 0; /* Alinear a la izquierda */
-    right: 0; /* Alinear a la derecha */
-    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+/* Aseguramos que el logo esté a la izquierda */
+.logo-container {
+  position: absolute;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* Contenedor del logo y la navegación */
-.logo-de-cipfluid {
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: space-between; /* Espacio entre logo y navegación */
+/* Centramos el UL */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 
-/* Estilos del logo */
-.logo-de-cipfluid img {
-    max-width: 10%; /* Asegurarse de que la imagen no exceda el contenedor */
-    height: auto; /* Mantener la proporción de la imagen */
+
+  nav.transparent {
+    background-color: rgba(0, 51, 102, 0); /* Dark semi-transparent */
+    box-shadow: none;
+  }
+
+  nav.solid {
+    background-color: #0b2245; /* Solid dark blue */
+    box-shadow: 0 2px 6px rgb(11 34 69 / 0.7);
+  }
+
+
+
+  nav ul a {
+    text-transform: uppercase;
+  }
+
+  nav ul a {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    color: #cbd5e1; /* Tailwind slate-300 */
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    border-radius: 9999px;
+    background-color: #0b2245; /* dark stronger background for pill */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+  }
+
+  nav ul  a:hover,
+  nav ul a:focus {
+    background-color: #1e40af; /* Tailwind blue-700 */
+    color: white;
+    outline: none;
+  }
+
+
+/* Hero section */
+.hero {
+  margin: 0; /* Mantener sin margen es correcto */
+  padding: 0; /* Confirmar que no tenga padding adicional */
+}
+.hero-text {
+  text-align: left; /* Asegúrate de que el texto esté alineado a la izquierda */
+  margin-left: 0;  /* Esto está bien, puedes dejarlo */
+  padding-left: 0; /* Puedes eliminar el padding si es innecesario */
 }
 
-/* Estilos de la navegación */
-.nav-cipfluid {
-    display: flex; /* Usar flexbox para alinear enlaces */
-    gap: 20px; /* Espacio entre enlaces */
+/* Tipografía y colores */
+.hero-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.nav-cipfluid a {
-    text-decoration: none; /* Sin subrayado */
-    color: #ffffff; /* Color del texto */
-    font-weight: bold; /* Negrita */
-    transition: color 0.3s; /* Transición suave para el hover */
+.hero-text .white-text {
+  color: #fff;
 }
 
-.nav-cipfluid a:hover {
-    color: #007bff; /* Color al pasar el mouse */
+.hero-text .blue-text {
+  color: #1e90ff; 
 }
 
-/* Espaciado superior para el contenido principal */
-.main-content {
-    padding-top: 100px; /* Asegurarse de que el contenido no se superponga al encabezado */
+.hero-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 6px rgba(255, 249, 249, 0.979);
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+  /* Logo images styles */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo-container img {
+    margin-top: 1px;
+    height: 50px;
+    width: auto;        /* Fuerza un ancho mayor */
+    object-fit: contain;
+  }
+
+  /* Hero header */
+  header {
+    margin-top: 0; /* To avoid content under fixed navbar */
+    width: 100%;
+    min-height: 720PX;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-image: url('../recursos/Bridas de acero en formación precisa.png');
+
+  }
+
+  /* Overlay filter to darken background */
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(11, 34, 69, 0.65);
+    z-index: 1;
+  }
+
+  /* Hero text */
+  header h1 {
+    position: relative;
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+
+  /* Scroll to top button */
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 90px;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    background-color: #0b2245;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 3px 7px rgb(11 34 69 / 0.7);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 60;
+    transition: background-color 0.3s ease;
+  }
+  .scroll-top-btn:hover {
+    background-color: #1e40af;
+  }
+  .scroll-top-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .whatsapp-icon, .flecha-icono {
+  position: fixed;
+  z-index: 100;
+}
+
+.whatsapp-icon { bottom: 19px; right: 20px; width: 60px; height: 60px; }
+.flecha-icono { bottom: 80px; right: 23px; transform: scale(0.8); width: auto; }
+
+.contact-options { display: flex; justify-content: center; align-items: center; margin: 20px 0; }
+.whatsapp-number { font-size: 25px; padding: 0 15px; }
+.separator { margin: 0 15px; font-size: 20px; color: #fff; }
+
+.footer-content { padding: 0; text-align: center; }
+.location { font-family: Arial, sans-serif; font-size: 20px; color: #f4f7fa; }
+
+/* ------------------ Footer ------------------ */
+.footer {
+  background-color: #0b2245;
+  color: white;
+  text-align: center;
+  padding: 70px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.footer a:hover { text-decoration: underline; }
+
+.footer-email, .footer-instagram {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-email:hover, .whatsapp-number:hover { color: #00B2A9; text-decoration: underline; }
+
+.footer-instagram h1:hover { color: #fff; text-decoration: underline; }
+
+.footer h3 { margin-bottom: 10px; color: #fff; }
