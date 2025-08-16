@@ -76,6 +76,16 @@ nav ul {
 
 
 /* Hero section */
+.titulo {
+  font-size: 2rem;     /* más grande que el h2 normal */
+  color: #0b2245;        /* azul acorde al esquema que usas */
+  text-align: center;    /* centrado */
+  font-weight: 650;      /* opcional: más grueso */
+  margin-bottom: 1.5rem; /* un poco de espacio debajo */
+    letter-spacing: 1px; /* Aumenta el espacio entre letras */
+}
+
+
 .hero {
   margin: 0; /* Mantener sin margen es correcto */
   padding: 0; /* Confirmar que no tenga padding adicional */
@@ -305,4 +315,161 @@ nav ul {
     line-height: 1.4; /* Espaciado entre líneas reducido */
     color: #555; /* Color del texto de la descripción */
     font-size: 0.9em; /* Tamaño del texto más pequeño */
+}
+
+.productos-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columnas iguales */
+  gap: 25px;                             /* espacio entre tarjetas */
+  max-width: 1300px;                     /* limita el ancho total */
+  margin: 0 auto;                        /* centra el grid */
+  padding: 20px;                         /* espacio interno */
+}
+
+.card-container {
+  width: 100%;      /* ocupa todo el espacio de su celda */
+  max-width: 300px; /* no se hace demasiado grande */
+  margin: 0 auto;   /* centra la tarjeta dentro de su celda */
+}
+
+
+
+
+
+.producto-container {
+    flex: 0 0 auto; /* Evita que se estiren raro */
+}
+
+
+/* Tamaño controlado y responsive */
+.card-container {
+  --card-w: 300px;        /* ancho deseado */
+  --card-ratio: 1 / 1;    /* proporción: 1/1 cuadrada, 4/3, 16/9, etc. */
+
+  width: min(100%, var(--card-w));
+  aspect-ratio: var(--card-ratio);
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+/* Las dos caras ocupan exactamente el área del contenedor */
+.card .front-content,
+.card .content {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* IMAGEN: llena sin deformarse */
+.card .front-content {
+  overflow: hidden; 
+}
+
+.card .front-content img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;       /* recorta sin deformar */
+  transform: none;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+
+
+/* CAPA DE TEXTO: no altera el layout, solo se desliza */
+.card-container {
+  width: 300px;
+  height: 340px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+
+.card .content {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;    /* centra horizontalmente */
+  justify-content: center;/* centra verticalmente */
+  text-align: center;     /* centra el texto */
+  gap: 10px;
+  background: linear-gradient(-75deg, #285497 0%, #020a3a 100%);
+  color: #e8e8e8;
+  padding: 20px 30px;     /* margen interno: arriba/abajo 20px, lados 30px */
+  line-height: 1.5;
+  pointer-events: none;
+  transform: translateY(96%);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  box-sizing: border-box; /* asegura que el padding no rompa el tamaño */
+}
+
+
+.card .front-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Para que la imagen no sobresalga */
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .front-content p {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.card .front-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen se ajuste sin deformarse */
+  display: block;
+}
+
+
+.card .content {
+  /* ... lo que ya tienes */
+  gap: 4px; /* reduce el espacio entre elementos (antes 10px) */
+}
+
+.card .content .heading {
+    font-size: 32px;
+  font-weight: 700;
+  margin: 0; /* elimina el margen por defecto del título */
+}
+
+.card .content p {
+  margin: 0; /* elimina el margen por defecto del párrafo */
+}
+
+.card:hover .content {
+  transform: translateY(0);
+}
+
+.card:hover .front-content {
+  transform: translateY(-30%);
+}
+
+.card:hover .front-content p {
+  opacity: 0;
 }
