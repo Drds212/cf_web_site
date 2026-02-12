@@ -231,16 +231,24 @@ nav ul {
 .location { font-family: Arial, sans-serif; font-size: 20px; color: #f4f7fa; }
 
 /* ------------------ Footer ------------------ */
+/* ======================= Footer Corregido ======================= */
 .footer {
-  background-color: #0b2245;
-  color: white;
-  text-align: center;
-  padding: 70px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
+    background-color: #003D5B;
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+    
+    /* TRUCO PARA FORZAR ANCHO COMPLETO (Full Width) */
+    width: 100vw;                 /* Ocupa el 100% del ancho de la ventana */
+    position: relative;
+    left: 50%;                    /* Mueve el inicio al centro */
+    right: 50%;
+    margin-left: -50vw;           /* Lo "estira" hacia la izquierda */
+    margin-right: -50vw;          /* Lo "estira" hacia la derecha */
+    
+    bottom: 0;
+    font-size: 14px;
+    box-sizing: border-box;       /* Para que el padding no rompa el ancho */
 }
 
 .footer a {

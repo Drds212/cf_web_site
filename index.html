@@ -295,7 +295,7 @@
         link.click();
         document.body.removeChild(link);
         this.checked = false;
-      }, 3500); // espera animación
+      }, 3500); 
     }
   });
 });
@@ -303,10 +303,17 @@
 </script>
 
  <!-- Video Definox -->
-  <div class="video-definox">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/66Qt-H0ZgDk?si=GkFxFbgDns7F0Nou" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</section>
+  <section class="seccion-tres-videos">
+    <div class="fila-videos">
+      
+      <iframe src="https://www.youtube.com/embed/66Qt-H0ZgDk" title="Video 1" allowfullscreen></iframe>
+      
+      <iframe src="https://www.youtube.com/embed/2-mNtEafjhE" title="Video 2" allowfullscreen></iframe>
+      
+      <iframe src="https://www.youtube.com/embed/8f8GDQytApI" title="Video 3" allowfullscreen></iframe>
+      
+    </div>
+  </section>
 
 <!-- ================== SECCIÓN DE UBICACIÓN ================== -->
 <div id="ubicacion" class="map-container">
@@ -344,7 +351,7 @@
 
 <script>
 function abrirCorreo(e) {
-  e.preventDefault(); // siempre prevenimos el comportamiento por defecto
+  e.preventDefault(); 
 
   const asunto = "Solicitud de Cotización - CIP SISTEM";
   const cuerpo = `Estimado equipo de CIP SISTEM,
