@@ -437,11 +437,9 @@ Saludos cordiales,
     // Función que detecta el scroll
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        // Si bajamos más de 50px, agregamos la clase "scrolled" (Fondo blanco)
         navbar.classList.add('scrolled');
         if(scrollTopBtn) scrollTopBtn.style.display = 'flex';
       } else {
-        // Si estamos arriba, quitamos la clase (Vuelve a transparente)
         navbar.classList.remove('scrolled');
         if(scrollTopBtn) scrollTopBtn.style.display = 'none';
       }
