@@ -49,9 +49,10 @@ header {
 }
 
 .logo-cipsistem img {
-    max-width: 198px; 
-    height: 40px; 
+    max-width: 150px; /* Antes era 198px */
+    height: 30px;     /* Antes era 40px */
     margin-left: -15px;
+    object-fit: contain; /* Asegura que no se estire ni se deforme */
 }
 
 header.scrolled {
