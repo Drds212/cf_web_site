@@ -49,10 +49,9 @@ header {
 }
 
 .logo-cipsistem img {
-    max-width: 150px; /* Antes era 198px */
-    height: 30px;     /* Antes era 40px */
+    max-width: 198px; 
+    height: 40px; 
     margin-left: -15px;
-    object-fit: contain; /* Asegura que no se estire ni se deforme */
 }
 
 header.scrolled {
@@ -688,7 +687,8 @@ video {
   transition: all 0.4s ease;
   position: absolute;
   right: 18px;
-  bottom: 14px;
+  top: 20%;
+  transform: translateY(-50%); 
   text-align: center;
 }
 
@@ -747,8 +747,14 @@ video {
 }
 
 .label:has(.input:checked) {
-  width: 57px;
+  width: 59px;   /* ANTES ERA 57px o 55px -> CAMBIAR A 59px */
+  height: 59px;  /* ANTES ERA 55px -> CAMBIAR A 59px */
+  border-radius: 50%;
   animation: installed 0.4s ease 3.5s forwards;
+  
+  /* Aseguramos que el contenido siempre esté centrado */
+  justify-content: center; 
+  padding: 5px; /* Mantenemos el padding original */
 }
 
 .label:has(.input:checked)::before {
@@ -811,12 +817,14 @@ video {
 
 @keyframes rotate {
   0% {
-    transform: rotate(-90deg) translate(27px) rotate(0);
+    /* Cambiar 27px por 29px para ajustar al nuevo tamaño */
+    transform: rotate(-90deg) translate(29px) rotate(0); 
     opacity: 1;
     visibility: visible;
   }
   99% {
-    transform: rotate(270deg) translate(27px) rotate(270deg);
+    /* Cambiar 27px por 29px aquí también */
+    transform: rotate(270deg) translate(29px) rotate(270deg); 
     opacity: 1;
     visibility: visible;
   }
