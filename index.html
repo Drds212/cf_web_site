@@ -12,7 +12,7 @@
 <body>
 
   
-  <header role="barra" aria-label="Barra de navegación principal">
+  <header id="navbar" role="barra" aria-label="Barra de navegación principal">
     
     <!-- Logo principal -->
     <div class="logo-cipsistem">
@@ -29,14 +29,6 @@
       <a href="#ubicacion">UBICACION</a>
       <a href="#footer">CONTACTANOS</a>
     </nav>
-    
- <div class="encabezado"> 
-  <a href="cip_fluid.html" target="_blank" style="text-decoration: none;"> 
-    <button class="shadow__btn" type="button" aria-label="Contactar con Definox"> 
-      <img src="recursos/img logos/logo cip fluid.webp" alt="Logo CIP Fluid con letras CIP en blanco sobre fondo azul oscuro y la palabra FLUID debajo en blanco, sobre fondo azul más claro" style="height: 24px; vertical-align: middle; margin-right: 8px;" /> CIP FLUID </button> 
-    </a> 
-  </div>
-
 
   </header>
 
@@ -438,30 +430,32 @@ Saludos cordiales,
   </button>
 
   <script>
-    // Navbar background toggle on scroll
+    // Seleccionamos el header por su ID
     const navbar = document.getElementById('navbar');
     const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-    const toggleNavbarBackground = () => {
-      if(window.scrollY > 80) {
-        navbar.classList.remove('transparent');
-        navbar.classList.add('solid');
-        scrollTopBtn.style.display = 'flex';
+    // Función que detecta el scroll
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        // Si bajamos más de 50px, agregamos la clase "scrolled" (Fondo blanco)
+        navbar.classList.add('scrolled');
+        if(scrollTopBtn) scrollTopBtn.style.display = 'flex';
       } else {
-        navbar.classList.add('transparent');
-        navbar.classList.remove('solid');
-        scrollTopBtn.style.display = 'none';
+        // Si estamos arriba, quitamos la clase (Vuelve a transparente)
+        navbar.classList.remove('scrolled');
+        if(scrollTopBtn) scrollTopBtn.style.display = 'none';
       }
     };
 
-    // Scroll to top on button click
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    window.addEventListener('scroll', toggleNavbarBackground);
-    toggleNavbarBackground(); // Run onload to set correct initial state
+    // Escuchamos el evento scroll
+    window.addEventListener('scroll', handleScroll);
+    
+    // Botón para volver arriba
+    if(scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
   </script>
-
 </body>
 </html>
