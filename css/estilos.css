@@ -917,20 +917,6 @@ video {
 }
 
 
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 9999px;  
-    left: 50%;      
-    margin-left: -4999px;
-    background-color: #003D5B; 
-    z-index: -1;    
-}
-
-
-
 
 .footer a {
     color: #fff; 
