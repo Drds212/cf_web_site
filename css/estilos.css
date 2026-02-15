@@ -1502,3 +1502,125 @@ video {
 .product:hover {
   transform: translateY(-10px);
 }
+
+/* ======================= Banner Documentación Premium ======================= */
+.soporte-tecnico {
+  padding: 60px 20px;
+  background-color: #f8fbff; /* Fondo muy claro para resaltar la tarjeta */
+}
+
+.soporte-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 40px;
+  box-shadow: 0 10px 30px rgba(0, 51, 102, 0.08); /* Sombra suave azulada */
+  border: 1px solid #e1e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea de acento lateral azul */
+.soporte-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background-color: #003366;
+}
+
+.soporte-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Contenedor del Logo - Ahora más grande y a color */
+.soporte-logo-wrapper {
+  flex: 0 0 auto;
+}
+
+.logo-documentacion {
+  width: 180px; /* Tamaño más grande */
+  height: auto;
+  display: block;
+  /* Eliminamos el filtro de blanco y negro para que se vea a color */
+}
+
+.soporte-separador {
+  width: 1px;
+  height: 60px;
+  background-color: #e1e8f0;
+}
+
+.soporte-info {
+  flex: 1;
+  text-align: left;
+  min-width: 250px;
+}
+
+.soporte-info h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #003366;
+  font-weight: 700;
+}
+
+.soporte-info p {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Botón Estilo Corporativo */
+.btn-premium {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #003366;
+  color: #ffffff !important;
+  padding: 16px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+}
+
+.btn-premium:hover {
+  background-color: #004a94;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3);
+}
+
+.icon-descarga {
+  width: 20px;
+  height: 20px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 850px) {
+  .soporte-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+  .soporte-info {
+    text-align: center;
+  }
+  .soporte-separador {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+  }
+  .logo-documentacion {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
