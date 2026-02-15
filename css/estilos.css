@@ -1605,22 +1605,62 @@ video {
   height: 20px;
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 850px) {
+/* ============================================================
+   SOLUCIÓN PARA MÓVILES (SIN TOCAR EL VIEWPORT GENERAL)
+   ============================================================ */
+
+@media screen and (max-width: 850px) {
+  /* Forzamos al contenedor principal a no desbordarse */
+  .soporte-tecnico {
+    padding: 20px 10px !important;
+    width: 100vw !important; /* Usamos el ancho de la ventana real */
+    box-sizing: border-box;
+  }
+
+  .soporte-card {
+    padding: 20px !important;
+    margin: 0 auto !important;
+    width: 90% !important; /* Que ocupe casi todo el ancho del cel */
+    display: block !important;
+  }
+
   .soporte-contenido {
-    flex-direction: column;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important; /* Uno arriba del otro */
+    align-items: center !important;
+    text-align: center !important;
+    gap: 15px !important;
   }
-  .soporte-info {
-    text-align: center;
-  }
-  .soporte-separador {
-    width: 100%;
-    height: 1px;
-    margin: 10px 0;
-  }
+
+  /* El logo se ajusta para no verse gigante o cortado */
   .logo-documentacion {
-    width: 150px;
-    margin: 0 auto;
+    width: 140px !important; 
+    height: auto !important;
+    margin-bottom: 10px;
+  }
+
+  /* Ocultamos elementos que estorben en vista pequeña */
+  .soporte-separador {
+    display: none !important;
+  }
+
+  .soporte-info {
+    width: 100% !important;
+  }
+
+  .soporte-info h2 {
+    font-size: 1.2rem !important; /* Tamaño de fuente legible */
+  }
+
+  .soporte-info p {
+    font-size: 0.9rem !important;
+  }
+
+  /* El botón de descarga ahora es el protagonista */
+  .btn-premium {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 10px !important;
+    font-size: 13px !important;
   }
 }
