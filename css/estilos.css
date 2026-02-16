@@ -989,21 +989,6 @@ video {
   font-weight: bold;
 }
 
-.footer {
-  background-color: #003d5b;
-  color: white;
-  margin: 0;
-  padding: 60px 0 40px 0;
-  width: 100%;
-  display: block;
-}
-
-.footer {
-  /* elimina esta línea si existe */
-  height: 100%;
-}
-
-
 .footer a {
   color: #fff;
   text-decoration: none;
@@ -1346,7 +1331,7 @@ video {
 /* ------------------ Footer ------------------ */
 /* Localiza y reemplaza las secciones del footer por esta: */
 .footer-container {
-  background-color: #003d5b; /* Asegura que el contenedor tenga el color */
+  background-color: #003d5b;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -1356,9 +1341,10 @@ video {
   background-color: #003d5b;
   color: white;
   text-align: center;
-  padding: 60px 0 40px 0; /* Espacio arriba y abajo */
+  padding: 60px 0 40px 0;
   margin-top: 0; 
-  margin-bottom: 0 !important; /* ELIMINA EL ESPACIO BLANCO FINAL */
+  margin-bottom: -100px !important;
+  /*Esto estaba en 0 y lo cambie a -100px y se arreglo el espacio balnco del fondo*/
   width: 100%;
   font-size: 14px;
   display: block;
