@@ -3,493 +3,423 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=1024, initial-scale=0.35">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
-  
-  <title>CIP SISTEM</title>
+  <title>CIP SISTEM — Soluciones Industriales</title>
 </head>
 <body>
 
-  
-  <header id="navbar" role="barra" aria-label="Barra de navegación principal">
-    
-    <!-- Logo principal -->
+  <!-- ====== NAVBAR ====== -->
+  <header id="navbar" role="banner" aria-label="Barra de navegación principal">
     <div class="logo-cipsistem">
-      <a href="https://www.instagram.com/cipsistem.ca/" target="_blank">
-        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM Logo" class="logo-image" aria-hidden="true">
+      <a href="https://www.instagram.com/cipsistem.ca/" target="_blank" aria-label="CIP SISTEM en Instagram">
+        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM Logo" class="logo-image">
       </a>
     </div>
-    
-    <!-- Menú de navegación -->
     <nav class="menu" role="navigation" aria-label="Menú principal">
-      <a href="#nosotros">NOSOTROS</a>
-      <a href="#proveedores">DISTRIBUIDORES</a>
-      <a href="#productos">PRODUCTOS</a>
-      <a href="#ubicacion">UBICACION</a>
-      <a href="#footer">CONTACTANOS</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#proveedores">Distribuidores</a>
+      <a href="#productos">Productos</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#footer" class="nav-cta">Contáctanos</a>
     </nav>
-
   </header>
 
-  <!-- ================== SECCIÓN DE PRECENTACION / VIDEO ================== -->
-  <section class="animacion" role="video" id="inicio">
-    <video autoplay loop muted onerror="this.style.display='none'" width="100%" height="100%">
+  <!-- ====== HERO / VIDEO ====== -->
+  <section class="hero" id="inicio" aria-label="Presentación CIP SISTEM">
+    <video autoplay loop muted playsinline onerror="this.style.display='none'" class="hero-video">
       <source src="recursos/Videos/Videos Principal Cip Sistem.mp4" type="video/mp4">
-      Tu navegador no soporta el elemento de video.
     </video>
-    <div class="descripcion-video">
-      SOLUCIONES INDUSTRIALES EFICIENTES
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-line">Soluciones</span>
+        <span class="hero-line hero-accent">Industriales</span>
+        <span class="hero-line">Eficientes</span>
+      </h1>
+      <p class="hero-subtitle">Diseño y suministro de equipos para industrias exigentes con respaldo técnico especializado.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="hero-btn-primary">Ver Productos</a>
+        <a href="#nosotros" class="hero-btn-ghost">Conocernos</a>
+      </div>
     </div>
+    <div class="hero-scroll-indicator" aria-hidden="true"><span></span></div>
   </section>
 
-  <!-- ================== SECCIÓN NOSOTROS ================== -->
+  <!-- ====== NOSOTROS ====== -->
   <section id="nosotros" class="nosotros">
     <div class="nosotros-container">
-      
-      <!-- Imagen -->
-      <div class="nosotros-imagen">
-        <img src="recursos/productos CIP SISTEM/Producto Nosotros.webp" alt="Soldador trabajando">
+      <div class="nosotros-imagen-wrap">
+        <img src="recursos/productos CIP SISTEM/Producto Nosotros.webp" alt="Soldador trabajando en CIP SISTEM" class="nosotros-img">
+        <div class="nosotros-img-badge">+15 años</div>
       </div>
-      
-      <!-- Texto -->
       <div class="nosotros-texto">
-        <h2 class="btn-shine">NOSOTROS</h2>
-        <p>
-          CIP SISTEM, C.A. se dedica al diseño y suministro de equipos de alta calidad para varias industrias. 
-          Cuentan con el respaldo de fabricantes reconocidos y se distinguen por ofrecer 
-          <strong>servicio postventa y capacitación especializada</strong>. 
-          Además, desarrollan e implementan sistemas completos de 
-          <strong>Limpieza (CIP) y Esterilización (SIP)</strong>.
-        </p>
+        <div class="section-label">Quiénes Somos</div>
+        <h2>Compromiso con la <span class="text-accent">excelencia</span> industrial</h2>
+        <p>CIP SISTEM, C.A. se dedica al diseño y suministro de equipos de alta calidad para diversas industrias. Contamos con el respaldo de fabricantes reconocidos a nivel mundial y nos distinguimos por ofrecer <strong>servicio postventa y capacitación especializada</strong>.</p>
+        <p>Desarrollamos e implementamos sistemas completos de <strong>Limpieza (CIP) y Esterilización (SIP)</strong>, garantizando estándares internacionales en cada proyecto.</p>
+        <div class="nosotros-stats">
+          <div class="stat"><span class="stat-num">11+</span><span class="stat-label">Marcas Distribuidas</span></div>
+          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Sin Caducidad</span></div>
+          <div class="stat"><span class="stat-num">CIP/SIP</span><span class="stat-label">Sistemas Completos</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Script para animación de ScrollReveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>
-    ScrollReveal().reveal('.nosotros-texto', {
-      origin: 'right',
-      distance: '60px',
-      duration: 1000,
-      delay: 100,
-      opacity: 0,
-      reset: true 
-    });
+    ScrollReveal().reveal('.nosotros-texto',       { origin:'right',  distance:'50px', duration:900, delay:100, opacity:0, reset:true });
+    ScrollReveal().reveal('.nosotros-imagen-wrap', { origin:'left',   distance:'50px', duration:900, delay:100, opacity:0, reset:true });
+    ScrollReveal().reveal('.stat',                 { origin:'bottom', distance:'30px', duration:700, delay:200, opacity:0, reset:true, interval:100 });
+    ScrollReveal().reveal('.product-card',         { origin:'bottom', distance:'40px', duration:700, opacity:0, reset:true, interval:150 });
+    ScrollReveal().reveal('.proveedor-grid a',     { origin:'bottom', distance:'20px', duration:500, opacity:0, reset:true, interval:80 });
+    ScrollReveal().reveal('.cip-fluid-left',       { origin:'left',   distance:'50px', duration:900, opacity:0, reset:true });
+    ScrollReveal().reveal('.cip-fluid-right',      { origin:'right',  distance:'50px', duration:900, delay:150, opacity:0, reset:true });
   </script>
 
-  <!-- ================== SECCIÓN PROVEEDORES ================== -->
+  <!-- ====== DISTRIBUIDORES ====== -->
   <section id="proveedores" class="proveedores">
-    <h2>DISTRIBUIDORES EXCLUSIVOS</h2>
-    
-    <!-- Carrusel de proveedores -->
-    <div class="carousel-container">
-      <button class="carousel-button prev">&#10094;</button>
+    <div class="section-header">
+      <div class="section-label">Alianzas Estratégicas</div>
+      <h2>Distribuidores <span class="text-accent">Exclusivos</span></h2>
+      <p class="section-subtitle">Representamos a fabricantes líderes de clase mundial</p>
+    </div>
+
+    <!-- Carrusel (mobile/tablet) -->
+    <div class="carousel-container" aria-label="Carrusel de distribuidores">
+      <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
       <div class="carousel-track-container">
         <ul class="carousel-track">
-          <!-- Cada proveedor -->
-          <li class="carousel-slide current-slide">
-            <a href="https://definox.com/" target="_blank">
-              <img src="recursos/img proveedores/definox.webp" alt="Logo de Definox" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://www.boyer.fr/" target="_blank">
-              <img src="recursos/img proveedores/boyer.webp" alt="Logo de Boyer" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://www.danfoss.com/" target="_blank">
-              <img src="recursos/img proveedores/danfoss.webp" alt="Logo de Danfoss" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://wilo.com/us/en_us" target="_blank">
-              <img src="recursos/img proveedores/wilo.webp" alt="Logo de Wilo" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://www.burkert.com/en/products/microfluidics-products-and-pumps" target="_blank">
-              <img src="recursos/img proveedores/Burkert.webp" alt="Logo de Burkert" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://ampcopumps.com" target="_blank">
-              <img src="recursos/img proveedores/Ampco_pumps.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://www.emerson.com/es-es/automation/brands/flexim" target="_blank">
-              <img src="recursos/img proveedores/flexim.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://www.emerson.com/es-es/automation/rosemount" target="_blank">
-              <img src="recursos/img proveedores/rosemount.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://www.emerson.com/en-us/automation/fisher" target="_blank">
-              <img src="recursos/img proveedores/Fisher.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://eddypump.com/es/" target="_blank">
-              <img src="recursos/img proveedores/Eddy_Pump.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-            </a>
-          </li>
-          <li class="carousel-slide">
-            <a href="https://www.hofmann-heatexchanger.com" target="_blank">
-              <img src="recursos/img proveedores/Hofmann.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-            </a>
-          </li>
+          <li class="carousel-slide current-slide"><a href="https://definox.com/" target="_blank" rel="noopener"><img src="recursos/img proveedores/definox.webp" alt="Definox" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://www.boyer.fr/" target="_blank" rel="noopener"><img src="recursos/img proveedores/boyer.webp" alt="Boyer" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://www.danfoss.com/" target="_blank" rel="noopener"><img src="recursos/img proveedores/danfoss.webp" alt="Danfoss" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://wilo.com/us/en_us" target="_blank" rel="noopener"><img src="recursos/img proveedores/wilo.webp" alt="Wilo" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://www.burkert.com/en/" target="_blank" rel="noopener"><img src="recursos/img proveedores/Burkert.webp" alt="Burkert" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://ampcopumps.com" target="_blank" rel="noopener"><img src="recursos/img proveedores/Ampco_pumps.webp" alt="Ampco Pumps" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://www.emerson.com/es-es/automation/brands/flexim" target="_blank" rel="noopener"><img src="recursos/img proveedores/flexim.webp" alt="Flexim" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://www.emerson.com/es-es/automation/rosemount" target="_blank" rel="noopener"><img src="recursos/img proveedores/rosemount.webp" alt="Rosemount" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://www.emerson.com/en-us/automation/fisher" target="_blank" rel="noopener"><img src="recursos/img proveedores/Fisher.webp" alt="Fisher" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://eddypump.com/es/" target="_blank" rel="noopener"><img src="recursos/img proveedores/Eddy_Pump.webp" alt="Eddy Pump" class="proveedor-logo"></a></li>
+          <li class="carousel-slide"><a href="https://www.hofmann-heatexchanger.com" target="_blank" rel="noopener"><img src="recursos/img proveedores/Hofmann.webp" alt="Hofmann" class="proveedor-logo"></a></li>
         </ul>
       </div>
-      <button class="carousel-button next">&#10095;</button>
+      <button class="carousel-button next" aria-label="Siguiente">&#10095;</button>
+    </div>
+
+    <!-- Grid estático (desktop) -->
+    <div class="proveedor-grid">
+      <a href="https://definox.com/" target="_blank" rel="noopener"><img src="recursos/img proveedores/definox.webp" alt="Definox"></a>
+      <a href="https://www.boyer.fr/" target="_blank" rel="noopener"><img src="recursos/img proveedores/boyer.webp" alt="Boyer"></a>
+      <a href="https://www.danfoss.com/" target="_blank" rel="noopener"><img src="recursos/img proveedores/danfoss.webp" alt="Danfoss"></a>
+      <a href="https://wilo.com/us/en_us" target="_blank" rel="noopener"><img src="recursos/img proveedores/wilo.webp" alt="Wilo"></a>
+      <a href="https://www.burkert.com/en/" target="_blank" rel="noopener"><img src="recursos/img proveedores/Burkert.webp" alt="Burkert"></a>
+      <a href="https://ampcopumps.com" target="_blank" rel="noopener"><img src="recursos/img proveedores/Ampco_pumps.webp" alt="Ampco Pumps"></a>
+      <a href="https://www.emerson.com/es-es/automation/brands/flexim" target="_blank" rel="noopener"><img src="recursos/img proveedores/flexim.webp" alt="Flexim"></a>
+      <a href="https://www.emerson.com/es-es/automation/rosemount" target="_blank" rel="noopener"><img src="recursos/img proveedores/rosemount.webp" alt="Rosemount"></a>
+      <a href="https://www.emerson.com/en-us/automation/fisher" target="_blank" rel="noopener"><img src="recursos/img proveedores/Fisher.webp" alt="Fisher"></a>
+      <a href="https://eddypump.com/es/" target="_blank" rel="noopener"><img src="recursos/img proveedores/Eddy_Pump.webp" alt="Eddy Pump"></a>
+      <a href="https://www.hofmann-heatexchanger.com" target="_blank" rel="noopener"><img src="recursos/img proveedores/Hofmann.webp" alt="Hofmann"></a>
     </div>
   </section>
 
-  <!-- ================== SECCIÓN DE LOGOS DE PROVEEDORES ================== -->
-  <div class="proveedor">
-    <a href="https://definox.com/" target="_blank">
-      <img src="recursos/img proveedores/definox.webp" alt="Logo de Definox" class="proveedor-logo">
-    </a>
-    <a href="https://www.boyer.fr/" target="_blank">
-      <img src="recursos/img proveedores/boyer.webp" alt="Logo de Boyer" class="proveedor-logo">
-    </a>
-    <a href="https://www.danfoss.com/" target="_blank">
-      <img src="recursos/img proveedores/danfoss.webp" alt="Logo de Danfoss" class="proveedor-logo">
-    </a>
-    <a href="https://wilo.com/us/en_us" target="_blank">
-      <img src="recursos/img proveedores/wilo.webp" alt="Logo de Wilo" class="proveedor-logo">
-    </a>
-    <a href="https://www.burkert.com/en/products/microfluidics-products-and-pumps" target="_blank">
-      <img src="recursos/img proveedores/Burkert.webp" alt="Logo de Burkert" class="proveedor-logo">
-    </a>
-    <a href="https://ampcopumps.com" target="_blank">
-      <img src="recursos/img proveedores/Ampco_pumps.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-    </a>
-    <a href="https://www.emerson.com/es-es/automation/brands/flexim" target="_blank">
-      <img src="recursos/img proveedores/flexim.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-    </a>
-    <a href="https://www.emerson.com/es-es/automation/rosemount" target="_blank">
-      <img src="recursos/img proveedores/rosemount.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-    </a>
-    <a href="https://www.emerson.com/en-us/automation/fisher" target="_blank">
-      <img src="recursos/img proveedores/Fisher.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-    </a>
-    <a href="https://eddypump.com/es/" target="_blank">
-      <img src="recursos/img proveedores/Eddy_Pump.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-    </a>
-    <a href="https://www.hofmann-heatexchanger.com" target="_blank">
-      <img src="recursos/img proveedores/Hofmann.webp" alt="Logo de Watson-Marlow" class="proveedor-logo">
-    </a>
-  </div>
-
-  <!-- ================== SECCIÓN PRINCIPAL DEL SITIO ================== -->
-<section id="inicio" class="inicio">
-  <div class="card">
-    <a>
-      <img src="recursos/img logos/logo cip fluid.webp" alt="Logo CIP Fluid" class="card-image">
-    </a>
-
-    <div class="card__content">
-      <p class="btn-shine">DISTRIBUIDORES AUTORIZADOS DE LA MARCA</p>
-      <p class="card__description">
-        Representamos oficialmente a CIP Fluid, ofreciendo soluciones innovadoras y confiables en sistemas de procesamiento de fluidos.
-      </p>
-      <a href="cip_fluid.html" class="btn">IR A CIP FLUID</a>
-    </div>
-  </div>
-</section>
-
- <!-- CARRUSEL (JS EXTERNO) -->
-<script src="js/carrusel.js"></script>
-<br>
-
-<!-- Sección de productos -->
-<section id="productos" class="productos">
-  <h2>PRODUCTOS</h2>
-
-  <div class="container">
-
-    <!-- Producto 1 -->
-    <div class="product">
-  <img src="recursos/productos CIP SISTEM/Producto1.jpg" alt="Intercambiador de calor" class="product-image">
-  <div class="product-info">
-    <h3>Catalogo</h3>
-    <p>Conoce todos nuestros productos de las marcas Definox y Whilo descargando nuestro catalogo.</p><br>
-    <div class="download-container">
-      <label class="label">
-        <input type="checkbox" class="input download-btn" data-file="recursos/Catalogo 1.pdf" data-name="Catalogo 1" />
-        <span class="circle">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"/>
-          </svg>
-          <div class="square"></div>
-        </span>
-        <p class="title">Download</p>
-        <p class="title">Open</p>
-      </label>
-    </div>
-  </div>
-</div>
-
-<div class="product">
-  <img src="recursos/productos CIP SISTEM/Producto2 .jpg" alt="Bombas y válvulas" class="product-image">
-  <div class="product-info">
-    <h3>Catalogo</h3>
-    <p>Conoce todos nuestros productos de las marcas Eddy Pump, Flexim y Ampco Pump descargando nuestro catalogo.</p><br>
-    <div class="download-container">
-      <label class="label">
-        <input type="checkbox" class="input download-btn" data-file="recursos/Catalogo 2.pdf" data-name="Catalogo 2" />
-        <span class="circle">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"/>
-          </svg>
-          <div class="square"></div>
-        </span>
-        <p class="title">Download</p>
-        <p class="title">Open</p>
-      </label>
-    </div>
-  </div>
-</div>
-
-<div class="product">
-  <img src="recursos/productos CIP SISTEM/Producto3.jpg" alt="Producto 3" class="product-image">
-  <div class="product-info">
-    <h3>Catalogo</h3>
-    <p>Conoce todos nuestros productos de las marcas Danfoss, Burkert y Rosemount descargando nuestro catalogo.</p><br>
-    <div class="download-container">
-      <label class="label">
-        <input type="checkbox" class="input download-btn" data-file="recursos/Catalogo 3.pdf" data-name="Catalogo 3" />
-        <span class="circle">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5m0 14-4-4m4 4 4-4"/>
-          </svg>
-          <div class="square"></div>
-        </span>
-        <p class="title">Download</p>
-        <p class="title">Open</p>
-      </label>
-    </div>
-  </div>
-</div>
-
-<div class="politica-banner">
-    <div class="politica-content">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-      <span>Todos nuestros productos poseen <strong>política de no caducidad</strong></span>
-    </div>
-  </div>
-
-  <section id="soporte" class="soporte-tecnico">
-  <div class="soporte-card">
-    <div class="soporte-contenido">
-      
-      <div class="soporte-logo-wrapper">
-        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" class="logo-documentacion">
+  <!-- ====== CIP FLUID ====== -->
+  <section id="inicio-cip" class="cip-fluid-section">
+    <div class="cip-fluid-glow" aria-hidden="true"></div>
+    <div class="cip-fluid-inner">
+      <div class="cip-fluid-left">
+        <div class="cip-fluid-logo-card">
+          <div class="cip-fluid-logo-glow" aria-hidden="true"></div>
+          <img src="recursos/img logos/logo cip fluid.webp" alt="Logo CIP Fluid" class="cip-fluid-logo">
+        </div>
+        <div class="cip-fluid-stat-row">
+          <div class="cip-fs"><span class="cip-fs-n">100%</span><span class="cip-fs-l">Calidad Garantizada</span></div>
+          <div class="cip-fs-div"></div>
+          <div class="cip-fs"><span class="cip-fs-n">CIP/SIP</span><span class="cip-fs-l">Sistemas Completos</span></div>
+        </div>
       </div>
-
-      <div class="soporte-separador"></div>
-
-      <div class="soporte-info">
-        <h2>Documentación Técnica</h2>
-        <p>Nuestro manual de dimensiones y especificaciones de actuadores.</p>
-      </div>
-
-      <div class="soporte-accion">
-        <a href="recursos/PR0-NDT-241 ESP.pdf" download="Manual_Tecnico_CIP_SISTEM.pdf" class="btn-premium">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-descarga">
-            <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-          </svg>
-          DESCARGAR MANUAL PDF
+      <div class="cip-fluid-right">
+        <span class="cip-fluid-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Distribución Autorizada
+        </span>
+        <h2 class="cip-fluid-title">Distribuidores<br>Autorizados<br><em>CIP Fluid</em></h2>
+        <p class="cip-fluid-desc">Representamos oficialmente a CIP Fluid, ofreciendo soluciones innovadoras y confiables en sistemas de procesamiento de fluidos para la industria venezolana y latinoamericana.</p>
+        <div class="cip-fluid-features">
+          <div class="cip-feat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Soporte técnico especializado
+          </div>
+          <div class="cip-feat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Capacitación y servicio postventa
+          </div>
+          <div class="cip-feat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Equipos de alta calidad certificados
+          </div>
+        </div>
+        <a href="cip_fluid.html" class="cta-btn">
+          Ir a CIP Fluid
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================== SCRIPT DE DESCARGA DE PRODUCTOS ================== -->
-<script>
- document.querySelectorAll(".download-btn").forEach(btn => {
-  btn.addEventListener("change", function() {
-    if (this.checked) {
-      setTimeout(() => {
-        const link = document.createElement("a");
-        link.href = this.dataset.file;
-        link.download = this.dataset.name;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        this.checked = false;
-      }, 3500); 
-    }
-  });
-});
-
-</script>
-
- <!-- Video Definox -->
-  <section class="seccion-tres-videos">
-    <div class="fila-videos">
-      
-      <iframe src="https://www.youtube.com/embed/66Qt-H0ZgDk" title="Video 1" allowfullscreen></iframe>
-      
-      <iframe src="https://www.youtube.com/embed/2-mNtEafjhE" title="Video 2" allowfullscreen></iframe>
-      
-      <iframe src="https://www.youtube.com/embed/8f8GDQytApI" title="Video 3" allowfullscreen></iframe>
-      
     </div>
   </section>
 
-<!-- ================== SECCIÓN DE UBICACIÓN ================== -->
-<div id="ubicacion" class="map-container">
-  <h1>UBICACION</h1>
-  <br>
-  <div id="map-placeholder" style="width:100%;height:400px;background:#eee;text-align:center;line-height:400px;">
-    Cargando mapa...
-  </div>
-</div>
+  <script src="js/carrusel.js"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let mapLoaded = false;
-    window.addEventListener("scroll", function() {
-      const mapPlaceholder = document.getElementById("map-placeholder");
-      const rect = mapPlaceholder.getBoundingClientRect();
-      if (!mapLoaded && rect.top < window.innerHeight) {
-        mapPlaceholder.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.401282990832!2d-67.54638748991643!3d10.229183689846026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8023a2cafd9b9f%3A0xdb695f1c0b4b05fc!2sCip%20Sistem%2C%20C.A.!5e0!3m2!1ses-419!2sve!4v1754862349270!5m2!1ses-419!2sve" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
-        mapLoaded = true;
-      }
-    });
-  });
-</script>
-
-<!-- ================== FOOTER ================== -->
-<div class="footer-container">
-  <footer class="footer" id="footer">
-    <h2>Estamos para servirte. Contáctanos si deseas consultar disponibilidad en nuestros productos</h2>
-
-<a href="mailto:ventas@cipsistem.com" onclick="abrirCorreo(event)" class="footer-email">
-  E-mail: ventas@cipsistem.com
-</a>
-
-<script>
-function abrirCorreo(e) {
-  e.preventDefault(); 
-
-  const asunto = "Solicitud de Cotización - CIP SISTEM";
-  const cuerpo = `Estimado equipo de CIP SISTEM,
-
-Me gustaría solicitar una cotización para los siguientes productos/servicios:
-
-- [Especificar producto o servicio]
-- [Cantidad]
-- [Detalles adicionales]
-
-Datos de contacto:  
-Nombre:  
-Teléfono:  
-Correo:  
-
-Quedo atento(a) a su respuesta.
-
-Saludos cordiales,  
-[nombre]`;
-
-  const asuntoCodificado = encodeURIComponent(asunto);
-  const cuerpoCodificado = encodeURIComponent(cuerpo);
-
-  // Detectar si es móvil
-  const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-  if (esMovil) {
-    // En móvil: abrir la app de correo predeterminada
-    window.location.href = `mailto:ventas@cipsistem.com?subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
-  } else {
-    // En desktop: abrir Gmail web
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=${asuntoCodificado}&body=${cuerpoCodificado}`,
-      "_blank"
-    );
-  }
-}
-</script>
-
-
-    <div class="contact-options">
-      <a href="https://wa.me/+584140496684" class="whatsapp-number">+584140496684</a>
-      <span class="separator">|</span>
-      <a href="https://wa.me/+584140492892" class="whatsapp-number">+584140492892</a>
+  <!-- ====== PRODUCTOS ====== -->
+  <section id="productos" class="productos">
+    <div class="section-header">
+      <div class="section-label">Catálogos Técnicos</div>
+      <h2>Nuestros <span class="text-accent">Productos</span></h2>
+      <p class="section-subtitle">Descarga nuestros catálogos y conoce la gama completa de soluciones industriales</p>
     </div>
 
-    <div class="footer-instagram">
-      <p class="redes">
-        <img src="recursos/img logos/instagram.webp" alt="Instagram" style="width:20px; height:20px; vertical-align:middle;">
-        <a href="https://www.instagram.com/cipsistem.ca/" class="redes-social">CIP SISTEM</a>
-      </p>
+    <div class="productos-grid">
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="recursos/productos CIP SISTEM/Producto1.jpg" alt="Catálogo Definox y Wilo">
+          <div class="product-card-brands">Definox · Wilo</div>
+        </div>
+        <div class="product-card-body">
+          <h3>Catálogo 1</h3>
+          <p>Intercambiadores, válvulas y equipos de proceso Definox y Wilo.</p>
+          <label class="dl-label">
+            <input type="checkbox" class="dl-input download-btn" data-file="recursos/Catalogo 1.pdf" data-name="Catalogo_1_CIP_SISTEM">
+            <span class="dl-track"><span class="dl-thumb"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 14-4-4m4 4 4-4"/></svg></span></span>
+            <span class="dl-text-before">Descargar PDF</span>
+            <span class="dl-text-after">¡Descargado!</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="recursos/productos CIP SISTEM/Producto2 .jpg" alt="Catálogo Eddy Pump, Flexim, Ampco">
+          <div class="product-card-brands">Eddy Pump · Flexim · Ampco</div>
+        </div>
+        <div class="product-card-body">
+          <h3>Catálogo 2</h3>
+          <p>Bombas, medidores de flujo y equipos de alta eficiencia.</p>
+          <label class="dl-label">
+            <input type="checkbox" class="dl-input download-btn" data-file="recursos/Catalogo 2.pdf" data-name="Catalogo_2_CIP_SISTEM">
+            <span class="dl-track"><span class="dl-thumb"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 14-4-4m4 4 4-4"/></svg></span></span>
+            <span class="dl-text-before">Descargar PDF</span>
+            <span class="dl-text-after">¡Descargado!</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="recursos/productos CIP SISTEM/Producto3.jpg" alt="Catálogo Danfoss, Burkert, Rosemount">
+          <div class="product-card-brands">Danfoss · Burkert · Rosemount</div>
+        </div>
+        <div class="product-card-body">
+          <h3>Catálogo 3</h3>
+          <p>Instrumentación, control y automatización de procesos industriales.</p>
+          <label class="dl-label">
+            <input type="checkbox" class="dl-input download-btn" data-file="recursos/Catalogo 3.pdf" data-name="Catalogo_3_CIP_SISTEM">
+            <span class="dl-track"><span class="dl-thumb"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 14-4-4m4 4 4-4"/></svg></span></span>
+            <span class="dl-text-before">Descargar PDF</span>
+            <span class="dl-text-after">¡Descargado!</span>
+          </label>
+        </div>
+      </div>
     </div>
 
-    <div class="footer-content">
-      <p class="location">
-        <img src="recursos/img logos/ubicacion.webp" alt="Ubicación" style="width:20px; height:20px; vertical-align:middle;">
-        <a href="#ubicacion" class="location-link">CC Coche Aragua, Av. Intercomunal Santiago Mariño, Turmero 2115, Aragua</a>
-      </p>
+    <script>
+      document.querySelectorAll(".download-btn").forEach(function(btn) {
+        btn.addEventListener("change", function() {
+          if (!this.checked) return;
+          var label = this.closest('.dl-label');
+          label.classList.add('downloading');
+          var file = this.dataset.file, name = this.dataset.name, cb = this;
+          setTimeout(function() {
+            var link = document.createElement("a");
+            link.href = file; link.download = name;
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
+            label.classList.remove('downloading');
+            label.classList.add('done');
+            setTimeout(function() { label.classList.remove('done'); cb.checked = false; }, 2800);
+          }, 1600);
+        });
+      });
+    </script>
+
+    <!-- Banner política -->
+    <div class="politica-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Todos nuestros productos poseen <strong>política de no caducidad</strong></span>
     </div>
 
-    <a href="#inicio">Volver al inicio</a>
-    <p>&copy; 2025 CIP SISTEM, C.A. Todos los derechos reservados.</p>
-  </footer>
-</div>
+<div class="doc-tecnica-card">
+      <div class="doc-tecnica-left">
+        <div class="doc-tecnica-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="doc-tecnica-meta">
+          <span class="doc-tecnica-tag">Documentación Oficial</span>
+          <h3>Manual Técnico</h3>
+          <p>Dimensiones y especificaciones completas de actuadores industriales CIP SISTEM.</p>
+          <div class="doc-tecnica-specs">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Formato PDF</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Versión ESP</span>
+          </div>
+        </div>
+      </div>
+      <div class="doc-tecnica-right">
+        
+        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" style="height: 35px; width: auto; object-fit: contain; margin-bottom: 10px; filter: none; opacity: 1;">
+        
+        <a href="recursos/PR0-NDT-241 ESP.pdf" download="Manual_Tecnico_CIP_SISTEM.pdf" class="doc-tecnica-btn">
+          <span class="doc-tecnica-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          </span>
+          <span class="doc-tecnica-btn-text">
+            <span class="doc-btn-label">Descargar</span>
+            <span class="doc-btn-sub">Manual PDF</span>
+          </span>
+        </a>
+      </div>
+    </div>
 
+    <!-- Videos En Acción -->
+    <div class="videos-section">
+      <div class="section-label" style="text-align:center;margin-bottom:2rem;">En Acción</div>
+      <div class="videos-grid">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/66Qt-H0ZgDk" title="CIP SISTEM Video 1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/2-mNtEafjhE" title="CIP SISTEM Video 2" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/8f8GDQytApI" title="CIP SISTEM Video 3" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
 
+  </section>
 
-<!-- ================== ÍCONOS FLOTANTES ================== -->
-
-<!-- WhatsApp -->
-<div class="whatsapp-icon">
-  <a href="https://wa.me/04140496684" target="_blank">
-    <img src="recursos/img logos/WhatsApp.webp" alt="WhatsApp" />
-  </a>
-</div>
-
-  <!-- Scroll to top button -->
-  <button aria-label="Scroll to top" id="scrollTopBtn" class="scroll-top-btn" title="Volver arriba" type="button">
-    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-      viewBox="0 0 24 24" aria-hidden="true" focusable="false" >
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
+  <!-- ====== UBICACIÓN ====== -->
+  <section id="ubicacion" class="ubicacion-section">
+    <div class="section-header">
+      <div class="section-label">Encuéntranos</div>
+      <h2>Nuestra <span class="text-accent">Ubicación</span></h2>
+    </div>
+    <div class="mapa-wrap" id="map-placeholder">
+      <div class="mapa-placeholder-text">Cargando mapa…</div>
+    </div>
+  </section>
 
   <script>
-    // Seleccionamos el header por su ID
-    const navbar = document.getElementById('navbar');
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    (function() {
+      var mapLoaded = false;
+      function tryLoad() {
+        var el = document.getElementById("map-placeholder");
+        if (!el || mapLoaded) return;
+        if (el.getBoundingClientRect().top < window.innerHeight + 300) {
+          el.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.401282990832!2d-67.54638748991643!3d10.229183689846026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8023a2cafd9b9f%3A0xdb695f1c0b4b05fc!2sCip%20Sistem%2C%20C.A.!5e0!3m2!1ses-419!2sve!4v1754862349270!5m2!1ses-419!2sve" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación CIP SISTEM"></iframe>';
+          mapLoaded = true;
+        }
+      }
+      window.addEventListener("scroll", tryLoad, { passive: true });
+      setTimeout(tryLoad, 600);
+    })();
+  </script>
 
-    // Función que detecta el scroll
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" class="footer-logo" style="height: 40px; width: auto; object-fit: contain; margin-bottom: 1.25rem; filter: none; opacity: 1;">
+        <p>Soluciones Industriales Eficientes.<br>Diseño, suministro y respaldo técnico especializado.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contáctanos</h4>
+        <a href="mailto:ventas@cipsistem.com" onclick="abrirCorreo(event)" class="footer-email-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          ventas@cipsistem.com
+        </a>
+        <div class="footer-phones">
+          <a href="https://wa.me/+584140496684" target="_blank" rel="noopener" class="footer-wa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            +58 414-049 6684
+          </a>
+          <a href="https://wa.me/+584140492892" target="_blank" rel="noopener" class="footer-wa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            +58 414-049 2892
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>Navegación</h4>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#proveedores">Distribuidores</a>
+        <a href="#productos">Productos</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <a href="https://www.instagram.com/cipsistem.ca/" target="_blank" rel="noopener" class="footer-ig">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @cipsistem.ca
+        </a>
+        <div class="footer-address">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <a href="#ubicacion">CC Coche Aragua, Av. Intercomunal Santiago Mariño, Turmero, Aragua</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CIP SISTEM, C.A. — Todos los derechos reservados.</p>
+      <a href="#inicio" class="footer-back-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        Volver al inicio
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function abrirCorreo(e) {
+      e.preventDefault();
+      var asunto = encodeURIComponent("Solicitud de Cotización - CIP SISTEM");
+      var cuerpo = encodeURIComponent("Estimado equipo de CIP SISTEM,\n\nMe gustaría solicitar una cotización para los siguientes productos/servicios:\n\n- [Especificar producto o servicio]\n- [Cantidad]\n- [Detalles adicionales]\n\nDatos de contacto:\nNombre:\nTeléfono:\nCorreo:\n\nSaludos cordiales,\n[nombre]");
+      if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        window.location.href = "mailto:ventas@cipsistem.com?subject=" + asunto + "&body=" + cuerpo;
+      } else {
+        window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=" + asunto + "&body=" + cuerpo, "_blank");
+      }
+    }
+    var navbar = document.getElementById('navbar');
+    var scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 80) {
         navbar.classList.add('scrolled');
-        if(scrollTopBtn) scrollTopBtn.style.display = 'flex';
+        if (scrollTopBtn) scrollTopBtn.style.display = 'flex';
       } else {
         navbar.classList.remove('scrolled');
-        if(scrollTopBtn) scrollTopBtn.style.display = 'none';
+        if (scrollTopBtn) scrollTopBtn.style.display = 'none';
       }
-    };
-
-    // Escuchamos el evento scroll
-    window.addEventListener('scroll', handleScroll);
-    
-    // Botón para volver arriba
-    if(scrollTopBtn) {
-        scrollTopBtn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
+    }, { passive: true });
+    if (scrollTopBtn) scrollTopBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   </script>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/04140496684" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Scroll to top -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
 </body>
 </html>
