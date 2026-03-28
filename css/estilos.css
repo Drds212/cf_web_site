@@ -660,6 +660,769 @@ header.scrolled nav.menu a.nav-cta {
   flex-direction: column;
   gap: 0.2rem;
   flex: 1;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product:hover .product-info {
+  opacity: 1;
+}
+
+.product h3 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.product p {
+  margin: 5px;
+  font-size: 17px;
+  padding: 12px;
+}
+
+/* --- Forzar que cualquier imagen dentro de .product ocupe todo el cuadro --- */
+.product .product-image,
+.product .product-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.product img,
+.product img.product-image,
+.product img.imagen {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.product:hover img,
+.product:hover img.product-image,
+.product:hover img.imagen {
+  transform: scale(1.1);
+}
+
+.product .product-info {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animacion de descarga */
+.container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  background-color: transparent;
+  border: 2px solid #00b2a9;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  width: 160px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 5px;
+  position: relative;
+}
+
+.label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  transition: all 0.4s ease;
+  border-radius: 100%;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input {
+  display: none;
+}
+
+.label .title {
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 18px;
+  top: 20%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.label .title:last-child {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .circle {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #00b2a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.label .circle .icon {
+  color: #fff;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle .square {
+  aspect-ratio: 1;
+  width: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #127a75;
+  width: 100%;
+  height: 0;
+  transition: all 0.4s ease;
+}
+
+.label:has(.input:checked) {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  animation: installed 0.4s ease 3.5s forwards;
+  justify-content: center;
+  padding: 5px;
+}
+
+.label:has(.input:checked)::before {
+  animation: rotate 3s ease-in-out 0.4s forwards;
+}
+
+.label .input:checked + .circle {
+  animation:
+    pulse 1s forwards,
+    circleDelete 0.2s ease 3.5s forwards;
+  rotate: 180deg;
+}
+
+.label .input:checked + .circle::before {
+  animation: installing 3s ease-in-out forwards;
+}
+
+.label .input:checked + .circle .icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input:checked ~ .circle .square {
+  opacity: 1;
+  visibility: visible;
+}
+
+.label .input:checked ~ .title {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .input:checked ~ .title:last-child {
+  animation: showInstalledMessage 0.4s ease 3.5s forwards;
+}
+
+@keyframes pulse {
+  0% {
+    scale: 0.95;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    scale: 1;
+    box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+  }
+  100% {
+    scale: 0.95;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes installing {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    /* Cambiar 27px por 29px para ajustar al nuevo tamaño */
+    transform: rotate(-90deg) translate(29px) rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    /* Cambiar 27px por 29px aquí también */
+    transform: rotate(270deg) translate(29px) rotate(270deg);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes installed {
+  100% {
+    width: 150px;
+    border-color: rgb(35, 174, 35);
+  }
+}
+
+@keyframes circleDelete {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes showInstalledMessage {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    right: 56px;
+  }
+}
+
+/* Estilos para la sección de ubicación */
+.ubicacion-container {
+  display: flex;
+  justify-content: center;
+}
+
+.ubicacion-texto {
+  display: flex;
+  justify-content: center;
+}
+
+.video-definox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-definox iframe {
+  width: 900px;
+  height: 370px;
+}
+
+/* contenedor del mapa */
+.map-container {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 40px auto;
+  width: 88%;
+  height: 90%;
+}
+.map-container h1 {
+  margin: 0 0 10px 0;
+  color: #003d5b;
+  font-size: 30px;
+  margin: 20px 0 10px 0;
+  padding: 5px 0;
+}
+
+.logo-section p {
+  color: #00345b;
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-email,
+.footer-instagram {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+  color: #00b2a9;
+}
+
+.whatsapp-number:hover {
+  text-decoration: underline;
+  color: #00b2a9;
+}
+
+.footer-instagram h1:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 19px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.flecha-icono {
+  position: fixed;
+  bottom: 80px;
+  right: 23px;
+  z-index: 100;
+  transform: scale(0.8);
+  width: auto;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.whatsapp-number {
+  text-decoration: none;
+  font-size: 25px;
+  padding: 0 15px;
+}
+
+.separator {
+  margin: 0 15px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.footer-content {
+  padding: 0px;
+  text-align: center;
+}
+
+.location {
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  color: #f4f7fa;
+}
+
+/* ------------------ Animacion de descarga de productos ------------------ */
+.label {
+  background-color: transparent;
+  border: 2px solid #00b2a9;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  width: 160px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 5px;
+  position: relative;
+}
+
+.label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.label .input {
+  display: none;
+}
+
+.label .title {
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  text-align: center;
+}
+
+.label .title:last-child {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.label .circle {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #00b2a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.label .circle .icon {
+  color: #fff;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle .square {
+  aspect-ratio: 1;
+  width: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.label .circle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #127a75;
+  width: 100%;
+  height: 0;
+  transition: all 0.4s ease;
+}
+
+/* ======================= 3 Videos en Una Fila ======================= */
+.seccion-tres-videos {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fila-videos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1150px;
+}
+
+.fila-videos iframe {
+  flex: 1;
+  width: 100%;
+  height: 300px;
+
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.fila-videos iframe:hover {
+  transform: translateY(-5px);
+  z-index: 2;
+}
+
+/*===================Politica de no caducidad======================*/
+/* From Uiverse.io by bhaveshxrawat */
+
+.politica-no-caducidad-container {
+  display: flex;
+  justify-content: center;
+  padding: auto;
+  margin: auto;
+}
+
+.card1 {
+  width: 350px;
+  height: 280px;
+  background: #03234e;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card1 h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+.card1::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(2, 156, 143),
+    rgb(158, 158, 158)
+  );
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card1::after {
+  content: "";
+  position: absolute;
+  background: #03234e;
+  inset: 5px;
+  border-radius: 15px;
+}
+/* .card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
+
+/* ======================= Responsivo (Celulares) ======================= */
+@media (max-width: 900px) {
+  .fila-videos {
+    flex-direction: column;
+  }
+  .fila-videos iframe {
+    height: 350px;
+  }
+}
+
+/* ------------------ Contenedor del mapa ------------------ */
+.map-container {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 60px auto;
+  width: 84%;
+  height: 90%;
+}
+
+.map-container h1 {
+  margin: 5px 0 5px 0;
+  color: #003d5b;
+  font-size: 30px;
+  padding: 10px 0;
+}
+/* Scroll to top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  background-color: #0b2245;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 7px rgb(11 34 69 / 0.7);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  transition: background-color 0.3s ease;
+}
+.scroll-top-btn:hover {
+  background-color: #1e40af;
+}
+.scroll-top-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ------------------ Footer ------------------ */
+/* Localiza y reemplaza las secciones del footer por esta: */
+.footer-container {
+  background-color: #003d5b;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.footer {
+  background-color: #003d5b;
+  color: white;
+  text-align: center;
+  padding: 60px 0 40px 0;
+  margin-top: 0; 
+  margin-bottom: -100px !important;
+  /*Esto estaba en 0 y lo cambie a -100px y se arreglo el espacio balnco del fondo*/
+  width: 100%;
+  font-size: 14px;
+  display: block;
+}
+
+/* Asegura que el último párrafo no empuje el fondo */
+.footer p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-email,
+.footer-instagram {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-email:hover,
+.whatsapp-number:hover {
+  color: #00b2a9;
+  text-decoration: underline;
+}
+
+.footer-instagram h1:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.whatsapp-icon,
+.flecha-icono {
+  position: fixed;
+  z-index: 100;
+}
+
+.whatsapp-icon {
+  bottom: 19px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+}
+.flecha-icono {
+  bottom: 80px;
+  right: 23px;
+  transform: scale(0.8);
+  width: auto;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.whatsapp-number {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.separator {
+  margin: 0 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-content {
+  padding: 0;
   text-align: center;
 }
 .cip-fs-n {
