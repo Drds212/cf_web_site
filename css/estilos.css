@@ -32,9 +32,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
+  overflow-x: hidden;
+  width: 100%;
   scroll-behavior: smooth;
   font-size: 16px;
-  /* SIN hacks de transform/scale — esto rompía en TV y tablets */
 }
 
 body {
@@ -44,6 +45,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   width: 100%;
+  position: relative;
 }
 
 img { display: block; max-width: 100%; }
@@ -360,14 +362,14 @@ header.scrolled .hamburger span { background: var(--navy); }
   align-items: center;
   gap: 0.5rem;
   background: transparent;
-  color: var(--navy);
+  color: var(--white);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.88rem;
   letter-spacing: 0.04em;
   padding: 0.85rem 1.9rem;
   border-radius: var(--radius-md);
-  border: 2px solid var(--navy);
+  border: 2px solid var(--white);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -379,14 +381,14 @@ header.scrolled .hamburger span { background: var(--navy); }
   top: 0; left: 0;
   width: 0%;
   height: 100%;
-  background: var(--navy);
+  background: var(--white);
   z-index: -1;
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn-ghost:hover {
-  color: var(--white);
+  color: var(--navy);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(10, 22, 40, 0.2);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
 }
 .hero-btn-ghost:hover::before { width: 100%; }
 
@@ -412,7 +414,7 @@ header.scrolled .hamburger span { background: var(--navy); }
 
 /* ====== NOSOTROS ====== */
 .nosotros {
-  padding: 6rem 0;
+  padding: 6rem 0 5rem;
   background: var(--white);
 }
 .nosotros-container {
@@ -1436,6 +1438,10 @@ header.scrolled .hamburger span { background: var(--navy); }
 /* ---- TABLET PORTRAIT (≤ 768px) ---- */
 @media (max-width: 768px) {
   header { padding: 10px 20px; }
+  .hero { 
+    height: 60vh; 
+    min-height: 480px; 
+  }
   header.scrolled { padding: 8px 20px; }
 
   .hero { min-height: 540px; }
@@ -1474,6 +1480,10 @@ header.scrolled .hamburger span { background: var(--navy); }
 /* ---- MOBILE (≤ 640px) ---- */
 @media (max-width: 640px) {
   header { padding: 10px 16px; }
+  .hero { 
+    height: 60vh; 
+    min-height: 440px; 
+  }
   .logo-cipsistem img { height: 28px; }
 
   .hero { min-height: 520px; }

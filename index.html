@@ -2,17 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <!-- viewport correcto: sin width fijo, sin scale forzado -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css?v=4">
   <title>CIP SISTEM — Soluciones Industriales</title>
 </head>
 <body>
 
-  <!-- ====== NAVBAR ====== -->
   <header id="navbar" role="banner" aria-label="Barra de navegación principal">
     <div class="logo-cipsistem">
       <a href="https://www.instagram.com/cipsistem.ca/" target="_blank" aria-label="CIP SISTEM en Instagram">
@@ -20,7 +18,6 @@
       </a>
     </div>
 
-    <!-- Nav desktop -->
     <nav class="menu" role="navigation" aria-label="Menú principal">
       <a href="#nosotros">Nosotros</a>
       <a href="#proveedores">Distribuidores</a>
@@ -29,7 +26,6 @@
       <a href="#footer" class="nav-cta">Contáctanos</a>
     </nav>
 
-    <!-- Botón hamburguesa (mobile / tablet) -->
     <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
       <span></span>
@@ -37,7 +33,6 @@
     </button>
   </header>
 
-  <!-- Menú mobile superpuesto -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
     <a href="#nosotros"   onclick="closeMobileMenu()">Nosotros</a>
     <a href="#proveedores" onclick="closeMobileMenu()">Distribuidores</a>
@@ -46,7 +41,6 @@
     <a href="#footer" class="nav-cta" onclick="closeMobileMenu()">Contáctanos</a>
   </nav>
 
-  <!-- ====== HERO / VIDEO ====== -->
   <section class="hero" id="inicio" aria-label="Presentación CIP SISTEM">
     <video autoplay loop muted playsinline onerror="this.style.display='none'" class="hero-video">
       <source src="recursos/Videos/Videos Principal Cip Sistem.mp4" type="video/mp4">
@@ -61,13 +55,11 @@
       <p class="hero-subtitle">Diseño y suministro de equipos para industrias exigentes con respaldo técnico especializado.</p>
       <div class="hero-actions">
         <a href="#productos" class="hero-btn-primary">Ver Productos</a>
-        <a href="#nosotros" class="hero-btn-ghost">Conocernos</a>
+        <a href="#nosotros" class="hero-btn-ghost">Conócenos</a>
       </div>
     </div>
-    <div class="hero-scroll-indicator" aria-hidden="true"><span></span></div>
   </section>
 
-  <!-- ====== NOSOTROS ====== -->
   <section id="nosotros" class="nosotros">
     <div class="nosotros-container">
       <div class="nosotros-imagen-wrap">
@@ -88,6 +80,13 @@
     </div>
   </section>
 
+  <section style="padding: 2rem 20px; background: var(--white);">
+    <div class="politica-banner" style="margin-bottom: 0;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Todos nuestros productos poseen <strong>política de no caducidad</strong></span>
+    </div>
+  </section>
+
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>
     ScrollReveal().reveal('.nosotros-texto',       { origin:'right',  distance:'50px', duration:900, delay:100, opacity:0, reset:true });
@@ -97,9 +96,9 @@
     ScrollReveal().reveal('.proveedor-grid a',     { origin:'bottom', distance:'20px', duration:500, opacity:0, reset:true, interval:80 });
     ScrollReveal().reveal('.cip-fluid-left',       { origin:'left',   distance:'50px', duration:900, opacity:0, reset:true });
     ScrollReveal().reveal('.cip-fluid-right',      { origin:'right',  distance:'50px', duration:900, delay:150, opacity:0, reset:true });
+    ScrollReveal().reveal('.politica-banner',      { origin:'bottom', distance:'30px', duration:700, opacity:0, reset:true });
   </script>
 
-  <!-- ====== DISTRIBUIDORES ====== -->
   <section id="proveedores" class="proveedores">
     <div class="section-header">
       <div class="section-label">Alianzas Estratégicas</div>
@@ -107,9 +106,8 @@
       <p class="section-subtitle">Representamos a fabricantes líderes de clase mundial</p>
     </div>
 
-    <!-- Carrusel (mobile/tablet) -->
     <div class="carousel-container" aria-label="Carrusel de distribuidores">
-      <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
+      <button class="carousel-button prev" aria-label="Anterior">❮</button>
       <div class="carousel-track-container">
         <ul class="carousel-track">
           <li class="carousel-slide current-slide"><a href="https://definox.com/" target="_blank" rel="noopener"><img src="recursos/img proveedores/definox.webp" alt="Definox" class="proveedor-logo"></a></li>
@@ -125,10 +123,9 @@
           <li class="carousel-slide"><a href="https://www.hofmann-heatexchanger.com" target="_blank" rel="noopener"><img src="recursos/img proveedores/Hofmann.webp" alt="Hofmann" class="proveedor-logo"></a></li>
         </ul>
       </div>
-      <button class="carousel-button next" aria-label="Siguiente">&#10095;</button>
+      <button class="carousel-button next" aria-label="Siguiente">❯</button>
     </div>
 
-    <!-- Grid estático (desktop) -->
     <div class="proveedor-grid">
       <a href="https://definox.com/" target="_blank" rel="noopener"><img src="recursos/img proveedores/definox.webp" alt="Definox"></a>
       <a href="https://www.boyer.fr/" target="_blank" rel="noopener"><img src="recursos/img proveedores/boyer.webp" alt="Boyer"></a>
@@ -144,7 +141,6 @@
     </div>
   </section>
 
-  <!-- ====== CIP FLUID ====== -->
   <section id="inicio-cip" class="cip-fluid-section">
     <div class="cip-fluid-glow" aria-hidden="true"></div>
     <div class="cip-fluid-inner">
@@ -206,122 +202,7 @@
 
   <script src="js/carrusel.js"></script>
 
-  <!-- ====== PRODUCTOS ====== -->
   <section id="productos" class="productos">
-    <div class="section-header">
-      <div class="section-label">Catálogos Técnicos</div>
-      <h2>Nuestros <span class="text-accent">Productos</span></h2>
-      <p class="section-subtitle">Descarga nuestros catálogos y conoce la gama completa de soluciones industriales</p>
-    </div>
-
-    <div class="productos-grid">
-      <div class="product-card">
-        <div class="product-card-img">
-          <img src="recursos/productos CIP SISTEM/Producto1.jpg" alt="Catálogo Definox y Wilo">
-          <div class="product-card-brands">Definox · Wilo</div>
-        </div>
-        <div class="product-card-body">
-          <h3>Catálogo 1</h3>
-          <p>Intercambiadores, válvulas y equipos de proceso Definox y Wilo.</p>
-          <label class="dl-label">
-            <input type="checkbox" class="dl-input download-btn" data-file="recursos/Catalogo 1.pdf" data-name="Catalogo_1_CIP_SISTEM">
-            <span class="dl-track"><span class="dl-thumb"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 14-4-4m4 4 4-4"/></svg></span></span>
-            <span class="dl-text-before">Descargar PDF</span>
-            <span class="dl-text-after">¡Descargado!</span>
-          </label>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-card-img">
-          <img src="recursos/productos CIP SISTEM/Producto2 .jpg" alt="Catálogo Eddy Pump, Flexim, Ampco">
-          <div class="product-card-brands">Eddy Pump · Flexim · Ampco</div>
-        </div>
-        <div class="product-card-body">
-          <h3>Catálogo 2</h3>
-          <p>Bombas, medidores de flujo y equipos de alta eficiencia.</p>
-          <label class="dl-label">
-            <input type="checkbox" class="dl-input download-btn" data-file="recursos/Catalogo 2.pdf" data-name="Catalogo_2_CIP_SISTEM">
-            <span class="dl-track"><span class="dl-thumb"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 14-4-4m4 4 4-4"/></svg></span></span>
-            <span class="dl-text-before">Descargar PDF</span>
-            <span class="dl-text-after">¡Descargado!</span>
-          </label>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-card-img">
-          <img src="recursos/productos CIP SISTEM/Producto3.jpg" alt="Catálogo Danfoss, Burkert, Rosemount">
-          <div class="product-card-brands">Danfoss · Burkert · Rosemount</div>
-        </div>
-        <div class="product-card-body">
-          <h3>Catálogo 3</h3>
-          <p>Instrumentación, control y automatización de procesos industriales.</p>
-          <label class="dl-label">
-            <input type="checkbox" class="dl-input download-btn" data-file="recursos/Catalogo 3.pdf" data-name="Catalogo_3_CIP_SISTEM">
-            <span class="dl-track"><span class="dl-thumb"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 14-4-4m4 4 4-4"/></svg></span></span>
-            <span class="dl-text-before">Descargar PDF</span>
-            <span class="dl-text-after">¡Descargado!</span>
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      document.querySelectorAll(".download-btn").forEach(function(btn) {
-        btn.addEventListener("change", function() {
-          if (!this.checked) return;
-          var label = this.closest('.dl-label');
-          label.classList.add('downloading');
-          var file = this.dataset.file, name = this.dataset.name, cb = this;
-          setTimeout(function() {
-            var link = document.createElement("a");
-            link.href = file; link.download = name;
-            document.body.appendChild(link); link.click(); document.body.removeChild(link);
-            label.classList.remove('downloading');
-            label.classList.add('done');
-            setTimeout(function() { label.classList.remove('done'); cb.checked = false; }, 2800);
-          }, 1600);
-        });
-      });
-    </script>
-
-    <!-- Banner política -->
-    <div class="politica-banner">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <span>Todos nuestros productos poseen <strong>política de no caducidad</strong></span>
-    </div>
-
-    <div class="doc-tecnica-card">
-      <div class="doc-tecnica-left">
-        <div class="doc-tecnica-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        </div>
-        <div class="doc-tecnica-meta">
-          <span class="doc-tecnica-tag">Documentación Oficial</span>
-          <h3>Manual Técnico</h3>
-          <p>Dimensiones y especificaciones completas de actuadores industriales CIP SISTEM.</p>
-          <div class="doc-tecnica-specs">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Formato PDF</span>
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Versión ESP</span>
-          </div>
-        </div>
-      </div>
-      <div class="doc-tecnica-right">
-        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" style="height:35px;width:auto;object-fit:contain;filter:none;opacity:1;">
-        <a href="recursos/PR0-NDT-241 ESP.pdf" download="Manual_Tecnico_CIP_SISTEM.pdf" class="doc-tecnica-btn">
-          <span class="doc-tecnica-btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          </span>
-          <span class="doc-tecnica-btn-text">
-            <span class="doc-btn-label">Descargar</span>
-            <span class="doc-btn-sub">Manual PDF</span>
-          </span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Videos En Acción -->
     <div class="videos-section">
       <div class="section-label" style="text-align:center;margin-bottom:2rem;">En Acción</div>
       <div class="videos-grid">
@@ -336,10 +217,8 @@
         </div>
       </div>
     </div>
-
   </section>
 
-  <!-- ====== UBICACIÓN ====== -->
   <section id="ubicacion" class="ubicacion-section">
     <div class="section-header">
       <div class="section-label">Encuéntranos</div>
@@ -366,7 +245,6 @@
     })();
   </script>
 
-  <!-- ====== FOOTER ====== -->
   <footer class="footer" id="footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -476,12 +354,10 @@
     });
   </script>
 
-  <!-- WhatsApp flotante -->
   <a href="https://wa.me/04140496684" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Contactar por WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <!-- Scroll to top -->
   <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
