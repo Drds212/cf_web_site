@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="viewport" content="width=1024, initial-scale=0.35">
+  <!-- viewport correcto: sin width fijo, sin scale forzado -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -19,6 +19,8 @@
         <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM Logo" class="logo-image">
       </a>
     </div>
+
+    <!-- Nav desktop -->
     <nav class="menu" role="navigation" aria-label="Menú principal">
       <a href="#nosotros">Nosotros</a>
       <a href="#proveedores">Distribuidores</a>
@@ -26,7 +28,23 @@
       <a href="#ubicacion">Ubicación</a>
       <a href="#footer" class="nav-cta">Contáctanos</a>
     </nav>
+
+    <!-- Botón hamburguesa (mobile / tablet) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <!-- Menú mobile superpuesto -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+    <a href="#nosotros"   onclick="closeMobileMenu()">Nosotros</a>
+    <a href="#proveedores" onclick="closeMobileMenu()">Distribuidores</a>
+    <a href="#productos"  onclick="closeMobileMenu()">Productos</a>
+    <a href="#ubicacion"  onclick="closeMobileMenu()">Ubicación</a>
+    <a href="#footer" class="nav-cta" onclick="closeMobileMenu()">Contáctanos</a>
+  </nav>
 
   <!-- ====== HERO / VIDEO ====== -->
   <section class="hero" id="inicio" aria-label="Presentación CIP SISTEM">
@@ -165,21 +183,23 @@
         <a href="cip_fluid.html" class="cta-btn">
           Ir a CIP Fluid
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-
-      <div class="soporte-separador"></div>
-
-      <div class="soporte-info">
-        <h2>Conoce nuestras valvulas de asiento</h2>
-        <p>DIMENSIONES ASIENTO, MUELLE Y ACTUADOR NTD-241.</p>
-      </div>
-
-      <div class="soporte-accion">
-        <a href="recursos/PR0-NDT-241 ESP.pdf" download="Manual_Tecnico_CIP_SISTEM.pdf" class="btn-premium">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-descarga">
-            <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-          </svg>
-          DESCARGAR MANUAL PDF
         </a>
+
+        <div class="soporte-separador"></div>
+
+        <div class="soporte-info">
+          <h2>Conoce nuestras válvulas de asiento</h2>
+          <p>DIMENSIONES ASIENTO, MUELLE Y ACTUADOR NTD-241.</p>
+        </div>
+
+        <div class="soporte-accion">
+          <a href="recursos/PR0-NDT-241 ESP.pdf" download="Manual_Tecnico_CIP_SISTEM.pdf" class="btn-premium">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-descarga">
+              <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            DESCARGAR MANUAL PDF
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -272,7 +292,7 @@
       <span>Todos nuestros productos poseen <strong>política de no caducidad</strong></span>
     </div>
 
-<div class="doc-tecnica-card">
+    <div class="doc-tecnica-card">
       <div class="doc-tecnica-left">
         <div class="doc-tecnica-icon-wrap">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
@@ -288,9 +308,7 @@
         </div>
       </div>
       <div class="doc-tecnica-right">
-        
-        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" style="height: 35px; width: auto; object-fit: contain; margin-bottom: 10px; filter: none; opacity: 1;">
-        
+        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" style="height:35px;width:auto;object-fit:contain;filter:none;opacity:1;">
         <a href="recursos/PR0-NDT-241 ESP.pdf" download="Manual_Tecnico_CIP_SISTEM.pdf" class="doc-tecnica-btn">
           <span class="doc-tecnica-btn-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
@@ -352,7 +370,7 @@
   <footer class="footer" id="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" class="footer-logo" style="height: 40px; width: auto; object-fit: contain; margin-bottom: 1.25rem; filter: none; opacity: 1;">
+        <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" class="footer-logo" style="height:40px;width:auto;object-fit:contain;filter:none;opacity:1;">
         <p>Soluciones Industriales Eficientes.<br>Diseño, suministro y respaldo técnico especializado.</p>
       </div>
       <div class="footer-contact">
@@ -401,6 +419,7 @@
   </footer>
 
   <script>
+    /* ---- Correo ---- */
     function abrirCorreo(e) {
       e.preventDefault();
       var asunto = encodeURIComponent("Solicitud de Cotización - CIP SISTEM");
@@ -411,6 +430,8 @@
         window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=" + asunto + "&body=" + cuerpo, "_blank");
       }
     }
+
+    /* ---- Navbar scroll ---- */
     var navbar = document.getElementById('navbar');
     var scrollTopBtn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', function() {
@@ -422,7 +443,37 @@
         if (scrollTopBtn) scrollTopBtn.style.display = 'none';
       }
     }, { passive: true });
-    if (scrollTopBtn) scrollTopBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    if (scrollTopBtn) scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ---- Menú hamburguesa ---- */
+    var hamburgerBtn = document.getElementById('hamburgerBtn');
+    var mobileMenu   = document.getElementById('mobileMenu');
+
+    function closeMobileMenu() {
+      hamburgerBtn.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburgerBtn.addEventListener('click', function() {
+      var isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    /* Cerrar menú al hacer clic fuera */
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) closeMobileMenu();
+    });
+
+    /* Cerrar con tecla Escape */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMobileMenu();
+    });
   </script>
 
   <!-- WhatsApp flotante -->
@@ -432,7 +483,7 @@
 
   <!-- Scroll to top -->
   <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
 </body>

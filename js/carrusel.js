@@ -1,18 +1,18 @@
 /**
- * CIP SISTEM — Carrusel de Distribuidores (Rediseñado)
+ * CIP SISTEM — Carrusel de Distribuidores
  * Robusto: maneja resize, touch y auto-slide limpio.
  */
 (function () {
-  const track = document.querySelector('.carousel-track');
+  var container = document.querySelector('.carousel-container');
+  var track = document.querySelector('.carousel-track');
   if (!track) return;
 
-  const slides = Array.from(track.children);
-  const nextBtn = document.querySelector('.carousel-button.next');
-  const prevBtn = document.querySelector('.carousel-button.prev');
+  var slides = Array.from(track.children);
+  var nextBtn = document.querySelector('.carousel-button.next');
+  var prevBtn = document.querySelector('.carousel-button.prev');
 
-  let currentIndex = 0;
-  let slideWidth = slides[0].getBoundingClientRect().width;
-  let autoTimer = null;
+  var currentIndex = 0;
+  var autoTimer = null;
 
   /* ----- Helpers ----- */
   function getSlideWidth() {
@@ -20,9 +20,9 @@
   }
 
   function moveTo(index) {
-    slideWidth = getSlideWidth();
+    var slideWidth = getSlideWidth();
     currentIndex = ((index % slides.length) + slides.length) % slides.length;
-    track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    track.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
   }
 
   function next() { moveTo(currentIndex + 1); }
@@ -38,28 +38,36 @@
   }
 
   /* ----- Events ----- */
-  nextBtn && nextBtn.addEventListener('click', () => { next(); startAuto(); });
-  prevBtn && prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { next(); startAuto(); });
+  if (prevBtn) prevBtn.addEventListener('click', function() { prev(); startAuto(); });
 
-  /* Recalcula ancho al hacer resize (importante en mobile) */
-  let resizeTimer;
-  window.addEventListener('resize', () => {
+  /* Recalcula ancho al hacer resize */
+  var resizeTimer;
+  window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => moveTo(currentIndex), 150);
+    resizeTimer = setTimeout(function() { moveTo(currentIndex); }, 150);
   });
 
   /* Touch/swipe */
-  let touchStartX = 0;
-  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; stopAuto(); }, { passive: true });
-  track.addEventListener('touchend', e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) { diff > 0 ? next() : prev(); }
+  var touchStartX = 0;
+  track.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    stopAuto();
+  }, { passive: true });
+
+  track.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) { next(); } else { prev(); }
+    }
     startAuto();
   });
 
   /* Pausa al hacer hover */
-  track.closest('.carousel-container') && track.closest('.carousel-container').addEventListener('mouseenter', stopAuto);
-  track.closest('.carousel-container') && track.closest('.carousel-container').addEventListener('mouseleave', startAuto);
+  if (container) {
+    container.addEventListener('mouseenter', stopAuto);
+    container.addEventListener('mouseleave', startAuto);
+  }
 
   /* ----- Init ----- */
   track.style.transition = 'transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
