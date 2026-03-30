@@ -270,7 +270,7 @@ header.scrolled .hamburger span { background: var(--navy); }
 .hero-content::before {
   content: '';
   position: absolute;
-  inset: -65% -30% -65% -10%;
+  inset: -65% -30% -55% -70%;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.575) 0%,
