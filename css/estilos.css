@@ -113,8 +113,18 @@ header.scrolled {
   padding: 10px 40px;
 }
 
-.logo-cipsistem img { height: 34px; width: auto; object-fit: contain; transition: opacity var(--transition); }
-.logo-cipsistem img:hover { opacity: 0.8; }
+.logo-cipsistem img, 
+.logo-cipsistem video { 
+  height: 34px; 
+  width: auto; 
+  object-fit: contain; 
+  transition: opacity var(--transition); 
+  display: block; /* Asegura que el video no deje espacios vacíos debajo */
+}
+.logo-cipsistem img:hover, 
+.logo-cipsistem video:hover { 
+  opacity: 0.8; 
+}
 
 nav.menu {
   position: absolute;
@@ -684,7 +694,8 @@ header.scrolled .hamburger span { background: var(--navy); }
 
 @media (max-width: 640px) {
   header { padding: 10px 16px; }
-  .logo-cipsistem img { height: 28px; }
+  .logo-cipsistem img,
+  .logo-cipsistem video { height: 28px; }
   .hero { height: 60vh; min-height: 520px; }
   .hero-content { padding: 0 18px; padding-top: 80px; width: 100%; max-width: 100%; }
   .hero-title { font-size: clamp(2.4rem, 10vw, 3.2rem); line-height: 1.0; }
