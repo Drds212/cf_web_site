@@ -115,15 +115,28 @@ header.scrolled {
 
 .logo-cipsistem img, 
 .logo-cipsistem video { 
-  height: 34px; 
-  width: auto; 
+  height: 64px !important; 
+  width: 160px !important; 
   object-fit: contain; 
-  transition: opacity var(--transition); 
-  display: block; 
+  display: block;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  will-change: transform, opacity;
+  outline: none;
+  border: none;
+  background: transparent !important;
 }
-.logo-cipsistem img:hover, 
-.logo-cipsistem video:hover { 
-  opacity: 0.8; 
+
+#navbar {
+  /* ... tus otras propiedades (display: flex, etc.) ... */
+  padding: 0.1rem 2rem; /* El primer número (0.5) controla el espacio arriba y abajo */
+  min-height: 60px;     /* Ajusta este valor si quieres forzar una altura mínima específica */
 }
 
 nav.menu {
