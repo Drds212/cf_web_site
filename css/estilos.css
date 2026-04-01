@@ -119,7 +119,7 @@ header.scrolled {
   width: auto; 
   object-fit: contain; 
   transition: opacity var(--transition); 
-  display: block; /* Asegura que el video no deje espacios vacíos debajo */
+  display: block; 
 }
 .logo-cipsistem img:hover, 
 .logo-cipsistem video:hover { 
