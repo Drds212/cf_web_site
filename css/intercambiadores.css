@@ -1,0 +1,307 @@
+/* ================================================
+   intercambiadores.css
+   Estilo coherente con CIP SISTEM C.A.:
+   fondo blanco/gris claro · acento teal · tipografía limpia
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* ── Variables ── */
+:root {
+  --teal:        #00bcd4;
+  --teal-dark:   #0097a7;
+  --teal-light:  #e0f7fa;
+  --black:       #111418;
+  --dark:        #1e2328;
+  --gray-text:   #4a5260;
+  --gray-light:  #f4f6f8;
+  --gray-border: #e2e6ec;
+  --white:       #ffffff;
+  --radius-sm:   6px;
+  --radius:      12px;
+  --radius-lg:   18px;
+  --shadow-card: 0 2px 14px rgba(0,0,0,.07);
+  --shadow-hover:0 8px 32px rgba(0,0,0,.13);
+  --font:        'Outfit', sans-serif;
+  --max-w:       1200px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================================================
+   SECTION WRAPPER
+   ================================================ */
+.ic-section {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 64px 28px 80px;
+}
+.ic-card__img-wrap {
+  width: 100%;
+  height: 190px; /* O la altura que prefieras para mantener uniformidad */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Un fondo sutil por si la imagen tiene transparencias */
+}
+
+.ic-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Usa 'cover' si prefieres que la imagen llene todo el espacio recortando los bordes */
+}
+
+/* Ajuste para el logo que reemplaza la palabra azul en el título */
+.ic-title-logo {
+  height: 1.1em; /* Utiliza la unidad 'em' para que escale según el tamaño de la letra del h1 */
+  width: auto;
+  vertical-align: middle; /* Lo alinea perfectamente con la línea de texto */
+  margin-top: -5px; /* Ajuste fino opcional por si queda muy bajo */
+}
+
+/* Ajuste para el logo que reemplaza el recuadro rojo de la derecha */
+.ic-funke-img {
+  max-width: 170px; /* 170px era el ancho exacto del SVG original */
+  height: auto;
+  display: block;
+}
+/* ================================================
+   HEADER  (título izquierda · logo+desc derecha)
+   ================================================ */
+.ic-header {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+/* Left column */
+.ic-eyebrow {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  margin-bottom: 14px;
+}
+
+.ic-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.ic-title--teal { color: var(--teal); }
+
+.ic-subtitle {
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--teal-dark);
+  letter-spacing: .04em;
+}
+
+/* Right column */
+.ic-header__right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ic-logo-block { display: flex; }
+.ic-funke-svg  { width: 160px; height: auto; }
+
+.ic-header__desc {
+  font-size: .92rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--gray-text);
+}
+
+/* ── Divider ── */
+.ic-divider {
+  border: none;
+  border-top: 1.5px solid var(--gray-border);
+  margin-bottom: 48px;
+}
+
+/* ================================================
+   PRODUCT GRID  (4 cols → 2 → 1)
+   ================================================ */
+.ic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* ── Card ── */
+.ic-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  cursor: default;
+}
+.ic-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+  border-color: var(--teal);
+}
+
+/* Image area */
+.ic-card__img-wrap {
+  background: var(--gray-light);
+  padding: 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1.5px solid var(--gray-border);
+  min-height: 150px;
+}
+.ic-card__img-wrap svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  transition: transform .35s ease;
+}
+.ic-card:hover .ic-card__img-wrap svg {
+  transform: scale(1.04);
+}
+
+/* Body */
+.ic-card__body {
+  padding: 18px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.ic-card__title {
+  font-size: .95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--black);
+}
+.ic-card:hover .ic-card__title { color: var(--teal-dark); }
+
+.ic-card__desc {
+  font-size: .80rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--gray-text);
+  flex: 1;
+}
+
+/* Tags / spec pills */
+.ic-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+.ic-tag {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border: 1px solid rgba(0,151,167,.2);
+  white-space: nowrap;
+}
+
+/* Card entrance animation */
+.ic-card {
+  animation: cardIn .55s ease both;
+}
+.ic-card:nth-child(1) { animation-delay: .05s; }
+.ic-card:nth-child(2) { animation-delay: .10s; }
+.ic-card:nth-child(3) { animation-delay: .15s; }
+.ic-card:nth-child(4) { animation-delay: .20s; }
+.ic-card:nth-child(5) { animation-delay: .25s; }
+.ic-card:nth-child(6) { animation-delay: .30s; }
+.ic-card:nth-child(7) { animation-delay: .35s; }
+.ic-card:nth-child(8) { animation-delay: .40s; }
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+@media (max-width: 1100px) {
+  .ic-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .ic-header { grid-template-columns: 1fr; gap: 28px; }
+  .ic-grid   { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .ic-section { padding: 44px 18px 60px; }
+}
+
+@media (max-width: 520px) {
+  .ic-grid { grid-template-columns: 1fr; }
+  .ic-title { font-size: 1.8rem; }
+}
+
+
+/* =========================================
+   ESTILOS DE LA BARRA DE NAVEGACIÓN
+   ========================================= */
+.ic-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%; /* Espaciado a los lados igual que el contenido */
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil en la parte inferior */
+  position: sticky; /* Opcional: hace que la barra se quede pegada al hacer scroll */
+  top: 0;
+  z-index: 1000;
+}
+
+/* Controla el tamaño del logo para que encaje perfecto en la barra */
+.ic-navbar-logo {
+  height: 45px; /* Altura fija para que la barra no se haga gigante */
+  width: auto;
+  display: block;
+}
+
+/* Estilos para el botón de Volver */
+.ic-btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Separación entre la flecha y el texto */
+  padding: 8px 16px;
+  background-color: #f1f5f9; /* Un gris/azulado muy clarito */
+  color: #334155; /* Texto oscuro */
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.ic-btn-volver:hover {
+  background-color: #e2e8f0; /* Se oscurece un poco al pasar el mouse */
+  color: #0f172a;
+}
