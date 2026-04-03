@@ -11,6 +11,10 @@
 </head>
 <body>
 
+
+
+
+  <!--Barra de navegacion-->
   <header id="navbar" role="banner" aria-label="Barra de navegación principal">
     <div class="logo-cipsistem">
       <a href="https://www.instagram.com/cipsistem.ca/" target="_blank" aria-label="CIP SISTEM en Instagram">
@@ -22,7 +26,7 @@
 
     <nav class="menu" role="navigation" aria-label="Menú principal">
       <a href="#nosotros">Nosotros</a>
-      <a href="#proveedores">Distribuidores</a>
+      <a href="#proveedores">Distribuidor</a>
       <a href="#productos">Productos</a>
       <a href="#ubicacion">Ubicación</a>
       <a href="#footer" class="nav-cta">Contáctanos</a>
@@ -50,9 +54,8 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">
-        <span class="hero-line">Soluciones</span>
-        <span class="hero-line hero-accent">Industriales</span>
-        <span class="hero-line">Eficientes</span>
+        <span class="hero-line">Creando</span>
+        <span class="hero-line hero-accent">Sinergia</span>
       </h1>
       <p class="hero-subtitle">Diseño y suministro de equipos para industrias exigentes con respaldo técnico especializado.</p>
       <div class="hero-actions">
@@ -62,6 +65,10 @@
     </div>
   </section>
 
+
+
+
+  <!--Seccion Nosotros-->
   <section id="nosotros" class="nosotros">
     <div class="nosotros-container">
       <div class="nosotros-imagen-wrap">
@@ -71,7 +78,7 @@
       <div class="nosotros-texto">
         <div class="section-label">Quiénes Somos</div>
         <h2>Compromiso con la <span class="text-accent">excelencia</span> industrial</h2>
-        <p>CIP SISTEM, C.A. se dedica al diseño y suministro de equipos de alta calidad para diversas industrias. Contamos con el respaldo de fabricantes reconocidos a nivel mundial y nos distinguimos por ofrecer <strong>servicio postventa y capacitación especializada</strong>.</p>
+        <p>CIP SISTEM C.A. se dedica al diseño y suministro de equipos de alta calidad para diversas industrias. Contamos con el respaldo de fabricantes reconocidos a nivel mundial y nos distinguimos por ofrecer <strong>servicio postventa y capacitación especializada</strong>.</p>
         <p>Desarrollamos e implementamos sistemas completos de <strong>Limpieza (CIP) y Esterilización (SIP)</strong>, garantizando estándares internacionales en cada proyecto.</p>
         <div class="nosotros-stats">
           <div class="stat"><span class="stat-num">11+</span><span class="stat-label">Marcas Distribuidas</span></div>
@@ -89,12 +96,25 @@
     </div>
   </section>
 
+
+
+
+
+
+  <!--Seccion de Proveedores-->
   <section id="proveedores" class="proveedores">
     <div class="section-header">
       <div class="section-label">Alianzas Estratégicas</div>
-      <h2>Distribuidores <span class="text-accent">Exclusivos</span></h2>
+      <h2>Distribuidor <span class="text-accent">Exclusivo</span></h2>
       <p class="section-subtitle">Representamos a fabricantes líderes de clase mundial.</p>
+      <br>
       
+
+      <!-- Esto esta comentado debido a que se pidio abrir paginas 
+       individiules para los productos en vez de descargar catalogos
+
+
+
       <div class="info-instruccion">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Haz clic en cada distribuidor para descargar el catálogo de productos por marca.
@@ -102,6 +122,15 @@
 
     </div>
 
+
+
+    -->
+
+
+
+
+
+    <!--Carrusel-->
     <svg style="display: none;">
       <symbol id="icon-download" viewBox="0 0 24 24">
         <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
@@ -198,7 +227,7 @@
           <li class="carousel-slide">
             <a href="intercambiadores.html" title="Ver Intercambiadores Hofmann">
               <div class="download-overlay"><svg class="download-icon"><use href="#icon-link"></use></svg></div>
-              <img src="recursos/img proveedores/Hofmann.webp" alt="Hofmann" class="proveedor-logo">
+              <img src="recursos/img logos/logo cip fluid.webp" alt="Cipfluid" class="proveedor-logo">
             </a>
           </li>
         </ul>
@@ -206,9 +235,14 @@
       <button class="carousel-button next" aria-label="Siguiente">❯</button>
     </div>
 
+
+
+
+    <!--Seccion de los provedores con catalogos-->
     <div class="proveedor-grid">
       <a href="recursos/CatalagoProveedores/1.%20Catalago%20Definox.pdf" download><div class="download-overlay"><svg class="download-icon"><use href="#icon-download"></use></svg></div><img src="recursos/img proveedores/definox.webp" alt="Definox"></a>
       
+      <!--Este es el catalogo que no esta disponible-->
       <a class="no-catalog" title="Catálogo no disponible"><div class="download-overlay overlay-no-disponible"><svg class="download-icon"><use href="#icon-warning"></use></svg><span class="texto-no-disponible">No disponible</span></div><img src="recursos/img proveedores/boyer.webp" alt="Boyer"></a>
       
       <a href="recursos/CatalagoProveedores/7.%20Danfoss.pdf" download><div class="download-overlay"><svg class="download-icon"><use href="#icon-download"></use></svg></div><img src="recursos/img proveedores/danfoss.webp" alt="Danfoss"></a>
@@ -221,10 +255,16 @@
       <a class="no-catalog" title="Catálogo no disponible"><div class="download-overlay overlay-no-disponible"><svg class="download-icon"><use href="#icon-warning"></use></svg><span class="texto-no-disponible">No disponible</span></div><img src="recursos/img proveedores/Fisher.webp" alt="Fisher"></a>
       
       <a href="recursos/CatalagoProveedores/2.%20Eddy%20Pump.pdf" download><div class="download-overlay"><svg class="download-icon"><use href="#icon-download"></use></svg></div><img src="recursos/img proveedores/Eddy_Pump.webp" alt="Eddy Pump"></a>
-      <a href="intercambiadores.html"><div class="download-overlay"><svg class="download-icon"><use href="#icon-link"></use></svg></div><img src="recursos/img proveedores/Hofmann.webp" alt="Hofmann"></a>
+      <a href="intercambiadores.html"><div class="download-overlay"><svg class="download-icon"><use href="#icon-link"></use></svg></div><img src="recursos/img logos/logo cip fluid.webp" alt="CipFluid"></a>
     </div>
   </section>
 
+
+
+
+
+
+  <!--Secion de Cip Fluid-->
   <section id="inicio-cip" class="cip-fluid-section">
     <div class="cip-fluid-glow" aria-hidden="true"></div>
     <div class="cip-fluid-inner">
@@ -244,7 +284,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           Distribución Autorizada
         </span>
-        <h2 class="cip-fluid-title">Distribuidores<br>Autorizados<br><em>CIP Fluid</em></h2>
+        <h2 class="cip-fluid-title">Distribuidor<br>Autorizado de la marca<br><em>CIP Fluid</em></h2>
         <p class="cip-fluid-desc">Representamos oficialmente a CIP Fluid, ofreciendo soluciones innovadoras y confiables en sistemas de procesamiento de fluidos para la industria venezolana y latinoamericana.</p>
         <div class="cip-fluid-features">
           <div class="cip-feat">
@@ -260,10 +300,15 @@
             Equipos de alta calidad certificados
           </div>
         </div>
-        <a href="cip_fluid.html" class="cta-btn">
+        <a href="cip_fluid.html" target="_blank" class="cta-btn">
           Ir a CIP Fluid
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
+
+
+          <!--
+          Comentado, deciciones creativas
+
 
         <div class="soporte-separador"></div>
 
@@ -280,6 +325,8 @@
             Contactanos
           </a>
         </div>
+          -->
+
       </div>
     </div>
   </section>
@@ -287,6 +334,14 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="js/carrusel.js"></script>
 
+
+
+
+
+
+
+
+  <!--Seccion de videos-->
   <section id="productos" class="productos">
     <div class="videos-section">
       <div class="section-label" style="text-align:center;margin-bottom:2rem;">En Acción</div>
@@ -304,6 +359,14 @@
     </div>
   </section>
 
+
+
+
+
+
+
+
+  <!--Ubicacion-->
   <section id="ubicacion" class="ubicacion-section">
     <div class="section-header">
       <div class="section-label">Encuéntranos</div>
@@ -314,11 +377,19 @@
     </div>
   </section>
 
+
+
+
+
+  
+
+
+  <!--Footer-->
   <footer class="footer" id="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="recursos/img logos/logo cip sistem.webp" alt="CIP SISTEM" class="footer-logo" style="height:40px;width:auto;object-fit:contain;filter:none;opacity:1;">
-        <p>Soluciones Industriales Eficientes.<br>Diseño, suministro y respaldo técnico especializado.</p>
+        <p>Creando Sinergia.<br>Diseño, suministro y respaldo técnico especializado.</p>
       </div>
       <div class="footer-contact">
         <h4>Contáctanos</h4>
@@ -340,7 +411,7 @@
       <div class="footer-nav">
         <h4>Navegación</h4>
         <a href="#nosotros">Nosotros</a>
-        <a href="#proveedores">Distribuidores</a>
+        <a href="#proveedores">Distribuidor</a>
         <a href="#productos">Productos</a>
         <a href="#ubicacion">Ubicación</a>
       </div>
@@ -364,6 +435,14 @@
       </a>
     </div>
   </footer>
+
+
+
+
+
+
+
+
 
   <script>
     /* Script para ScrollReveal con los nuevos selectores */
