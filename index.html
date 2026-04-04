@@ -11,9 +11,6 @@
 </head>
 <body>
 
-
-
-
   <!--Barra de navegacion-->
   <header id="navbar" role="banner" aria-label="Barra de navegación principal">
     <div class="logo-cipsistem">
@@ -65,9 +62,6 @@
     </div>
   </section>
 
-
-
-
   <!--Seccion Nosotros-->
   <section id="nosotros" class="nosotros">
     <div class="nosotros-container">
@@ -96,11 +90,6 @@
     </div>
   </section>
 
-
-
-
-
-
   <!--Seccion de Proveedores-->
   <section id="proveedores" class="proveedores">
     <div class="section-header">
@@ -109,26 +98,15 @@
       <p class="section-subtitle">Representamos a fabricantes líderes de clase mundial.</p>
       <br>
       
-
       <!-- Esto esta comentado debido a que se pidio abrir paginas 
        individiules para los productos en vez de descargar catalogos
-
-
 
       <div class="info-instruccion">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Haz clic en cada distribuidor para descargar el catálogo de productos por marca.
       </div>
-
     </div>
-
-
-
     -->
-
-
-
-
 
     <!--Carrusel-->
     <svg style="display: none;">
@@ -235,9 +213,6 @@
       <button class="carousel-button next" aria-label="Siguiente">❯</button>
     </div>
 
-
-
-
     <!--Seccion de los provedores con catalogos-->
     <div class="proveedor-grid">
       <a href="recursos/CatalagoProveedores/1.%20Catalago%20Definox.pdf" download><div class="download-overlay"><svg class="download-icon"><use href="#icon-download"></use></svg></div><img src="recursos/img proveedores/definox.webp" alt="Definox"></a>
@@ -258,11 +233,6 @@
       <a href="intercambiadores.html"><div class="download-overlay"><svg class="download-icon"><use href="#icon-link"></use></svg></div><img src="recursos/img logos/logo cip fluid.webp" alt="CipFluid"></a>
     </div>
   </section>
-
-
-
-
-
 
   <!--Secion de Cip Fluid-->
   <section id="inicio-cip" class="cip-fluid-section">
@@ -305,28 +275,6 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
-
-          <!--
-          Comentado, deciciones creativas
-
-
-        <div class="soporte-separador"></div>
-
-        <div class="soporte-info">
-          <h2>Conoce nuestras válvulas de asiento</h2>
-          <p>DIMENSIONES ASIENTO, MUELLE Y ACTUADOR NTD-241.</p>
-        </div>
-
-        <div class="soporte-accion">
-          <a href="cip_fluid.html" class="btn-premium">
-            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="width:20px;height:20px;margin-right:10px;">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
-            Contactanos
-          </a>
-        </div>
-          -->
-
       </div>
     </div>
   </section>
@@ -335,36 +283,89 @@
   <script src="js/carrusel.js"></script>
 
 
-
-
-
-
-
-
   <!--Seccion de videos-->
-  <section id="productos" class="productos">
-    <div class="videos-section">
-      <div class="section-label" style="text-align:center;margin-bottom:2rem;">En Acción</div>
-      <div class="videos-grid">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/66Qt-H0ZgDk" title="CIP SISTEM Video 1" allowfullscreen loading="lazy"></iframe>
+  <section id="productos-videos" class="productos" style="padding: 40px 0;">
+  <div class="videos-section">
+    <div class="section-header" style="text-align: left; margin-bottom: 30px; padding-left: 10px;">
+      <div class="section-label">En Acción</div>
+    </div>
+    
+    <div class="videos-grid">
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, '66Qt-H0ZgDk')">
+          <h4 class="video-title">[EN] Definox | Starmotion Pigging</h4>
+          <img src="https://img.youtube.com/vi/66Qt-H0ZgDk/mqdefault.jpg" alt="Video 1">
         </div>
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/2-mNtEafjhE" title="CIP SISTEM Video 2" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, '2-mNtEafjhE')">
+          <h4 class="video-title">Multi-Parameter Flow Meter (Type 8098)</h4>
+          <img src="https://img.youtube.com/vi/2-mNtEafjhE/mqdefault.jpg" alt="Video 2">
         </div>
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/8f8GDQytApI" title="CIP SISTEM Video 3" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, '8f8GDQytApI')">
+          <h4 class="video-title">Technology Animation: SAW Technology</h4>
+          <img src="https://img.youtube.com/vi/8f8GDQytApI/mqdefault.jpg" alt="Video 3">
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, 'crXqwpjfvrg')">
+          <h4 class="video-title">Definox SAS - Animation</h4>
+          <img src="https://img.youtube.com/vi/crXqwpjfvrg/mqdefault.jpg" alt="Video 4">
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, 'Efb9M7Z815I')">
+          <h4 class="video-title">Bürkert FLOWave Simulation</h4>
+          <img src="https://img.youtube.com/vi/Efb9M7Z815I/mqdefault.jpg" alt="Video 5">
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, '_WLtj_fzPAg')">
+          <h4 class="video-title">Danfoss Industrial Automation</h4>
+          <img src="https://img.youtube.com/vi/_WLtj_fzPAg/mqdefault.jpg" alt="Video 6">
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, 'Z5zlLeTK3kE')">
+          <h4 class="video-title">Wilo-Stratos MAXO</h4>
+          <img src="https://img.youtube.com/vi/Z5zlLeTK3kE/mqdefault.jpg" alt="Video 7">
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, 'yYWLFCegt50')">
+          <h4 class="video-title">CIP Fluid Solutions</h4>
+          <img src="https://img.youtube.com/vi/yYWLFCegt50/mqdefault.jpg" alt="Video 8">
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-facade" onclick="loadVideo(this, 'DzgmDkpaTFc')">
+          <h4 class="video-title">Industrial Process Control</h4>
+          <img src="https://img.youtube.com/vi/DzgmDkpaTFc/mqdefault.jpg" alt="Video 9">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-
-
-
-
-
-
+<script>
+function loadVideo(element, videoId) {
+  const iframe = document.createElement("iframe");
+  iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+  iframe.setAttribute("title", "CIP SISTEM Video");
+  iframe.setAttribute("frameborder", "0");
+  iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+  iframe.setAttribute("allowfullscreen", "1");
+  
+  // Estilos para que encaje perfecto en el diseño de Liliana
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.borderRadius = "12px";
+  
+  element.parentNode.replaceChild(iframe, element);
+}
+</script>
 
   <!--Ubicacion-->
   <section id="ubicacion" class="ubicacion-section">
@@ -376,13 +377,6 @@
       <div class="mapa-placeholder-text">Cargando mapa…</div>
     </div>
   </section>
-
-
-
-
-
-  
-
 
   <!--Footer-->
   <footer class="footer" id="footer">
@@ -435,13 +429,6 @@
       </a>
     </div>
   </footer>
-
-
-
-
-
-
-
 
 
   <script>
@@ -512,6 +499,25 @@
       window.addEventListener("scroll", tryLoad, { passive: true });
       setTimeout(tryLoad, 600);
     })();
+
+
+    /* Función para cargar el video de YouTube solo al hacer clic */
+    function loadVideo(element, videoId) {
+      const iframe = document.createElement("iframe");
+      // Usamos los mismos atributos que tenías en tu código original
+      iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+      iframe.setAttribute("title", "CIP SISTEM Video");
+      iframe.setAttribute("allowfullscreen", "true");
+      iframe.setAttribute("allow", "autoplay; encrypted-media");
+      
+      // Forzamos a que el iframe use el 100% del contenedor .video-wrap
+      iframe.style.width = "100%";
+      iframe.style.height = "100%"; 
+      iframe.style.display = "block";
+      iframe.style.border = "none";
+      
+      element.parentNode.replaceChild(iframe, element);
+    }
   </script>
 
   <a href="https://wa.me/04140496684" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Contactar por WhatsApp">
