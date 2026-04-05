@@ -1,322 +1,384 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CIP FLUID</title>
-  <link rel="stylesheet" href="css/estilos_cipfluid.css">
-  <meta name="viewport" content="width=1024, initial-scale=0.35">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIP FLUID — Soluciones Industriales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos_cipfluid.css">
 </head>
-
 <body>
-  <nav id="navbar" class="transparent" role="navigation" aria-label="Main Navigation">
-    <div class="logo-container" aria-label="Logos">
-      <img src="recursos/img logos/logo cip fluid.webp" alt="Logo CIP SISTEM"
-        onclick="window.open('https://www.instagram.com/cipfluid/', '_blank')" style="cursor:pointer;" />
 
-    </div>
-    <ul role="menubar" aria-label="Primary Menu">
-      <a href="#nosotros">NOSOTROS</a>
-      <a href="#productos">PRODUCTOS</a>
-      <a href="#footer">CONTACTANOS</a>
+  <!-- ==============================
+       NAVBAR
+  =============================== -->
+  <nav id="navbar" class="transparent" role="navigation" aria-label="Navegación principal">
+
+    <!-- Logo pill — always contrasted -->
+    <a class="nav-logo-wrap" href="https://www.instagram.com/cipfluid/" target="_blank" rel="noopener" aria-label="CIP FLUID Instagram">
+      <img src="./recursos/img logos/logo cip fluid.webp" alt="Logo CIP FLUID" />
+      <div class="nav-brand-label">CIP FLUID<span>Soluciones Industriales</span></div>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="menubar">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#footer">Contacto</a></li>
+      <li><a href="index.html" class="nav-back">← CIP SISTEM</a></li>
     </ul>
+
+    <!-- Hamburger (mobile) -->
+    <button class="nav-burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <header role="banner" class="hero" id="inicio">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="recursos/Videos/document_4952103936602408101.mp4" type="video/mp4">
-      Tu navegador no soporta el video.
-    </video>
+  <!-- Mobile overlay menu -->
+  <div class="nav-mobile" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú principal">
+    <button class="nav-mobile-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
+    <a href="#nosotros"  onclick="closeMobileMenu()">Nosotros</a>
+    <a href="#productos" onclick="closeMobileMenu()">Productos</a>
+    <a href="#footer"    onclick="closeMobileMenu()">Contacto</a>
+    <a href="index.html">← CIP SISTEM</a>
+  </div>
 
-    <div class="hero-text">
-      <h1>
-        <span class="white-text">SOLUCIONES INDUSTRIALES</span>
-        <span class="blue-text">EFICIENTES</span>
+
+  <!-- ==============================
+       HERO — Video de fondo
+  =============================== -->
+  <section id="inicio" role="banner">
+
+    <div class="hero-video-wrap" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="none"
+             poster="./recursos/Productos Cip Fluid/imagen principal cid fluid.jpg">
+        <source src="./recursos/Videos/document_4952103936602408101.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-stripe"  aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        <span>Acero 316L — Calidad Industrial</span>
+      </div>
+
+      <h1 class="hero-title">
+        Soluciones<br>
+        <em>Industriales</em>
+        Eficientes
       </h1>
-    </div>
-  </header>
-  <main>
-  </br> 
 
-
-<section id="nosotros" class="nosotros">
-  <h2 class="titulo">NOSOTROS</h2>
-  
-  <div class="nosotros-contenido">
-    <div class="nosotros-texto">
-      <h3>Innovación y soluciones <br> industriales de confianza</h3>
-      <p>
-      CIP FLUID, es una empresa especializada en el diseño, dimensionamiento y suministro de equipos para la industria alimenticia, química, petrolera, papelera, cementera, entre otras. Somos fabricantes de equipos de la más alta calidad, monitoreados cuidadosamente desde su origen hasta la entrega en planta.
+      <p class="hero-desc">
+        Diseño, dimensionamiento y suministro de equipos para la industria alimenticia, química, petrolera, papelera y cementera. Fabricamos con los más altos estándares de calidad.
       </p>
+
+      <div class="hero-cta-group">
+        <a href="#productos" class="btn-primary">
+          Ver productos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#nosotros" class="btn-ghost">Conócenos</a>
+      </div>
     </div>
 
-    <div class="nosotros-imagenes">
-      <div class="columna">
-        <img src="recursos/Productos Cip Fluid/nosotros 1.png " alt="imagen 1">
-        
-      </div>
-      <div class="columna">
-        <img src="recursos/Productos Cip Fluid/nosotros.png" alt="imagen 3">
-        <img src="recursos/Productos Cip Fluid/Bridas de acero en formación precisa.png" alt="imagen 4">
-          <img src="recursos/img logos/Imagen1.png" alt="imagen 6" class="img-especial">
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
+
+  <!-- ==============================
+       NOSOTROS
+  =============================== -->
+  <section id="nosotros" aria-label="Nosotros">
+  <div class="section-wrapper">
+    <div class="section-header reveal">
+      <p class="section-kicker">Quiénes somos</p>
+      <h2 class="section-title">Nosotros</h2>
+    </div>
+
+    <div class="nosotros-grid">
+      <div class="nosotros-text-block reveal reveal-delay-1">
+        <h3>Innovación y soluciones<br><em>industriales</em> de confianza</h3>
+        <p>
+          CIP FLUID es una empresa especializada en el diseño, dimensionamiento y suministro de equipos para la industria alimenticia, química, petrolera, papelera, cementera, entre otras. Somos fabricantes de equipos de la más alta calidad, monitoreados cuidadosamente desde su origen hasta la entrega en planta.
+        </p>
+
+        <div class="nosotros-stats">
+          <div class="stat-card reveal reveal-delay-2">
+            <div class="stat-num">316L</div>
+            <div class="stat-label">Acero certificado</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-2">
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Líneas de producto</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Control de calidad</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <div class="stat-num">B2B</div>
+            <div class="stat-label">Soluciones a medida</div>
+          </div>
+        </div>
       </div>
-      <div class="columna">
-        <img src="recursos/Productos Cip Fluid/Gemini_Generated_Image_9qs40n9qs40n9qs4.png" alt="imagen 5">
-        <img src="recursos/Productos Cip Fluid/ferrule_clamp_cip_fluid/ferrule_clamp_3pulgadas.jpg" alt="imagen 2">
+
+      <div class="nosotros-image-wrapper reveal reveal-delay-2">
+        <img src="./recursos/Productos Cip Fluid/imagen principal cid fluid.jpg" alt="Profesional de CIP FLUID trabajando" class="nosotros-single-img">
       </div>
-    
     </div>
   </div>
 </section>
 
-  <section id="productos" style="padding:1.8rem 1.8rem;">
-  <h2 class="titulo">PRODUCTOS</h2>
 
-      <div class="productos-wrapper">
+  <!-- ==============================
+       PRODUCTOS
+  =============================== -->
+  <section id="productos" aria-label="Productos">
 
-        <div class="card-container">
-          <div class="card">
-            <div class="front-content">
-              <img src="recursos/Productos Cip Fluid/valvulas/valvula_3pulgadas.jpg" alt="Imagen del producto">
-            </div>
-            <div class="content">
-              <p class="heading">Valvulas</p>
-              <p>Disponemos de valvulas mariposa desde 1" hasta 4", tambien contamos con valvulas de asiento inclinado
-                de 1,5" y 2". Todo en acero 316L</p>
-            </div>
+    <div class="section-wrapper">
+      <div class="section-header reveal">
+        <p class="section-kicker">Catálogo</p>
+        <h2 class="section-title">Productos</h2>
+      </div>
+
+      <div class="products-grid">
+
+        <div class="prod-card reveal reveal-delay-1"
+             data-img="./recursos/Productos Cip Fluid/valvulas/valvula_3pulgadas.jpg"
+             data-name="Válvulas"
+             data-material="316L • 1&quot; – 4&quot;">
+          <div class="prod-card-img">
+            <img src="./recursos/Productos Cip Fluid/valvulas/valvula_3pulgadas.jpg" alt="Válvulas industriales" loading="lazy">
+          </div>
+          <span class="prod-badge">Acero 316L</span>
+          <div class="prod-card-info">
+            <p class="prod-name">Válvulas</p>
+            <p class="prod-desc">Válvulas mariposa desde 1" hasta 4" y válvulas de asiento inclinado de 1.5" y 2". Todo en acero 316L.</p>
+            <span class="prod-material">316L • 1" – 4"</span>
+          </div>
+          <div class="prod-card-zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
         </div>
 
-        <div class="card-container">
-          <div class="card">
-            <div class="front-content">
-              <img src="recursos/Productos Cip Fluid/tuberias_cip_fluid/codo_1,5pulgadas.jpg" alt="Imagen del producto">
-            </div>
-            <div class="content">
-              <p class="heading">Tuberias</p>
-              <p>
-                Disponemos de codos de 1,5" hasta 6", tambien contamos con tuberias tee corta desde 1,5" hasta 4", todas
-                las tuberias a soldar. Todo en acero 316L
-              </p>
-            </div>
+        <div class="prod-card reveal reveal-delay-2"
+             data-img="./recursos/Productos Cip Fluid/tuberias_cip_fluid/codo_1,5pulgadas.jpg"
+             data-name="Tuberías"
+             data-material="316L • 1.5&quot; – 6&quot;">
+          <div class="prod-card-img">
+            <img src="./recursos/Productos Cip Fluid/tuberias_cip_fluid/codo_1,5pulgadas.jpg" alt="Tuberías industriales" loading="lazy">
+          </div>
+          <span class="prod-badge">A soldar</span>
+          <div class="prod-card-info">
+            <p class="prod-name">Tuberías</p>
+            <p class="prod-desc">Codos de 1.5" a 6" y tuberías tee corta desde 1.5" hasta 4", todas a soldar. Acero 316L.</p>
+            <span class="prod-material">316L • 1.5" – 6"</span>
+          </div>
+          <div class="prod-card-zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
         </div>
 
-        <div class="card-container">
-          <div class="card">
-            <div class="front-content">
-              <img src="recursos/Productos Cip Fluid/ferrule_clamp_cip_fluid/ferrule_clamp_3pulgadas.jpg"
-                alt="Imagen del producto">
-            </div>
-            <div class="content">
-              <p class="heading">Ferrule clamp</p>
-              <p>
-                Disponemos de las medidas desde 1" hasta las 4" y todo en material de acero 316L
-              </p>
-            </div>
+        <div class="prod-card reveal reveal-delay-3"
+             data-img="./recursos/Productos Cip Fluid/ferrule_clamp_cip_fluid/ferrule_clamp_3pulgadas.jpg"
+             data-name="Ferrule Clamp"
+             data-material="316L • 1&quot; – 4&quot;">
+          <div class="prod-card-img">
+            <img src="./recursos/Productos Cip Fluid/ferrule_clamp_cip_fluid/ferrule_clamp_3pulgadas.jpg" alt="Ferrule clamp" loading="lazy">
+          </div>
+          <span class="prod-badge">Acero 316L</span>
+          <div class="prod-card-info">
+            <p class="prod-name">Ferrule Clamp</p>
+            <p class="prod-desc">Medidas desde 1" hasta 4", todo en material de acero 316L de alta calidad.</p>
+            <span class="prod-material">316L • 1" – 4"</span>
+          </div>
+          <div class="prod-card-zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
         </div>
 
-        <div class="card-container">
-          <div class="card">
-            <div class="front-content">
-              <img src="recursos/Productos Cip Fluid/sensores_cip_fluid/actuador_neumatico_1_a_3pulgadas.jpg"
-                alt="Imagen del producto">
-            </div>
-            <div class="content">
-              <p class="heading">Actuador neumatico"</p>
-              <p>
-                Capacidad de apertura y cerrado de valvulas de 1" a 3"
-              </p>
-            </div>
+        <div class="prod-card reveal reveal-delay-1"
+             data-img="./recursos/Productos Cip Fluid/sensores_cip_fluid/actuador_neumatico_1_a_3pulgadas.jpg"
+             data-name="Actuador Neumático"
+             data-material="1&quot; – 3&quot;">
+          <div class="prod-card-img">
+            <img src="./recursos/Productos Cip Fluid/sensores_cip_fluid/actuador_neumatico_1_a_3pulgadas.jpg" alt="Actuador neumático" loading="lazy">
+          </div>
+          <span class="prod-badge">Neumático</span>
+          <div class="prod-card-info">
+            <p class="prod-name">Actuador Neumático</p>
+            <p class="prod-desc">Capacidad de apertura y cierre de válvulas de 1" a 3" con precisión garantizada.</p>
+            <span class="prod-material">1" – 3"</span>
+          </div>
+          <div class="prod-card-zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
         </div>
 
-        <div class="card-container">
-          <div class="card">
-            <div class="front-content">
-              <img
-                src="recursos/Productos Cip Fluid/reducciones_concentricas_cip_fluid/reduccion_concentrica_3x1,5pulgadas.jpg"
-                alt="Imagen del producto">
-            </div>
-            <div class="content">
-              <p class="heading">Reduccion concentrica</p>
-              <p>
-                Todas en material de acero 316L, a soldar. Contamos con las medidas de 2,5"x1,5" 2,5"x2" 2"x1" 3"x1,5"
-                3"x2,5" 3"x2" y 2,5"x1,5"
-              </p>
-            </div>
+        <div class="prod-card reveal reveal-delay-2"
+             data-img="./recursos/Productos Cip Fluid/reducciones_concentricas_cip_fluid/reduccion_concentrica_3x1,5pulgadas.jpg"
+             data-name="Reducción Concéntrica"
+             data-material="316L • A soldar">
+          <div class="prod-card-img">
+            <img src="./recursos/Productos Cip Fluid/reducciones_concentricas_cip_fluid/reduccion_concentrica_3x1,5pulgadas.jpg" alt="Reducción concéntrica" loading="lazy">
+          </div>
+          <span class="prod-badge">Acero 316L</span>
+          <div class="prod-card-info">
+            <p class="prod-name">Reducción Concéntrica</p>
+            <p class="prod-desc">Medidas: 2.5"×1.5" · 2.5"×2" · 2"×1" · 3"×1.5" · 3"×2.5" · 3"×2". Todo en 316L, a soldar.</p>
+            <span class="prod-material">316L • A soldar</span>
+          </div>
+          <div class="prod-card-zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
         </div>
 
-        <div class="card-container">
-          <div class="card">
-            <div class="front-content">
-              <img src="recursos/Productos Cip Fluid/abrazaderas_cip_fluid/abrazadera_1,5pulgadas.jpg"
-                alt="Imagen del producto">
-            </div>
-            <div class="content">
-              <p class="heading">Abrazaderas</p>
-              <p>
-                Material de acero 304 contamos con las medidas de 1" y 3"
-              </p>
-            </div>
+        <div class="prod-card reveal reveal-delay-3"
+             data-img="./recursos/Productos Cip Fluid/abrazaderas_cip_fluid/abrazadera_1,5pulgadas.jpg"
+             data-name="Abrazaderas"
+             data-material="304 • 1&quot; – 3&quot;">
+          <div class="prod-card-img">
+            <img src="./recursos/Productos Cip Fluid/abrazaderas_cip_fluid/abrazadera_1,5pulgadas.jpg" alt="Abrazaderas" loading="lazy">
+          </div>
+          <span class="prod-badge">Acero 304</span>
+          <div class="prod-card-info">
+            <p class="prod-name">Abrazaderas</p>
+            <p class="prod-desc">Material de acero 304, disponibles en medidas de 1" y 3".</p>
+            <span class="prod-material">304 • 1" – 3"</span>
+          </div>
+          <div class="prod-card-zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
         </div>
 
-        <div class="card-container">
-          <div class="card">
-            <div class="front-content">
-              <img src="recursos/Productos Cip Fluid/gomas_cip_fluid/20250814_182946.jpg"
-                alt="Imagen del producto">
-            </div>
-            <div class="content">
-              <p class="heading">Empacadura clamp</p>
-              <p>
-                Material de teflon y tambien en Epdm, en medidas de 1"  1,5"  2"  2,5"  y  3"
-              </p>
-            </div>
+        <div class="prod-card reveal reveal-delay-1"
+             data-img="./recursos/Productos Cip Fluid/gomas_cip_fluid/20250814_182946.jpg"
+             data-name="Empacadura Clamp"
+             data-material="1&quot; – 3&quot;">
+          <div class="prod-card-img">
+            <img src="./recursos/Productos Cip Fluid/gomas_cip_fluid/20250814_182946.jpg" alt="Empacadura clamp" loading="lazy">
+          </div>
+          <span class="prod-badge">Teflón / EPDM</span>
+          <div class="prod-card-info">
+            <p class="prod-name">Empacadura Clamp</p>
+            <p class="prod-desc">En teflón y EPDM, en medidas de 1" · 1.5" · 2" · 2.5" · 3".</p>
+            <span class="prod-material">1" – 3"</span>
+          </div>
+          <div class="prod-card-zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           </div>
         </div>
-
 
       </div>
-    </section>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FLOATING BUTTONS
+  =============================== -->
+  <a class="whatsapp-float" href="https://wa.me/+584140496684" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <img src="./recursos/img logos/WhatsApp.webp" alt="WhatsApp">
+  </a>
 
 
 
 
-    <!-- WhatsApp -->
-    <div class="whatsapp-icon">
-      <a href="https://wa.me/04140496684" target="_blank">
-        <img src="recursos\img logos\WhatsApp.webp" alt="WhatsApp" />
-      </a>
+  <!-- ==============================
+       FOOTER
+  =============================== -->
+  <footer id="footer" aria-label="Pie de página">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="./recursos/img logos/logo cip fluid.webp" alt="Logo CIP FLUID" class="footer-logo">
+        <p>Expertos en diseño, dimensionamiento y suministro de equipos industriales de alta calidad. Monitoreo estricto desde el origen hasta la entrega en planta.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-nav">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="index.html" class="footer-back-link">← Volver a CIP SISTEM</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h4>Contacto</h4>
+        <div class="contact-list">
+          <a href="/cdn-cgi/l/email-protection#c7b1a2a9b3a6b487a4aeb7b4aeb4b3a2aae9a4a8aa" class="contact-item" onclick="abrirCorreo(event,'ventas@cipsistem.com')">
+            <span class="contact-icon">📧</span> <span class="__cf_email__" data-cfemail="7f091a110b1e0c3f1c160f0c160c0b1a12511c1012">[email&#160;protected]</span>
+          </a>
+          <a href="/cdn-cgi/l/email-protection#047e65696676656a6b2a656a706b6a6d6b446369656d682a676b69" class="contact-item" onclick="abrirCorreo(event,'zambrano.antonio@gmail.com')">
+            <span class="contact-icon">📧</span> <span class="__cf_email__" data-cfemail="473d262a25352629286926293328292e2807202a262e2b6924282a">[email&#160;protected]</span>
+          </a>
+          <a href="https://wa.me/+584140496684" class="contact-item">
+            <span class="contact-icon">📱</span> +58 414 049 6684
+          </a>
+          <a href="https://wa.me/+584140492892" class="contact-item">
+            <span class="contact-icon">📱</span> +58 414 049 2892
+          </a>
+          
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/cipfluid/" target="_blank" rel="noopener" class="social-badge">@cipfluid</a>
+            <a href="https://www.instagram.com/cipsistem.ca/" target="_blank" rel="noopener" class="social-badge">@cipsistem.ca</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Scroll to top button -->
-    <button aria-label="Scroll to top" id="scrollTopBtn" class="scroll-top-btn" title="Volver arriba" type="button">
-      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <polyline points="18 15 12 9 6 15"></polyline>
-      </svg>
+    <div class="footer-bottom">
+      <p>&copy; 2025 CIP FLUID, C.A. Todos erechos reservados.</p>
+      <a href="#inicio" class="back-to-top-link">Volver arriba ↑</a>
+    </div>
+
+  </div>
+</footer>
+
+
+  <!-- ==============================
+       LIGHTBOX
+  =============================== -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada del producto">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
 
-    <script>
-      // Navbar background toggle on scroll
-      const navbar = document.getElementById('navbar');
-      const scrollTopBtn = document.getElementById('scrollTopBtn');
+    <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox-arrow next" id="lightboxNext" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
 
-      const toggleNavbarBackground = () => {
-        if (window.scrollY > 80) {
-          navbar.classList.remove('transparent');
-          navbar.classList.add('solid');
-          scrollTopBtn.style.display = 'flex';
-        } else {
-          navbar.classList.add('transparent');
-          navbar.classList.remove('solid');
-          scrollTopBtn.style.display = 'none';
-        }
-      };
-
-      // Scroll to top on button click
-      scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      window.addEventListener('scroll', toggleNavbarBackground);
-      toggleNavbarBackground(); // Run onload to set correct initial state
-    </script>
-    </section>
-
-    <!-- ================== FOOTER ================== -->
-    <div class="footer-container">
-      <footer class="footer" id="footer">
-        <h2>Estamos para servirte. Contacta con nuestros distrubuidores autorizados consultar disponibilidad en nuestros
-          productos</h2>
-
-        <a href="mailto:ventas@cipsistem.com" onclick="abrirCorreo(event)" class="footer-email">
-          E-mail: ventas@cipsistem.com
-        </a>
-
-        <script>
-          function abrirCorreo(e) {
-            e.preventDefault(); // siempre prevenimos el comportamiento por defecto
-
-            const asunto = "Solicitud de Cotización - CIP SISTEM";
-            const cuerpo = `Estimado equipo de CIP SISTEM,
-
-Me gustaría solicitar una cotización para los siguientes productos/servicios:
-
-- [Especificar producto o servicio]
-- [Cantidad]
-- [Detalles adicionales]
-
-Datos de contacto:  
-Nombre:  
-Teléfono:  
-Correo:  
-
-Quedo atento(a) a su respuesta.
-
-Saludos cordiales,  
-[nombre]`;
-
-            const asuntoCodificado = encodeURIComponent(asunto);
-            const cuerpoCodificado = encodeURIComponent(cuerpo);
-
-            // Detectar si es móvil
-            const esMovil = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-            if (esMovil) {
-              // En móvil: abrir la app de correo predeterminada
-              window.location.href = `mailto:ventas@cipsistem.com?subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
-            } else {
-              // En desktop: abrir Gmail web
-              window.open(
-                `https://mail.google.com/mail/?view=cm&fs=1&to=ventas@cipsistem.com&su=${asuntoCodificado}&body=${cuerpoCodificado}`,
-                "_blank"
-              );
-            }
-          }
-        </script>
-
-        <div class="contact-options">
-          <a href="https://wa.me/+584140496684" class="whatsapp-number">+584140496684</a>
-          <span class="separator">|</span>
-          <a href="https://wa.me/+584140492892" class="whatsapp-number">+584140492892</a>
-        </div>
-
-        <div class="footer-instagram">
-          <p class="redes">
-            <img src="recursos\img logos\instagram.webp" alt="Instagram"
-              style="width:20px; height:20px; vertical-align:middle;">
-            <a href="https://www.instagram.com/cipsistem.ca/" class="redes-social">CIP SISTEM</a>
-          </p>
-        </div>
-
-        <div class="footer-instagram">
-          <p class="redes">
-            <img src="recursos\img logos\instagram.webp" alt="Instagram"
-              style="width:20px; height:20px; vertical-align:middle;">
-            <a href="https://www.instagram.com/cipfluid" class="redes-social">CIP FLUID</a>
-          </p>
-        </div>
-
-        <div class="footer-content">
-          <!-- <p class="location">
-        <img src="recursos/ubicacion.png" alt="Ubicación" style="width:20px; height:20px; vertical-align:middle;">
-        <a href="#ubicacion" class="location-link">CC Coche Aragua, Av. Intercomunal Santiago Mariño, Turmero 2115, Aragua</a>
-      </p> -->
-        </div>
-
-        <a href="#inicio">Volver al inicio</a>
-        <p>&copy; 2025 CIP FLUID, C.A. Todos los derechos reservados.</p>
-      </footer>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption">
+        <span class="lightbox-caption-name" id="lightboxName"></span>
+        <span class="lightbox-caption-material" id="lightboxMaterial"></span>
+      </div>
     </div>
+  </div>
+
+
+  <!-- ==============================
+       SCRIPTS
+  =============================== -->
+  <script src="./js/main.js"></script>
 
 </body>
-
 </html>
