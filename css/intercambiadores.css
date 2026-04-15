@@ -555,3 +555,38 @@ body {
     gap: 0.75rem;
   }
 }
+
+
+.ic-video-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .video-container {
+  width: 100%;
+  max-width: 850px; 
+  height: 350px;  
+  margin: 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+  .video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+  @media (max-width: 768px) {
+  .video-container {
+    height: 250px;
+    max-width: 95%;
+  }
+    .video-container {
+      border-radius: 12px;
+    }
+  }
