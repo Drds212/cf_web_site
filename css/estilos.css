@@ -115,8 +115,8 @@ header.scrolled {
 
 .logo-cipsistem img, 
 .logo-cipsistem video { 
-  height: 64px !important; 
-  width: 160px !important; 
+  height: 40px !important; /* Aumentado de 64px a 85px */
+  width: auto !important; 
   object-fit: contain; 
   display: block;
   transform: translate3d(0, 0, 0);
