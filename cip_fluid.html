@@ -6,7 +6,9 @@
   <title>CIP FLUID — Soluciones Industriales</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="./recursos/Productos Cip Fluid/imagen principal cid fluid.jpg" fetchpriority="high">
   <link rel="stylesheet" href="./css/estilos_cipfluid.css">
 </head>
 <body>
@@ -16,13 +18,12 @@
   =============================== -->
   <nav id="navbar" class="transparent" role="navigation" aria-label="Navegación principal">
 
-    <!-- Logo pill — always contrasted -->
     <a class="nav-logo-wrap" href="https://www.instagram.com/cipfluid/" target="_blank" rel="noopener" aria-label="CIP FLUID Instagram">
-      <img src="./recursos/img logos/logo cip fluid.webp" alt="Logo CIP FLUID" />
+      <!-- Logo: fetchpriority alto, sin lazy -->
+      <img src="./recursos/img logos/logo cip fluid.webp" alt="Logo CIP FLUID" width="42" height="42" fetchpriority="high">
       <div class="nav-brand-label">CIP FLUID<span>Soluciones Industriales</span></div>
     </a>
 
-    <!-- Desktop links -->
     <ul class="nav-links" role="menubar">
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#productos">Productos</a></li>
@@ -30,7 +31,6 @@
       <li><a href="index.html" class="nav-back">← CIP SISTEM</a></li>
     </ul>
 
-    <!-- Hamburger (mobile) -->
     <button class="nav-burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -45,14 +45,10 @@
     <a href="index.html">← CIP SISTEM</a>
   </div>
 
-
-  <!-- ==============================
-       HERO — Video de fondo
-  =============================== -->
   <section id="inicio" role="banner">
 
     <div class="hero-video-wrap" aria-hidden="true">
-      <video autoplay muted loop playsinline preload="none"
+      <video id="heroVideo" muted loop playsinline
              poster="./recursos/Productos Cip Fluid/imagen principal cid fluid.jpg">
         <source src="./recursos/Videos/document_4952103936602408101.mp4" type="video/mp4">
       </video>
@@ -79,7 +75,7 @@
       <div class="hero-cta-group">
         <a href="#productos" class="btn-primary">
           Ver productos
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
@@ -132,16 +128,17 @@
       </div>
 
       <div class="nosotros-image-wrapper reveal reveal-delay-2">
-        <img src="./recursos/Productos Cip Fluid/imagen principal cid fluid.jpg" alt="Profesional de CIP FLUID trabajando" class="nosotros-single-img">
+        <img src="./recursos/Productos Cip Fluid/imagen principal cid fluid.jpg"
+             alt="Profesional de CIP FLUID trabajando"
+             class="nosotros-single-img"
+             loading="lazy"
+             decoding="async"
+             width="420" height="560">
       </div>
     </div>
   </div>
 </section>
 
-
-  <!-- ==============================
-       PRODUCTOS
-  =============================== -->
   <section id="productos" aria-label="Productos">
 
     <div class="section-wrapper">
@@ -152,12 +149,17 @@
 
       <div class="products-grid">
 
+        <!-- VÁLVULAS -->
         <div class="prod-card reveal reveal-delay-1"
              data-img="./recursos/Productos Cip Fluid/valvulas/valvula_3pulgadas.jpg"
              data-name="Válvulas"
              data-material="316L • 1&quot; – 4&quot;">
           <div class="prod-card-img">
-            <img src="./recursos/Productos Cip Fluid/valvulas/valvula_3pulgadas.jpg" alt="Válvulas industriales" loading="lazy">
+            <img data-src="./recursos/Productos Cip Fluid/valvulas/valvula_3pulgadas.jpg"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                 alt="Válvulas industriales"
+                 class="lazy-img"
+                 width="300" height="360" decoding="async">
           </div>
           <span class="prod-badge">Acero 316L</span>
           <div class="prod-card-info">
@@ -170,12 +172,17 @@
           </div>
         </div>
 
+        <!-- TUBERÍAS -->
         <div class="prod-card reveal reveal-delay-2"
              data-img="./recursos/Productos Cip Fluid/tuberias_cip_fluid/codo_1,5pulgadas.jpg"
              data-name="Tuberías"
              data-material="316L • 1.5&quot; – 6&quot;">
           <div class="prod-card-img">
-            <img src="./recursos/Productos Cip Fluid/tuberias_cip_fluid/codo_1,5pulgadas.jpg" alt="Tuberías industriales" loading="lazy">
+            <img data-src="./recursos/Productos Cip Fluid/tuberias_cip_fluid/codo_1,5pulgadas.jpg"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                 alt="Tuberías industriales"
+                 class="lazy-img"
+                 width="300" height="360" decoding="async">
           </div>
           <span class="prod-badge">A soldar</span>
           <div class="prod-card-info">
@@ -188,12 +195,17 @@
           </div>
         </div>
 
+        <!-- FERRULE CLAMP -->
         <div class="prod-card reveal reveal-delay-3"
              data-img="./recursos/Productos Cip Fluid/ferrule_clamp_cip_fluid/ferrule_clamp_3pulgadas.jpg"
              data-name="Ferrule Clamp"
              data-material="316L • 1&quot; – 4&quot;">
           <div class="prod-card-img">
-            <img src="./recursos/Productos Cip Fluid/ferrule_clamp_cip_fluid/ferrule_clamp_3pulgadas.jpg" alt="Ferrule clamp" loading="lazy">
+            <img data-src="./recursos/Productos Cip Fluid/ferrule_clamp_cip_fluid/ferrule_clamp_3pulgadas.jpg"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                 alt="Ferrule clamp"
+                 class="lazy-img"
+                 width="300" height="360" decoding="async">
           </div>
           <span class="prod-badge">Acero 316L</span>
           <div class="prod-card-info">
@@ -206,12 +218,17 @@
           </div>
         </div>
 
+        <!-- ACTUADOR NEUMÁTICO -->
         <div class="prod-card reveal reveal-delay-1"
              data-img="./recursos/Productos Cip Fluid/sensores_cip_fluid/actuador_neumatico_1_a_3pulgadas.jpg"
              data-name="Actuador Neumático"
              data-material="1&quot; – 3&quot;">
           <div class="prod-card-img">
-            <img src="./recursos/Productos Cip Fluid/sensores_cip_fluid/actuador_neumatico_1_a_3pulgadas.jpg" alt="Actuador neumático" loading="lazy">
+            <img data-src="./recursos/Productos Cip Fluid/sensores_cip_fluid/actuador_neumatico_1_a_3pulgadas.jpg"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                 alt="Actuador neumático"
+                 class="lazy-img"
+                 width="300" height="360" decoding="async">
           </div>
           <span class="prod-badge">Neumático</span>
           <div class="prod-card-info">
@@ -224,12 +241,17 @@
           </div>
         </div>
 
+        <!-- REDUCCIÓN CONCÉNTRICA -->
         <div class="prod-card reveal reveal-delay-2"
              data-img="./recursos/Productos Cip Fluid/reducciones_concentricas_cip_fluid/reduccion_concentrica_3x1,5pulgadas.jpg"
              data-name="Reducción Concéntrica"
              data-material="316L • A soldar">
           <div class="prod-card-img">
-            <img src="./recursos/Productos Cip Fluid/reducciones_concentricas_cip_fluid/reduccion_concentrica_3x1,5pulgadas.jpg" alt="Reducción concéntrica" loading="lazy">
+            <img data-src="./recursos/Productos Cip Fluid/reducciones_concentricas_cip_fluid/reduccion_concentrica_3x1,5pulgadas.jpg"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                 alt="Reducción concéntrica"
+                 class="lazy-img"
+                 width="300" height="360" decoding="async">
           </div>
           <span class="prod-badge">Acero 316L</span>
           <div class="prod-card-info">
@@ -242,12 +264,17 @@
           </div>
         </div>
 
+        <!-- ABRAZADERAS -->
         <div class="prod-card reveal reveal-delay-3"
              data-img="./recursos/Productos Cip Fluid/abrazaderas_cip_fluid/abrazadera_1,5pulgadas.jpg"
              data-name="Abrazaderas"
              data-material="304 • 1&quot; – 3&quot;">
           <div class="prod-card-img">
-            <img src="./recursos/Productos Cip Fluid/abrazaderas_cip_fluid/abrazadera_1,5pulgadas.jpg" alt="Abrazaderas" loading="lazy">
+            <img data-src="./recursos/Productos Cip Fluid/abrazaderas_cip_fluid/abrazadera_1,5pulgadas.jpg"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                 alt="Abrazaderas"
+                 class="lazy-img"
+                 width="300" height="360" decoding="async">
           </div>
           <span class="prod-badge">Acero 304</span>
           <div class="prod-card-info">
@@ -260,12 +287,17 @@
           </div>
         </div>
 
+        <!-- EMPACADURA CLAMP -->
         <div class="prod-card reveal reveal-delay-1"
              data-img="./recursos/Productos Cip Fluid/gomas_cip_fluid/20250814_182946.jpg"
              data-name="Empacadura Clamp"
              data-material="1&quot; – 3&quot;">
           <div class="prod-card-img">
-            <img src="./recursos/Productos Cip Fluid/gomas_cip_fluid/20250814_182946.jpg" alt="Empacadura clamp" loading="lazy">
+            <img data-src="./recursos/Productos Cip Fluid/gomas_cip_fluid/20250814_182946.jpg"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                 alt="Empacadura clamp"
+                 class="lazy-img"
+                 width="300" height="360" decoding="async">
           </div>
           <span class="prod-badge">Teflón / EPDM</span>
           <div class="prod-card-info">
@@ -282,15 +314,12 @@
     </div>
   </section>
 
-
   <!-- ==============================
        FLOATING BUTTONS
   =============================== -->
   <a class="whatsapp-float" href="https://wa.me/+584140496684" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-    <img src="./recursos/img logos/WhatsApp.webp" alt="WhatsApp">
+    <img src="./recursos/img logos/WhatsApp.webp" alt="WhatsApp" width="32" height="32" loading="lazy">
   </a>
-
-
 
 
   <!-- ==============================
@@ -301,7 +330,7 @@
 
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="./recursos/img logos/logo cip fluid.webp" alt="Logo CIP FLUID" class="footer-logo">
+        <img src="./recursos/img logos/logo cip fluid.webp" alt="Logo CIP FLUID" class="footer-logo" width="120" height="48" loading="lazy" decoding="async">
         <p>Expertos en diseño, dimensionamiento y suministro de equipos industriales de alta calidad. Monitoreo estricto desde el origen hasta la entrega en planta.</p>
       </div>
 
@@ -318,11 +347,11 @@
       <div class="footer-col contact-col">
         <h4>Contacto</h4>
         <div class="contact-list">
-          <a href="/cdn-cgi/l/email-protection#c7b1a2a9b3a6b487a4aeb7b4aeb4b3a2aae9a4a8aa" class="contact-item" onclick="abrirCorreo(event,'ventas@cipsistem.com')">
-            <span class="contact-icon">📧</span> <span class="__cf_email__" data-cfemail="7f091a110b1e0c3f1c160f0c160c0b1a12511c1012">[email&#160;protected]</span>
+          <a href="#" class="contact-item" onclick="abrirCorreo(event,'ventas@cipsistem.com')">
+            <span class="contact-icon">📧</span> ventas@cipsistem.com
           </a>
-          <a href="/cdn-cgi/l/email-protection#047e65696676656a6b2a656a706b6a6d6b446369656d682a676b69" class="contact-item" onclick="abrirCorreo(event,'zambrano.antonio@gmail.com')">
-            <span class="contact-icon">📧</span> <span class="__cf_email__" data-cfemail="473d262a25352629286926293328292e2807202a262e2b6924282a">[email&#160;protected]</span>
+          <a href="#" class="contact-item" onclick="abrirCorreo(event,'zambrano.antonio@gmail.com')">
+            <span class="contact-icon">📧</span> zambrano.antonio@gmail.com
           </a>
           <a href="https://wa.me/+584140496684" class="contact-item">
             <span class="contact-icon">📱</span> +58 414 049 6684
@@ -330,7 +359,7 @@
           <a href="https://wa.me/+584140492892" class="contact-item">
             <span class="contact-icon">📱</span> +58 414 049 2892
           </a>
-          
+
           <div class="footer-socials">
             <a href="https://www.instagram.com/cipfluid/" target="_blank" rel="noopener" class="social-badge">@cipfluid</a>
             <a href="https://www.instagram.com/cipsistem.ca/" target="_blank" rel="noopener" class="social-badge">@cipsistem.ca</a>
@@ -340,13 +369,12 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 CIP FLUID, C.A. Todos erechos reservados.</p>
+      <p>&copy; 2025 CIP FLUID, C.A. Todos los derechos reservados.</p>
       <a href="#inicio" class="back-to-top-link">Volver arriba ↑</a>
     </div>
 
   </div>
 </footer>
-
 
   <!-- ==============================
        LIGHTBOX
@@ -366,7 +394,7 @@
     </button>
 
     <div class="lightbox-inner">
-      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" decoding="async">
       <div class="lightbox-caption">
         <span class="lightbox-caption-name" id="lightboxName"></span>
         <span class="lightbox-caption-material" id="lightboxMaterial"></span>
@@ -374,11 +402,185 @@
     </div>
   </div>
 
+  <script>
 
-  <!-- ==============================
-       SCRIPTS
-  =============================== -->
-  <script src="./js/main.js"></script>
+  (function() {
+    var video = document.getElementById('heroVideo');
+    if (!video) return;
+
+    function startVideo() {
+      video.setAttribute('preload', 'auto');
+      video.load();
+      video.play().catch(function(){
+      });
+    }
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(startVideo, { timeout: 2000 });
+    } else {
+      setTimeout(startVideo, 200);
+    }
+  })();
+
+  (function() {
+    var lazyImgs = document.querySelectorAll('img.lazy-img');
+    if (!lazyImgs.length) return;
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          var img = entry.target;
+          var src = img.getAttribute('data-src');
+          if (!src) return;
+
+          img.src = src;
+          img.onload = function() {
+            img.classList.add('img-loaded');
+          };
+          img.removeAttribute('data-src');
+          observer.unobserve(img);
+        });
+      }, {
+        rootMargin: '200px 0px',
+        threshold: 0
+      });
+
+      lazyImgs.forEach(function(img) { io.observe(img); });
+    } else {
+      lazyImgs.forEach(function(img) {
+        var src = img.getAttribute('data-src');
+        if (src) { img.src = src; img.classList.add('img-loaded'); }
+      });
+    }
+  })();
+
+  (function() {
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+
+    var revealIO = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          el.classList.add('visible');
+          revealIO.unobserve(el); 
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(function(el) { revealIO.observe(el); });
+  })();
+  
+  (function() {
+    var navbar  = document.getElementById('navbar');
+    var ticking = false;
+
+    function updateNavbar() {
+      if (window.scrollY > 60) {
+        navbar.classList.remove('transparent');
+        navbar.classList.add('solid');
+      } else {
+        navbar.classList.remove('solid');
+        navbar.classList.add('transparent');
+      }
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateNavbar);
+        ticking = true;
+      }
+    }, { passive: true });
+  })();
+
+  // ─── 5. MENÚ MÓVIL ───────────────────────────────────────────────────────
+  var burgerBtn   = document.getElementById('burgerBtn');
+  var mobileMenu  = document.getElementById('mobileMenu');
+  var mobileClose = document.getElementById('mobileClose');
+
+  function openMobileMenu() {
+    mobileMenu.classList.add('open');
+    burgerBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (burgerBtn)   burgerBtn.addEventListener('click', openMobileMenu);
+  if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
+  // ─── 6. LIGHTBOX ─────────────────────────────────────────────────────────
+  var lightbox        = document.getElementById('lightbox');
+  var lightboxImg     = document.getElementById('lightboxImg');
+  var lightboxName    = document.getElementById('lightboxName');
+  var lightboxMat     = document.getElementById('lightboxMaterial');
+  var lightboxClose   = document.getElementById('lightboxClose');
+  var lightboxBackdrop= document.getElementById('lightboxBackdrop');
+  var lightboxPrev    = document.getElementById('lightboxPrev');
+  var lightboxNext    = document.getElementById('lightboxNext');
+
+  var cards       = Array.from(document.querySelectorAll('.prod-card'));
+  var currentIdx  = 0;
+
+  function openLightbox(idx) {
+    currentIdx = idx;
+    var card = cards[idx];
+    var src  = card.getAttribute('data-img');
+    var name = card.getAttribute('data-name');
+    var mat  = card.getAttribute('data-material');
+
+    // Fade suave
+    lightboxImg.style.opacity = '0';
+    lightboxImg.src = src;
+    lightboxImg.alt = name;
+    lightboxImg.onload = function() {
+      lightboxImg.style.transition = 'opacity 0.3s ease';
+      lightboxImg.style.opacity = '1';
+    };
+
+    lightboxName.textContent = name;
+    lightboxMat.textContent  = mat;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function() { lightboxImg.src = ''; }, 300);
+  }
+
+  function showPrev() { openLightbox((currentIdx - 1 + cards.length) % cards.length); }
+  function showNext() { openLightbox((currentIdx + 1) % cards.length); }
+
+  cards.forEach(function(card, i) {
+    card.addEventListener('click', function() { openLightbox(i); });
+  });
+
+  if (lightboxClose)   lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxBackdrop)lightboxBackdrop.addEventListener('click', closeLightbox);
+  if (lightboxPrev)    lightboxPrev.addEventListener('click', showPrev);
+  if (lightboxNext)    lightboxNext.addEventListener('click', showNext);
+
+  // Teclado: ESC y flechas
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+
+  // ─── 7. FUNCIÓN CORREO ───────────────────────────────────────────────────
+  function abrirCorreo(e, email) {
+    e.preventDefault();
+    window.location.href = 'mailto:' + email;
+  }
+  </script>
 
 </body>
 </html>

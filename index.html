@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css?v=4">
+  <link rel="stylesheet" href="css/estilos.css?v=5">
   <title>CIP SISTEM — Soluciones Industriales</title>  
 </head>
 <body>
@@ -77,16 +77,16 @@
         <div class="nosotros-stats">
           <div class="stat"><span class="stat-num">11+</span><span class="stat-label">Marcas Distribuidas</span></div>
           <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Sin Caducidad</span></div>
-          <div class="stat stat-cipsip" id="statCipSip">
+          <div class="stat stat-cipsip">
             <span class="stat-num">CIP/SIP</span>
             <span class="stat-label">Sistemas Completos</span>
-            <button class="cipsip-dot-btn" id="cipsipDotBtn" aria-label="Ver diagrama sistema CIP/SIP" aria-expanded="false">
+            <div class="cipsip-preview-trigger" aria-label="Ver sistema CIP/SIP">
               <span class="cipsip-hint-dot"></span>
-            </button>
-            <div class="cipsip-img-popup" id="cipsipPopup">
-              <div class="cipsip-popup-inner">
-                <img src="recursos/image.png" alt="Sistema CIP/SIP – Diagrama técnico" class="cipsip-popup-img">
-                <span class="cipsip-popup-caption">Sistema CIP/SIP — Diseño de ingeniería</span>
+              <div class="cipsip-img-popup">
+                <div class="cipsip-popup-inner">
+                  <img src="recursos/image.png" alt="Sistema CIP/SIP – Diagrama técnico" class="cipsip-popup-img">
+                  <span class="cipsip-popup-caption">Sistema CIP/SIP — Diseño de ingeniería</span>
+                </div>
               </div>
             </div>
           </div>
@@ -512,43 +512,6 @@ function loadVideo(element, videoId) {
       
       element.parentNode.replaceChild(iframe, element);
     }
-  </script>
-
-  <script>
-    /* CIP/SIP popup — click/touch para móvil, hover solo en desktop */
-    (function() {
-      var btn    = document.getElementById('cipsipDotBtn');
-      var popup  = document.getElementById('cipsipPopup');
-      var stat   = document.getElementById('statCipSip');
-      if (!btn || !popup) return;
-
-      function isTouch() {
-        return window.matchMedia('(hover: none)').matches;
-      }
-
-      function openPopup() {
-        popup.classList.add('cipsip-open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-      function closePopup() {
-        popup.classList.remove('cipsip-open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-      function togglePopup(e) {
-        e.stopPropagation();
-        popup.classList.contains('cipsip-open') ? closePopup() : openPopup();
-      }
-
-      /* En touch: abrir/cerrar con tap en el punto */
-      btn.addEventListener('click', function(e) {
-        if (isTouch()) togglePopup(e);
-      });
-
-      /* Cerrar al tocar fuera */
-      document.addEventListener('click', function(e) {
-        if (isTouch() && !stat.contains(e.target)) closePopup();
-      });
-    })();
   </script>
 
   <a href="https://wa.me/04140496684" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Contactar por WhatsApp">
