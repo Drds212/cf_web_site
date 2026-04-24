@@ -58,29 +58,63 @@
 
     <div class="ic-grid">
 
+      <!-- Tarjeta 1 -->
       <article class="ic-card">
         <div class="ic-card__img-wrap">
-          <img src="recursos/bombas-para-lodos.png" alt="Intercambiador de calor de placas con junta" class="ic-card__img">
+          <img src="recursos/bombas-para-lodos.png"
+               alt="Bombas para lodos" class="ic-card__img">
+          <button class="ic-expand-btn" onclick="abrirLightbox(this)" 
+          data-title="Bombas para lodos"
+                  title="Ver imagen ampliada">
+            <svg width="16" height="16" fill="none" stroke="#ffffff" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+            </svg>
+          </button>
         </div>
         <div class="ic-card__body">
           <h3 class="ic-card__title">Bombas para lodos</h3>
-          <p class="ic-card__desc">Contamos con un gran catálogo de bombas para lodos que se adaptan a cualquier situación.</p>
+          <p class="ic-card__desc">Contamos con un gran catálogo de 
+            bombas para lodos que se adaptan a cualquier situación.
+          </p>
         </div>
       </article>
 
+      <!-- Tarjeta 2 -->
       <article class="ic-card">
         <div class="ic-card__img-wrap">
-          <img src="recursos/bombas-de-aspiracion-inundadas.png" alt="Intercambiador de calor de placas brasadas" class="ic-card__img">
+          <img src="recursos/bombas-de-aspiracion-inundadas.png" alt="Sistemas de Pigging" class="ic-card__img">
+          <button class="ic-expand-btn" onclick="abrirLightbox(this)" 
+          data-title="Bombas de aspiración inundadas"
+                  title="Ver imagen ampliada">
+            <svg width="16" height="16" fill="none" stroke="#ffffff" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+            </svg>
+          </button>
         </div>
         <div class="ic-card__body">
           <h3 class="ic-card__title">Bombas de aspiración inundadas</h3>
-          <p class="ic-card__desc">Especialmente diseñadas para aplicaciones industriales y comerciales de alta resistencia.</p>
+          <p class="ic-card__desc">
+            Especialmente diseñadas para aplicaciones industriales y 
+            comerciales de alta resistencia.
+          </p>
         </div>
       </article>
 
+      <!-- Tarjeta 3 -->
       <article class="ic-card">
         <div class="ic-card__img-wrap">
-          <img src="recursos/accesorio-de-bomba-de-dragado-para-excavadora.png" alt="Intercambiador de calor de placas de varias secciones" class="ic-card__img">
+          <img src="recursos/accesorio-de-bomba-de-dragado-para-excavadora.png"
+               alt="Accesorio de bomba de dragado para excavadora" class="ic-card__img">
+          <button class="ic-expand-btn" onclick="abrirLightbox(this)"
+                  data-title="Accesorio de bomba de dragado para excavadora"
+                  title="Ver imagen ampliada">
+            <svg width="16" height="16" fill="none" stroke="#ffffff" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+            </svg>
+          </button>
         </div>
         <div class="ic-card__body">
           <h3 class="ic-card__title">Accesorio de bomba de dragado para excavadora</h3>
@@ -89,17 +123,28 @@
         </div>
       </article>
 
+      <!-- Tarjeta 4 -->
       <article class="ic-card">
         <div class="ic-card__img-wrap">
-          <img src="recursos/trineo-de-dragado.png" alt="trineo de dragado" class="ic-card__img">
+          <img src="recursos/trineo-de-dragado.png"
+               alt="Bombas de aspiración inundadas" class="ic-card__img">
+          <button class="ic-expand-btn" onclick="abrirLightbox(this)"
+                  data-title="Bombas de aspiración inundadas"
+                  title="Ver imagen ampliada">
+            <svg width="16" height="16" fill="none" stroke="#ffffff" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+            </svg>
+          </button>
         </div>
         <div class="ic-card__body">
-          <h3 class="ic-card__title">Trineo de dragado</h3>
+          <h3 class="ic-card__title">Bombas de aspiración inundadas</h3>
           <p class="ic-card__desc">Altamente diseñado para el dragado sumergible con la capacidad de deslizarse 
             suavemente por el fondo para bombear material altamente viscoso o abrasivo, lodos, estiércol,
             pasta, alto contenido en sólidos y otras aplicaciones de bombeo de lagunas difíciles.</p>
         </div>
       </article>
+
     </div>
   </section>
   
@@ -122,6 +167,22 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════
+       LIGHTBOX OVERLAY
+  ══════════════════════════════════ -->
+  <div class="lb-overlay" id="lb-overlay" onclick="cerrarLightboxFondo(event)">
+    <div class="lb-box">
+      <button class="lb-close" onclick="cerrarLightbox()" title="Cerrar">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+             stroke-linecap="round" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <img class="lb-img" id="lb-img" src="" alt="">
+      <p class="lb-title" id="lb-title"></p>
+    </div>
+  </div>
 
     <footer class="footer" id="footer">
     <div class="footer-inner">
@@ -174,6 +235,29 @@
     </div>
   </footer>
 
+    <script>
+    function abrirLightbox(btn) {
+      const img = btn.closest('.ic-card__img-wrap').querySelector('img');
+      document.getElementById('lb-img').src   = img.src;
+      document.getElementById('lb-img').alt   = img.alt;
+      document.getElementById('lb-title').textContent = btn.dataset.title;
+      document.getElementById('lb-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function cerrarLightbox() {
+      document.getElementById('lb-overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function cerrarLightboxFondo(e) {
+      if (e.target === document.getElementById('lb-overlay')) cerrarLightbox();
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') cerrarLightbox();
+    });
+  </script>
 
 
 </body>
